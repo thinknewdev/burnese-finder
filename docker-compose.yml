@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bernese_app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ../scraper/output:/var/www/storage/app/import
+    networks:
+      - bernese
+
+  nginx:
+    image: nginx:alpine
+    container_name: bernese_nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+      - ../scraper/output/images:/var/www/public/dog-images
+    networks:
+      - bernese
+    depends_on:
+      - app
+
+  mysql:
+    image: mysql:8.0
+    container_name: bernese_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: bernese
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_USER: bernese
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - bernese
+
+networks:
+  bernese:
+    driver: bridge
+
+volumes:
+  mysql_data:
