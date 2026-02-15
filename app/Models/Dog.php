@@ -66,6 +66,38 @@ class Dog extends Model
         return Dog::where('bg_dog_id', $this->dam_id)->first();
     }
 
+    public function littersAsSire()
+    {
+        return Litter::where('sire_id', $this->bg_dog_id)
+            ->orderByDesc('birth_year')
+            ->get();
+    }
+
+    public function littersAsDam()
+    {
+        return Litter::where('dam_id', $this->bg_dog_id)
+            ->orderByDesc('birth_year')
+            ->get();
+    }
+
+    public function allLitters()
+    {
+        return Litter::where('sire_id', $this->bg_dog_id)
+            ->orWhere('dam_id', $this->bg_dog_id)
+            ->orderByDesc('birth_year')
+            ->get();
+    }
+
+    public function getMostRecentLitterYearAttribute()
+    {
+        $litter = Litter::where('sire_id', $this->bg_dog_id)
+            ->orWhere('dam_id', $this->bg_dog_id)
+            ->orderByDesc('birth_year')
+            ->first();
+
+        return $litter?->birth_year;
+    }
+
     public function scopeSearch($query, string $term)
     {
         return $query->whereRaw(
@@ -108,6 +140,31 @@ class Dog extends Model
               ->orWhereNotNull('heart_status')
               ->orWhereNotNull('eye_status');
         });
+    }
+
+    public function scopeWithRecentLitters($query, ?int $sinceYear = null)
+    {
+        $year = $sinceYear ?? now()->subYears(3)->year;
+
+        return $query->where(function ($q) use ($year) {
+            // Find dogs that are sires or dams in recent litters
+            $q->whereIn('bg_dog_id', function ($subQuery) use ($year) {
+                $subQuery->select('sire_id')
+                    ->from('litters')
+                    ->whereNotNull('sire_id')
+                    ->where('birth_year', '>=', $year);
+            })->orWhereIn('bg_dog_id', function ($subQuery) use ($year) {
+                $subQuery->select('dam_id')
+                    ->from('litters')
+                    ->whereNotNull('dam_id')
+                    ->where('birth_year', '>=', $year);
+            });
+        });
+    }
+
+    public function scopeAliveWithRecentLitters($query, ?int $sinceYear = null)
+    {
+        return $query->alive()->withRecentLitters($sinceYear);
     }
 
     public function hasCompleteData(): bool

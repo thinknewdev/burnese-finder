@@ -105,4 +105,83 @@ class SearchController extends Controller
 
         return view('search.best', compact('dogs'));
     }
+
+    public function activeBreeding(Request $request)
+    {
+        $sinceYear = $request->get('since_year', now()->subYears(3)->year);
+        $sex = $request->get('sex');
+        $state = $request->get('state');
+        $sortBy = $request->get('sort', 'recent_litter');
+
+        $query = Dog::with('breeder')
+            ->aliveWithRecentLitters($sinceYear);
+
+        // Filter by sex
+        if ($sex) {
+            $query->where('sex', $sex);
+        }
+
+        // Filter by state
+        if ($state) {
+            $query->whereHas('breeder', fn($q) => $q->where('state', $state));
+        }
+
+        // Apply sorting
+        switch ($sortBy) {
+            case 'grade':
+                $query->orderByDesc('grade');
+                break;
+            case 'health':
+                $query->orderByDesc('health_score');
+                break;
+            case 'recent_litter':
+            default:
+                // This will be handled after we fetch the data
+                break;
+        }
+
+        $dogs = $query->get();
+
+        // Add litter information and sort by most recent litter if requested
+        $dogs = $dogs->map(function ($dog) {
+            $recentLitters = \App\Models\Litter::where(function ($q) use ($dog) {
+                $q->where('sire_id', $dog->bg_dog_id)
+                  ->orWhere('dam_id', $dog->bg_dog_id);
+            })
+            ->orderByDesc('birth_year')
+            ->limit(5)
+            ->get();
+
+            $dog->recent_litters = $recentLitters;
+            $dog->most_recent_litter_year = $recentLitters->first()?->birth_year;
+            $dog->total_litters = $recentLitters->count();
+
+            return $dog;
+        });
+
+        if ($sortBy === 'recent_litter') {
+            $dogs = $dogs->sortByDesc('most_recent_litter_year')->values();
+        }
+
+        $states = Breeder::whereNotNull('state')
+            ->distinct()
+            ->pluck('state')
+            ->sort()
+            ->values();
+
+        if ($request->wantsJson()) {
+            return response()->json([
+                'count' => $dogs->count(),
+                'dogs' => $dogs,
+                'filters' => [
+                    'since_year' => $sinceYear,
+                    'sex' => $sex,
+                    'state' => $state,
+                    'sort_by' => $sortBy,
+                ]
+            ]);
+        }
+
+        return view('search.active-breeding', compact('dogs', 'states', 'sinceYear', 'sex', 'state', 'sortBy'));
+    }
 }

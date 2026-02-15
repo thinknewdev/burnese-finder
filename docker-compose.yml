@@ -10,7 +10,7 @@ services:
     working_dir: /var/www
     volumes:
       - ./:/var/www
-      - ../scraper/output:/var/www/storage/app/import
+      - ./scraper/output:/var/www/storage/app/import
     networks:
       - bernese
 
@@ -23,7 +23,7 @@ services:
     volumes:
       - ./:/var/www
       - ./docker/nginx/conf.d:/etc/nginx/conf.d
-      - ../scraper/output/images:/var/www/public/dog-images
+      - ./scraper/output/images:/var/www/public/dog-images
     networks:
       - bernese
     depends_on:

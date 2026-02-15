@@ -49,9 +49,10 @@ return new class extends Migration
             $table->decimal('breeder_score', 5, 2)->nullable();
 
             $table->timestamps();
-
-            $table->fulltext(['registered_name', 'call_name']);
         });
+
+        // Add fulltext index using raw SQL for MySQL compatibility
+        \DB::statement('ALTER TABLE dogs ADD FULLTEXT INDEX dogs_search (registered_name, call_name)');
     }
 
     public function down(): void

@@ -24,9 +24,10 @@ return new class extends Migration
             $table->decimal('grade', 5, 2)->nullable()->index();
             $table->json('health_stats')->nullable();
             $table->timestamps();
-
-            $table->fulltext(['first_name', 'last_name', 'kennel_name']);
         });
+
+        // Add fulltext index using raw SQL for MySQL compatibility
+        \DB::statement('ALTER TABLE breeders ADD FULLTEXT INDEX breeders_search (first_name, last_name, kennel_name)');
     }
 
     public function down(): void
