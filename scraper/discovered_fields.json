@@ -1,0 +1,26 @@
+{
+  "Dog Search": {
+    "url": "https://bernergarde.org/DB/Dog_Search",
+    "inputs": [],
+    "selects": [],
+    "buttons": [],
+    "hidden": [],
+    "links": []
+  },
+  "People Search": {
+    "url": "https://bernergarde.org/DB/People_Search",
+    "inputs": [],
+    "selects": [],
+    "buttons": [],
+    "hidden": [],
+    "links": []
+  },
+  "Litter Search": {
+    "url": "https://bernergarde.org/DB/Litter_Search",
+    "inputs": [],
+    "selects": [],
+    "buttons": [],
+    "hidden": [],
+    "links": []
+  }
+}
