@@ -73,6 +73,20 @@ class ImportParentDogs extends Command
             $dog->color = $data['coat_color'] ?? null;
             $dog->primary_image = $this->convertImagePath($data['primary_image'] ?? null);
 
+            // New fields from scraped data
+            $dog->registration_number = $data['registrations'] ?? null;
+            $dog->dna_number = $data['dna reg '] ?? $data['dna reg'] ?? null;
+            $dog->microchip = $data['microchip'] ?? null;
+            $dog->weight = $data['weight'] ?? null;
+            $dog->height = $data['height'] ?? null;
+            $dog->bite = $data['bite'] ?? null;
+            $dog->tail = $data['tail'] ?? null;
+            $dog->eye_color = $data['eye_color'] ?? null;
+            $dog->stud_book = $data['stud book'] ?? $data['stud_book'] ?? null;
+            $dog->frozen_semen = !empty($data['frozen semen']) && strtolower($data['frozen semen']) !== 'no' && $data['frozen semen'] !== 'false';
+            $dog->rescue_type = $data['rescue type'] ?? $data['rescue_type'] ?? null;
+            $dog->litter_id = $data['litter id'] ?? $data['litter id_id'] ?? null;
+
             // Try to link to breeder if we have breeder info
             // Note: The scraped data doesn't include breeder_id, but we might have it from litters
 
