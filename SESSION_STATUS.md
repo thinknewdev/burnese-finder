@@ -1,7 +1,7 @@
 # Session Status & Next Steps
 
-**Last Updated:** February 17, 2026
-**Session Summary:** Added real health certification data from BernerGarde, updated branding, replaced placeholder images with bernese-1.png
+**Last Updated:** February 17, 2026 (Session 2)
+**Session Summary:** Revised grading system (health-first, pedigree longevity added), improved Breeder Information section, and built a full 3-generation pedigree chart on dog detail pages
 
 ---
 
@@ -56,24 +56,29 @@
    - **Active Breeder Badge**: Green gradient badge with litter count
    - **Breeding History**: Shows up to 5 recent litters with dates/partners
    - **Health Tests**: Card-based layout with emoji icons and color coding
-   - **3-Gen Pedigree**: Visual tree with clickable links and grades
-   - **Breeder Info**: Enhanced cards with contact details and grades
+   - **3-Gen Pedigree Chart**: Full-width table with linked ancestors, grade badges, hip + DM results ⭐ UPDATED
+   - **Breeder Info**: Kennel name header, BernerGarde person profile link, contact details ⭐ UPDATED
 
-4. **Real Health Certification Data** ⭐ NEW
+4. **Real Health Certification Data**
    - OFA cert results scraped directly from BernerGarde for 673 active breeding dogs
    - Displays hip, elbow, cardiac, eye, and DM results with OFA cert numbers
    - Color-coded: green (Excellent/Good/Normal), yellow (Fair/Carrier), red (Affected)
    - DM shows all test variants (SOD1-A, SOD1-B) with correct priority coloring
    - "No health clearances on file" message for dogs without data
 
-5. **Branding & Image Updates** ⭐ NEW
+5. **Branding & Image Updates**
    - Site title updated to "Bernese Mountain Dog Finder" everywhere
    - bernese-1.png used as placeholder image across all views (cards, table rows, detail pages, navbar)
 
-6. **Health Grading System**
-   - Dog grades: 40% health + 40% longevity + 20% breeder
-   - Health scoring based on OFA clearances (now populated with real data)
-   - Breeder grades recalculated based on updated dog grades
+6. **Revised Grading System** ⭐ UPDATED
+   - **New formula**: 50% health clearances + 30% own longevity + 20% pedigree longevity
+   - **Health score redesign**: Base 50 with penalties for untested critical areas
+     - No hips: −10, No elbows: −10, No heart: −5, No eyes: −5, No DM: −5
+     - Dog with zero clearances scores ~15 (not neutral 50)
+     - DM now included: Clear +10, Carrier 0, Affected −10
+   - **Pedigree longevity**: Average of sire + dam longevity scores (parents must be in DB)
+   - **Breeder grade removed** from dog grade formula (was circular)
+   - New artisan command: `php artisan dogs:recalculate-grades`
 
 ---
 
@@ -117,9 +122,20 @@ All located in `app/Console/Commands/`:
    docker exec bernese_app php artisan litters:link --fresh
    ```
 
-5. **`ImportHealthCertifications.php`** - Import OFA/health cert data ⭐ NEW
+5. **`ImportHealthCertifications.php`** - Import OFA/health cert data
    ```bash
    docker exec bernese_app php artisan import:health-certifications
+   ```
+
+6. **`RecalculateGrades.php`** - Recalculate all dog + breeder grades ⭐ NEW
+   ```bash
+   docker exec bernese_app php artisan dogs:recalculate-grades
+   ```
+   Run this after any scoring logic changes. Also infers age_years from birth/death dates when missing.
+
+7. **`LinkDogsToBreeders.php`** - Re-link dogs to breeders from breeders_details.csv
+   ```bash
+   docker exec bernese_app php artisan dogs:link-breeders
    ```
 
 ### Scraper Files
@@ -156,45 +172,50 @@ Located in `scraper/output/`:
 
 ---
 
-## 🎯 What Was Accomplished This Session (Feb 17)
+## 🎯 What Was Accomplished This Session (Feb 17, Session 2)
 
-### 1. Branding Update
-- ✅ Renamed site to "Bernese Mountain Dog Finder" (was "Bernese Dog Finder")
-- ✅ Updated page title, navbar, and footer everywhere (`layouts/app.blade.php`)
+### 1. Breeder Information Section Improvements
+- ✅ Kennel name shown as primary bold header (breeder full name below)
+- ✅ City/state location with pin emoji
+- ✅ BernerGarde person profile link using `bg_person_id` → `bernergarde.org/DB/Person_Detail?PID=...`
+- ✅ Fallback for dogs with only `breeder_name` (links to BernerGarde dog page)
+- ✅ Fallback for dogs with no breeder info ("Breeder Not Listed" + BernerGarde link)
+- ✅ New artisan command: `php artisan dogs:link-breeders`
 
-### 2. Image Placeholder Replacement
-- ✅ Replaced 🐕 emoji placeholders with `bernese-1.png` across all views:
-  - Navbar logo icon
-  - Dog cards (`dogs/index.blade.php`)
-  - Top-rated table thumbnails (`dogs/top.blade.php`)
-  - Dog detail main image (`dogs/show.blade.php`)
-  - Dog detail offspring thumbnails
-  - Homepage dog cards (`search/index.blade.php`)
-  - Active breeding empty state (`search/active-breeding.blade.php`)
+### 2. Revised Grading System ⭐ MAJOR
+- ✅ New formula: **50% health + 30% own longevity + 20% pedigree longevity**
+- ✅ Health score redesigned with penalties for untested areas:
+  - Zero clearances = ~15 score (not 50); tested + all clear = ~100
+  - Hips/elbows −10 each if not tested (critical)
+  - Heart/eyes −5 each if not tested, +3 if tested, +10 if normal/clear
+  - DM now included: Clear +10, Carrier 0, Affected −10, untested −5
+- ✅ Added `pedigree_longevity_score` — average of sire + dam longevity scores
+  - Falls back to 50 (neutral) when parents not in DB or lifespan unknown
+  - Fixed `.0` suffix bug in `sire_id`/`dam_id` lookups (e.g. `"82433.0"` → `"82433"`)
+- ✅ Migration added: `pedigree_longevity_score decimal(5,2)` column on dogs table
+- ✅ New `RecalculateGrades` artisan command (`php artisan dogs:recalculate-grades`)
+- ✅ All 8,962 dogs recalculated; 7,116 breeder grades updated
+- ✅ Score breakdown on dog detail page updated (4 rows, colour-coded)
 
-### 3. Real Health Certification Data ⭐ MAJOR
-- ✅ Investigated root cause: all health columns were empty — data was never scraped
-- ✅ Analyzed BernerGarde page structure via live page fetch
-  - Certifications table: Org | Test Type | Cert # | Findings | Test Date
-- ✅ Built `scraper/scrape_certifications.py`:
-  - Parses certifications table from each dog's BernerGarde detail page
-  - Maps to: hip_rating, elbow_rating, heart_status, eye_status, dm_status, dna_status
-  - Includes OFA cert numbers (e.g. "Good (BMD-25163G24M-VPI)")
-  - Supports resumable scraping (checkpoint every 100 dogs)
-- ✅ Scraped 989 active breeding dogs (33 min runtime at 2s/request)
-  - 673 dogs had certification data (68% hit rate)
-- ✅ Built `app/Console/Commands/ImportHealthCertifications.php` (`import:health-certifications`)
-  - Reads CSV, updates dog health fields, recalculates grades and breeder grades
-- ✅ Imported all 673 dogs with certifications into database
-- ✅ Updated `dogs/show.blade.php` health clearances section:
-  - OFA cert numbers shown in monospace below test name
-  - Fixed DM color priority: Affected (red) > Carrier (yellow) > Clear (green)
-  - Multiple DM test variants shown as separate badges
+### 3. Full-Width Pedigree Chart ⭐ MAJOR
+- ✅ Fixed `.0` suffix bug — sire/dam lookups now correctly match 1,275 sires + 1,535 dams
+- ✅ Pedigree data fetching moved to `DogController::show()` (not in Blade)
+- ✅ New full-width pedigree table between Physical Characteristics and Offspring:
+  - 3 columns: Parents | Grandparents | Great-grandparents
+  - Each node shows: name (linked), grade badge, hip rating, DM status (colour-coded)
+  - Text-only fallback when ancestor not in database
+  - Blue tinting for sire lines, pink for dam lines
+  - Scrollable on small screens
+- ✅ Parent summary sidebar updated with grade badges and hip ratings
 
-### 4. Previously Completed (Feb 15-16)
+### 4. Previously Completed (Feb 17 Session 1)
+- ✅ OFA health certifications scraped and imported for 673 dogs
+- ✅ Branding updated to "Bernese Mountain Dog Finder"
+- ✅ bernese-1.png used as placeholder across all views
+
+### 5. Previously Completed (Feb 15-16)
 - ✅ Homepage hero section for Active Breeding Search
 - ✅ Active Breeder badge, Breeding History section on dog detail pages
-- ✅ 3-Generation Pedigree Tree
 - ✅ Enhanced Breeder/Kennel cards
 
 ---
@@ -202,29 +223,34 @@ Located in `scraper/output/`:
 ## 🚀 Potential Next Steps
 
 ### Immediate Improvements
-1. **Add Pagination to Active Breeding Page**
+1. **Scrape broader health certifications**
+   - Currently only active breeding dogs (989) have OFA data scraped
+   - Could expand to all 8,962 dogs for richer historical pedigree scoring
+   - Run: `python3 scrape_certifications.py` (without `--active-only`)
+
+2. **Add Pagination to Active Breeding Page**
    - Currently shows all 505 dogs at once
    - Add pagination with 20-50 dogs per page
    - Improve loading performance
 
-2. **Enhance Active Breeding Filters**
+3. **Enhance Active Breeding Filters**
    - Add health clearance filters (hips, elbows, etc.) — now that data exists!
    - Add breeder grade filter
    - Add frozen semen availability filter
    - Export to CSV functionality
 
-3. **Breeder Contact Page**
+4. **Breeder Contact Page**
    - Create dedicated breeder contact form
    - Email integration for inquiries
    - Track inquiry submissions
 
-4. **Dog Comparison Feature**
+5. **Dog Comparison Feature**
    - Allow users to compare 2-3 dogs side by side
    - Compare health clearances, grades, pedigrees
    - Useful for breeding decisions
 
 ### Future Features
-5. **Pedigree Coefficient of Inbreeding (COI)**
+6. **Pedigree Coefficient of Inbreeding (COI)**
    - Calculate COI for potential breeding pairs
    - Show common ancestors
    - Genetic diversity metrics
@@ -308,6 +334,10 @@ docker exec bernese_app php artisan tinker
 docker exec bernese_app php artisan import:data --fresh
 docker exec bernese_app php artisan import:parent-dogs
 docker exec bernese_app php artisan litters:update-dog-ids
+docker exec bernese_app php artisan import:health-certifications
+
+# Recalculate grades (run after any scoring logic change)
+docker exec bernese_app php artisan dogs:recalculate-grades
 ```
 
 ### Python Scraping
@@ -372,11 +402,13 @@ docker exec bernese_app php artisan import:parent-dogs
 3. **No image optimization** - images load from scraper output directory
 4. **Limited mobile optimization** - works but could be better
 5. **No COI calculator** - coefficient of inbreeding not implemented yet
+6. **Pedigree longevity always 50** — no dogs currently have `age_years` populated (scraped dogs are all alive); pedigree longevity will activate when deceased dog lifespans are imported
+7. **Pedigree chart** — great-grandparent data is sparse; most dogs only have 2 generations reliably populated
 
 ### Performance Notes
+- Dog detail page makes up to 14 DB queries for the pedigree tree — consider caching or denormalising if slow
 - Consider adding database indexes on frequently queried fields
-- May need caching for expensive queries
-- Pedigree queries could be optimized with eager loading
+- Active breeding query may need caching for large result sets
 
 ---
 
@@ -400,7 +432,8 @@ DB_PASSWORD=secret
 - **Active Breeding**: http://localhost:8080/active-breeding
 - **Top Dogs**: http://localhost:8080/dogs/top
 - **Breeders**: http://localhost:8080/breeders
-- **Example Active Breeder with health certs**: http://localhost:8080/dogs/161807
+- **Example dog with health certs**: http://localhost:8080/dogs/161807
+- **Example dog with sire in DB (pedigree chart)**: http://localhost:8080/dogs/10
 
 ---
 
@@ -423,12 +456,13 @@ DB_PASSWORD=secret
 
 4. **Git Workflow**
    - Current branch: `main`
-   - Recent commits: Health certifications scraper + import, branding updates, bernese-1.png
+   - Recent commits: Pedigree chart, grading system revision, breeder info improvements, health certifications
    - Safe to pull updates: Yes
 
 5. **Health Data Refresh Workflow**
    - Re-scrape certs: `cd scraper && python3 scrape_certifications.py --active-only`
    - Import to DB: `docker exec bernese_app php artisan import:health-certifications`
+   - Recalculate grades: `docker exec bernese_app php artisan dogs:recalculate-grades`
    - Scraper resumes automatically if interrupted (skips already-scraped dogs)
 
 ---
@@ -447,7 +481,7 @@ DB_PASSWORD=secret
   - `resources/views/search/index.blade.php` - Complete homepage redesign
   - `resources/views/dogs/show.blade.php` - 5 major enhancements
 
-### Session Feb 17 (This Session)
+### Session Feb 17 — Part 1 (Health Certs + Branding)
 - **New files created**: 2
   - `scraper/scrape_certifications.py` - Health cert scraper
   - `app/Console/Commands/ImportHealthCertifications.php` - Import command
@@ -455,10 +489,23 @@ DB_PASSWORD=secret
 - **Data added**: 673 dogs with OFA health certifications
   - 577 hip ratings, 600 elbow ratings, 356 cardiac, 300 eye, 455 DM
 - **Runtime**: ~33 min scraping + instant import
-- **Commits**: 3 (code, data, session status)
-  - Enhanced breeder information cards
-- **Testing**: All pages verified (HTTP 200)
-- **Focus**: UI/UX improvements for active breeding feature
+- **Commits**: 3
+
+### Session Feb 17 — Part 2 (Grading + Pedigree)
+- **New files created**: 3
+  - `app/Console/Commands/RecalculateGrades.php` - Grade recalculation command
+  - `app/Console/Commands/LinkDogsToBreeders.php` - Breeder linking command
+  - `database/migrations/2026_02_17_..._add_pedigree_longevity_score.php`
+- **Files updated**: 6
+  - `app/Models/Dog.php` - New health scoring, pedigree longevity
+  - `app/Http/Controllers/DogController.php` - Pedigree data fetching
+  - `app/Console/Commands/ImportData.php` - pedigree_longevity_score
+  - `app/Console/Commands/ImportHealthCertifications.php` - updated grade formula
+  - `app/Console/Commands/ImportParentDogs.php` - pedigree_longevity_score
+  - `resources/views/dogs/show.blade.php` - Pedigree chart, breeder section, score breakdown
+- **Dogs recalculated**: 8,962 (new scoring system)
+- **Commits**: 4
+- **Testing**: All pages HTTP 200, pedigree chart confirmed rendering
 
 ---
 
