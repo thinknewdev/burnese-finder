@@ -135,6 +135,7 @@ class ImportParentDogs extends Command
         foreach ($newDogs as $dog) {
             $dog->health_score = $dog->calculateHealthScore();
             $dog->longevity_score = $dog->calculateLongevityScore();
+            $dog->pedigree_longevity_score = $dog->calculatePedigreeLongevityScore();
             $dog->grade = $dog->calculateGrade();
             $dog->save();
             $gradeBar->advance();

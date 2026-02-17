@@ -333,16 +333,26 @@
                     <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Score Breakdown</h3>
                     <div class="space-y-2">
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-600">Health (40%)</span>
-                            <span class="font-semibold text-bernese-700">{{ number_format($dog->health_score ?? 50, 1) }}</span>
+                            <span class="text-sm text-gray-600">Health Clearances (50%)</span>
+                            <span class="font-semibold {{ ($dog->health_score ?? 50) >= 70 ? 'text-green-600' : (($dog->health_score ?? 50) >= 40 ? 'text-bernese-700' : 'text-red-600') }}">
+                                {{ number_format($dog->health_score ?? 50, 1) }}
+                            </span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-600">Longevity (40%)</span>
+                            <span class="text-sm text-gray-600">Own Longevity (30%)</span>
                             <span class="font-semibold text-bernese-700">{{ number_format($dog->longevity_score ?? 50, 1) }}</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-600">Breeder (20%)</span>
-                            <span class="font-semibold text-bernese-700">{{ number_format($dog->breeder_score ?? $dog->breeder?->grade ?? 50, 1) }}</span>
+                            @php $pedigreeScore = $dog->pedigree_longevity_score ?? 50; @endphp
+                            <span class="text-sm text-gray-600">
+                                Pedigree Longevity (20%)
+                                @if($pedigreeScore == 50)
+                                <span class="text-xs text-gray-400 ml-1" title="Based on sire &amp; dam lifespan — defaults to neutral when parents have unknown lifespan">(?)</span>
+                                @endif
+                            </span>
+                            <span class="font-semibold {{ $pedigreeScore >= 70 ? 'text-green-600' : ($pedigreeScore >= 40 ? 'text-bernese-700' : 'text-red-600') }}">
+                                {{ number_format($pedigreeScore, 1) }}
+                            </span>
                         </div>
                     </div>
                 </div>

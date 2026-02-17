@@ -73,7 +73,8 @@ class ImportHealthCertifications extends Command
             if ($changed) {
                 // Recalculate health score and grade
                 $dog->health_score = $dog->calculateHealthScore();
-                $dog->grade = ($dog->health_score * 0.4) + ($dog->longevity_score * 0.4) + (($dog->breeder?->grade ?? 50) * 0.2);
+                $dog->pedigree_longevity_score = $dog->calculatePedigreeLongevityScore();
+                $dog->grade = $dog->calculateGrade();
                 $dog->save();
                 $updated++;
             }

@@ -320,6 +320,7 @@ class ImportData extends Command
         foreach ($dogs as $dog) {
             $dog->health_score = $dog->calculateHealthScore();
             $dog->longevity_score = $dog->calculateLongevityScore();
+            $dog->pedigree_longevity_score = $dog->calculatePedigreeLongevityScore();
             $dog->grade = $dog->calculateGrade();
             $dog->save();
             $bar->advance();
