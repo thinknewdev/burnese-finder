@@ -1,0 +1,990 @@
+bg_dog_id,has_certifications,hip_rating,elbow_rating,dm_status,dna_status,heart_status,eye_status
+233590,False,,,,,,
+233589,False,,,,,,
+233455,True,Good (BMD-28187G24F-P-VPI),Normal (BMD-EL18021F24-P-VPI),,,,
+233454,True,Fair (BMD-27984F24M-P-VPI),,,,,
+233448,True,,Normal (BMD-EL16870F26-C-VPI),,,,
+233388,False,,,,,,
+233346,False,,,,,,
+233334,True,Good (BMD-28396G30F-P-VPI),Normal (BMD-EL18205F30-P-VPI),,,,
+233128,False,,,,,,
+233127,False,,,,,,
+233120,False,,,,,,
+233099,False,,,,,,
+233098,False,,,,,,
+233014,False,,,,,,
+233011,False,,,,,,
+232955,False,,,,,,
+232893,True,A,0,,,,
+232892,True,A,0,,,,
+232590,False,,,,,,
+232264,False,,,,,,
+232263,False,,,,,,
+232117,False,,,,,,
+232116,False,,,,,,
+232076,False,,,,,,
+231976,True,,,Carrier (EMBARK),,,
+231975,True,,,Clear/Normal (501949) | Clear/Normal (501949),,,
+231974,True,,,Carrier (EMBARK),,,
+231621,False,,,,,,
+231620,False,,,,,,
+231601,False,,,,,,
+231402,False,,,,,,
+231343,False,,,,,,
+230007,False,,,,,,
+229927,False,,,,,,
+229776,True,B,0,,,,
+229755,False,,,,,,
+229735,True,Unaffected (HD-A (A + A)),"Normal (ED-0 (0,0))",,,,
+229614,True,B,0,,,,
+229354,True,A (2021-9-6915),0/0 (2021-9-6915),Clear (H433032) | Clear (H433032),Tested (LOSH 1300818),,
+229277,True,A (2019-04469),0/0 (2019-04469),Clear (H244378),Tested,,
+229130,False,,,,,,
+229059,False,,,,,,
+228836,False,,,,,,
+228834,False,,,,,,
+228803,False,,,,,,
+228796,False,,,,,,
+228737,False,,,,,,
+228736,False,,,,,,
+228669,False,,,,,,
+228651,False,,,,,,
+228615,True,Good (BMD-26330G28F-C-VPI),,,,Normal (BMD-BCA1426/28F/P-VPI),
+228586,True,Good (BMD-27311G26F-C-VPI),Elbow: DJD Grade I (UNILATERAL),Clear/Normal (EMBARK) | Clear/Normal (426484),,Normal (BMD-BCA1980/26F/S-VPI),Normal (BMD-EYE4858/40F-VPI)
+228360,False,,,,,,
+228328,False,,,,,,
+228263,False,,,,,,
+228259,False,,,,,,
+228099,True,Excellent (BMD-28728E25M-C-VPI),Normal (BMD-EL18498M25-C-VPI),Carrier (482108) | Clear/Normal (482108),,,
+228004,False,,,,,,
+227470,True,A/A,0/0 (O-O),Clear (2503 B 06707),,,
+227453,False,,,,,,
+227187,True,Good (PRELIMINARY),Normal (PRELIMINARY),,,Normal - Cardiologist (BMD-BCA2921/13M/C-VPI),Normal (BMD-EYE5067/9M-NOPI)
+227182,False,,,,,,
+227085,True,Excellent (BMD-24067E30M-VPI),,,,,
+226899,False,,,,,,
+226840,False,,,,,,
+226839,False,,,,,,
+226837,False,,,,,,
+226836,False,,,,,,
+226791,False,,,,,,
+226783,True,Good (BMD-26314G31F-C-VPI),Normal (BMD-EL16378F31-C-VPI),,,Normal (BMD-BCA1642/34F/P-VPI),Normal (BMD-EYE4076/34F-VPI)
+226741,True,A,Normal (0),Carrier (TIHODOG8463) | Clear (TIHODOG8463),,,
+226722,False,,,,,,
+226719,False,,,,,,
+226713,False,,,,,,
+226709,True,,,Clear (BMD-DM3635/4F-NOPI) | Clear (BMD-DMB491/4F-NOPI),,,
+226402,False,,,,,,
+226401,False,,,,,,
+226259,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear/Normal (PAW PRINT GENETICS) | Clear/Normal (PAW PRINT GENETICS),,Normal (BMD-BCA2487/12M/P-VPI),Normal (BMD-EYE5168/22M-VPI)
+226104,True,Good (BMD-27306G34F-C-VPI),Normal (BMD-EL17236F34-C-VPI),Clear (BMD-DM3636/10F-PI) | Clear/Normal (EMBARK) | Clear/Normal (426482) | Clear (BMD-DMB492/28F-PI),,Normal (BMD-BCA1981/34F/S-VPI),Normal (BMD-EYE4859/48F-VPI)
+225776,True,A (HD F),Normal (NORMAL),Carrier (2512 W 768354) | Clear (2512 W 768354),,,
+225715,True,Good (BMD-26982G27M-C-VPI),Normal (BMD-EL16956M27-C-VPI),Clear/Normal (EMBARK),,,
+225500,True,Mild Dysplasia (Prelim-Prelim-MILD UNILATERAL LEFT),Normal (Prelim-Prelim-NORMAL),Clear/Normal (522023) | Clear/Normal (522022),,,
+225377,True,A,1,,,,
+225295,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (499681) | Clear/Normal (499681),,,Normal (DR. STEPHANIE PUMPHRY (# 683))
+225285,True,Good (BMD-27286G25F-C-VPI),Normal (BMD-EL17220F25-C-VPI),Clear/Normal (BMD-DM3373/2F-PI),,,
+225237,True,A (LOE 2666319),0 (LOE 2666319),Carrier (A00035966) | Clear (A00035966),,,
+225110,False,,,,,,
+225109,False,,,,,,
+224832,False,,,,,,
+224795,False,,,,,,
+224746,True,B,0,,,,
+224722,True,C,0,,,,
+224356,False,,,,,,
+224229,True,Good (BMD-27746G25F-C-VPI),Normal (BMD-EL17632F25-C-VPI),Carrier (BMD-DM3592/24F-PI-CAR) | Clear (BMD-DMB461/24F-PI),,Normal (BMD-BCA2234/21F/C-VPI),Normal (BMD-EYE4618/21F-VPI)
+224115,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (ANIMAL GENETICS) | Clear/Normal (ANIMAL GENETICS),,Normal (BMD-BCA2528/24M/P-VPI),
+224083,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (07744581) | Clear/Normal (07744581) | Clear/Normal (481297) | Clear/Normal (481297),DNA Sample Donated for Canine Health Research (BMD-DNA-160/B),"Normal AO/CONG, AUSC/ECG (DR. SARAH BELL CB01)",Normal (DR. ERICA TOLAR EC323)
+223968,False,,,,,,
+223967,False,,,,,,
+223768,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (481389) | Clear/Normal (481389),,Normal (BMD-BCA2615/12M/C-VPI),Normal (BMD-EYE4745/8M-VPI)
+223723,False,,,,,,
+223722,False,,,,,,
+223649,True,Excellent (BMD-27205E33F-C-VPI),Normal (BMD-EL17144F33-C-VPI),,,,
+223558,False,,,,,,
+223557,False,,,,,,
+223555,False,,,,,,
+223553,False,,,,,,
+223165,True,Fair (BMD-28771F27F-C-VPI),Normal (BMD-EL18534F27-C-VPI),Carrier (PAW PRINT GENETICS) | Clear/Normal (PAW PRINT GENETICS),,"Normal AO/CONG, AUSC/ECHO (BMD-ACA1426/28F-VPI)",Normal (BMD-EYE5166/29F-VPI)
+223160,False,,,,,,
+222969,False,,,,,,
+222791,True,,Normal (PRELIMINARY),Carrier (483566) | Carrier (483566),,,
+222719,False,,,,,,
+222718,False,,,,,,
+222716,True,Good (BMD-27128G33F-U-PI),Normal (BMD-EL17075F33-U-PI),Clear/Normal (306560) | Clear/Normal (482660),,,
+222715,False,,,,,,
+222533,True,,,Carrier (AKC) | Clear/Normal (AKC),,,
+222486,True,Excellent (BMD-27518E28F-C-VPI),Normal (BMD-EL17426F28-C-VPI),Clear/Normal (472524) | Clear/Normal (472524),,Normal (BMD-BCA2106/28F/P-VPI),Normal (BMD-EYE4730/37F-VPI)
+222399,True,Good (#56095 (3+2=5)),Normal (#56095 (0/0)),,,,
+222301,True,Mild Dysplasia (MILD),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I),Clear/Normal (UC DAVIS),,Normal (BMD-BCA2144/24F/P-VPI),
+222241,False,,,,,,
+222044,True,Excellent (#36895 (2+2=4)),Normal (#36895 (0/0)),,,,
+222018,True,,Normal (PRELIMINARY),Carrier (435987) | Clear/Normal (435986),,Normal (BMD-BCA1927/12F/P-VPI),Normal (BMD-EYE4047/4F-VPI)
+221922,False,,,,,,
+221868,False,,,,,,
+221825,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Carrier (470098) | Clear/Normal (470097),,,
+221811,False,,,,,,
+221810,False,,,,,,
+221723,True,Good (BMD-28374G26F-P-VPI),Normal (BMD-EL18184F26-P-VPI),,,,
+221689,True,Good (PRELIM),Normal (PRELIM),Carrier (450468) | Clear/Normal (450468),,Normal - Cardiologist (BMD-BCA2306/18F/C-VPI),Normal - see health record (BMD-EYE4659/18F-VPI)
+221641,True,A,0/0,Carrier (2305 A 36162) | Clear (2305 A 36162),,,
+221576,False,,,,,,
+221575,False,,,,,,
+221534,False,,,,,,
+221533,False,,,,,,
+221507,False,,,,,,
+221496,True,,Normal (0),,,,
+221208,False,,,,,,
+221205,True,A/A,0/0 (ED 0),Clear (A00076240) | Clear (A00076240),,,
+221186,True,B (HD B),Normal (ED 0),Clear (A 00076238) | Clear (A 00076238),,,
+221125,True,Good (BMD-26393G28F-C-VPI),Normal (BMD-EL16449F28-C-VPI),,,Normal (BMD-BCA1462/28F/P-VPI),
+221116,False,,,,,,
+221084,False,,,,,,
+220984,False,,,,,,
+220872,True,Good (BMD-27188G38F-C-VPI),Normal (BMD-EL17129F38-C-VPI),Clear/Normal (ANIMAL GENETICS) | Clear/Normal (ANIMAL GENETICS),,,
+220824,True,A (HD A),Normal (ED 0),,,,
+220800,False,,,,,,
+220799,False,,,,,,
+220693,True,Normal (HD A),Normal (ED NORMAL),,,,
+220599,False,,,,,,
+220411,True,A (HD A),Normal (ED 0),Clear (1903 A 11278) | Clear (1903 A 11278),,,
+220394,False,,,,,,
+220385,True,Normal (A),Normal (0),,,,
+220251,False,,,,,,
+220250,False,,,,,,
+220249,False,,,,,,
+220074,False,,,,,,
+220058,False,,,,,,
+220045,False,,,,,,
+219972,False,,,,,,
+219923,False,,,,,,
+219911,False,,,,,,
+219855,False,,,,,,
+219854,False,,,,,,
+219842,True,,,Carrier (437128) | Clear/Normal (437129),,,
+219823,True,A (HD A),Normal (ED 0),,,,
+219818,True,,,,,Normal (BMD-BCA1194/34F/P-VPI),
+219807,False,,,,,,
+219780,True,A (A),0 (ED 0),,,,
+219669,False,,,,,,
+219570,True,Excellent (BMD-26099E25F-C-VPI),Elbow: DJD Grade I (DJD GRADE I),,,Normal (BMD-BCA1265/25F/P-VPI),
+219542,False,,,,,,
+219461,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear by Parentage | Clear by Parentage,,"Normal AO/CONG, AUSC/ECG (BMD-ACA1337/19F-VPI)",
+219416,False,,,,,,
+219361,True,A (2911 2024 HD),ED free (594 2025 ED),Carrier (A00096121) | Clear (A00096121),,,
+219355,False,,,,,,
+219281,True,Excellent (#44086 (1+2=3)),0/0 (#44086),,,,
+219278,True,Excellent (#59729 (2+1=3)),Normal (#59729 (0/0)),Carrier (#24E13573 : SOD1_C31 CARRIER) | Clear (#23E77031 : SOD1_C52 NEGATIVE / CLEAR),,,
+219265,False,,,,,,
+219217,False,,,,,,
+219124,True,Unaffected (HD-A),Normal (ED-0),,,,
+219028,True,Normal (2/2=4),Normal (0),,,,
+218893,True,,,,,Normal (BMD-BCA2090/29F/P-VPI),
+218836,True,Good (PRELIM),Normal (PRELIM),,,Normal (BMD-BCA1299/21M/P-VPI),
+218437,True,B (HD V),Normal (ED NORMAL),,,,
+218218,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (479618) | Clear/Normal (479618),,,
+218188,True,A (2572203),0 (2572203),Carrier (394282) | Clear (394281),,,
+218139,True,Good (BMD-27446G33M-P-VPI),Normal (BMD-EL17352M33-P-VPI),,,,
+218136,True,Good (BMD-26163G30M-C-NOPI),Normal (BMD-EL16245M30-C-NOPI),Clear/Normal (275297) | Clear/Normal (324734),,Normal (BMD-BCA1309/30M/P-NOPI),
+218132,True,Fair (BMD-27504F25F-C-VPI),Normal (BMD-EL17406F25-C-VPI),Carrier (414111) | Clear/Normal (414112),,,Normal (BMD-EYE4932/37F-VPI)
+218030,True,Good (BMD-27094G25F-P-VPI),Normal (BMD-EL17041F25-P-VPI),,,,Normal (DR MICHEL CARRIER ACVO135)
+217998,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Carrier (459540) | Clear/Normal (459540),,Normal (DR. J.A. WOODFIELD (CW-05)),Normal (BMD-EYE4557/22M-VPI)
+217989,True,,,Clear/Normal (EMBARK),,,
+217934,True,Good (BMD-28366G32F-C-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I),Clear/Normal (467986) | At Risk (EMBARK),,Normal (BMD-BCA1964/15F/P-VPI),Normal (BMD-EYE4521/15F-VPI)
+217902,True,A (2130-2022-HD A),0 (1241-2022-ED FREE),,,,
+217868,True,Unaffected (HD-A),Normal (ED-0),Clear (N/N) | Clear (N/N),,,
+217862,False,,,,,,
+217830,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear by Parentage | Clear/Normal (460733),DNA Sample Donated for Canine Health Research,Normal - Cardiologist (DR. LAUREN MERKOVIC (#20)),Normal (BMD-EYE4777/18M-VPI)
+217809,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (334314) | Clear/Normal (334315),,,
+217725,False,,,,,,
+217707,True,Unaffected (HD-A),Normal (ED-0),Carrier (784 148) | Clear (784 148),,,
+217684,True,Good (#57133 (4+2=6),Normal (#57133 (0/0)),,,,
+217683,True,Good (356987 (2+3=5)),Normal (#56987 (0/0)),,,,
+217611,False,,,,,,
+217600,True,A (1777 2024 HD),ED free (200-2025-ED),Carrier (A00050940) | Clear (A00050940),,,
+217556,True,,,Clear/Normal (420883) | Clear/Normal (420882),,Normal (BMD-BCA1364/15M/P-VPI),Normal (BMD-EYE4855/42M-VPI)
+217534,True,A/A (#1-1068.786 HD STATUS A),0/0 (#2-2050.805),Carrier (A00028134) | Clear (A00028134),,Clear/Normal (DR RICHARD WOOLLEY - CARDIORESPIRATORY PET REFERRALS (VIC)),Unaffected (#10103 ORCHID/ACES)
+217334,False,,,,,,
+217289,False,,,,,,
+217258,False,,,,,,
+217209,False,,,,,,
+217170,False,,,,,,
+217169,False,,,,,,
+217042,True,,,,,Normal (BMD-BCA1098/16M/P-NOPI),
+216997,True,Excellent (BMD-28333E24F-C-VPI),Normal (BMD-EL18150F24-C-VPI),Clear/Normal (154655) | Clear (BMD-DM3648/10F-PI) | Clear (BMD-DMB509/10F-PI) | Clear/Normal (154656),DNA Sample Donated for Canine Health Research,Normal - AO/CONG (BMD-ACA1364/25F-VPI),Normal (BRIAN SKOROBOHACH SKOROBOHACH 246)
+216966,True,,,,,Normal (BMD-BCA982/12M/P-VPI),
+216940,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (49889490) | Clear/Normal (49889490),,Normal (BMD-BCA2450/21F/P-VPI),Normal (BMD-EYE4739/21F-VPI)
+216902,True,Excellent (PRELIM),Normal (PRELIM),Clear/Normal (438951) | Clear/Normal (438951),,Normal - AO/CONG (BMD-ACA1251/13F-VPI),Normal (BMD-EYE4603/13F-VPI)
+216835,False,,,,,,
+216809,True,Good (BMD-28375G25F-U-VPI),Normal (BMD-EL18186F25-U-VPI),Clear (385315),,Normal (BMD-BCA2765/24F/C-VPI),Normal (BMD-EYE5027/24F-PI)
+216766,True,,Moderate Dysplasia (2),,,,
+216757,False,,,,,,
+216734,True,,,,,Normal (BMD-BCA-73/16F/P-PI),
+216478,False,,,,,,
+216287,True,A (2804-2024-HD),ED free (1746-2024-ED),Clear (A00063192) | Clear (A00063192),,,
+216062,True,,,Clear/Normal (436456) | Clear/Normal (436457),,,
+216061,True,,,Clear/Normal (436454) | Clear/Normal (436455),,,
+216056,True,Clear/Normal (HD - A),Clear/Normal (ED - 0),Clear/Normal (2408-W-115575) | Clear/Normal (2408-W-115575),,,Unaffected (EYES - CLEAR)
+215611,True,Good (PRELIM),Normal (PRELIM),Carrier (451290) | Clear by Parentage,,"Normal AO/CONG, AUSC/ECHO (DR, MEGAN KING)",Normal (BMD-EYE4705/16M-VPI)
+215484,True,,,Clear by Parentage | Clear by Parentage | Clear (A00065182) | Clear (A00065182),,,
+215388,True,Fair (BMD-28336F24M-C-VPI),Normal (BMD-EL18154M24-C-VPI),Carrier (451116) | Clear/Normal (451116),Tested (394531),Normal - AO/CONG (BMD-ACA1331/20M-VPI),Normal (DR. WILLIAM MILLER (EC007))
+215293,True,Excellent (BMD-28152E24F-C-VPI),Normal (BMD-EL17987F24-C-VPI),Clear/Normal (281623) | Clear/Normal (430903),,Normal (BMD-BCA2479/24F/P-VPI),Normal (BMD-EYE4824/25F-VPI)
+215289,True,Excellent (Prelim-Prelim-EXCELLENT),Normal (Prelim-Prelim-NORMAL),Clear/Normal (258740) | Clear/Normal (115291),,,Normal (BMD-EYE3924/11F-VPI)
+215006,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (416757) | Clear/Normal (416758),,Normal (BMD-BCA1926/13M/C-VPI),Normal (BMD-EYE4354/13M-VPI)
+214972,True,Good (PRELIM 2554832),Normal (PRELIM 2554832),Carrier (463721) | Clear/Normal (463721),,Normal - AO/CONG (BMD-ACA1219/15M-VPI),Normal (BMD-EYE4631/18M-VPI)
+214971,True,Fair (PRELIM),Normal (PRELIM),Carrier (477565) | Clear/Normal (477565),,Normal - AO/CONG (BMD-ACA1367/29M-VPI),Normal (BMD-EYE4569/25M-VPI)
+214954,True,,Normal (PRELIMINARY),Clear/Normal (419426),,,Normal (BMD-EYE4238/13F-VPI)
+214918,True,Clear/Normal (HD-A),Clear/Normal (ED-0),Clear/Normal (2406-W-28700) | Clear/Normal (2406-W-28700),,,Unaffected (EYES - CLEAR)
+214917,False,,,,,,
+214898,False,,,,,,
+214846,True,Good (BMD-26950G38F-C-VPI),,,,,
+214621,False,,,,,,
+214605,False,,,,,,
+214588,True,A,0,Carrier (A00032901) | Clear (A00032901),,,
+214587,False,,,,,,
+214586,False,,,,,,
+214287,False,,,,,,
+214218,False,,,,,,
+214180,True,A (HD A),0 (ED 0),Clear (N/N) | Clear (N/N),,,
+214176,True,Fair (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (413819) | Clear/Normal (413818),,Normal (BMD-BCA1403/20F/P-VPI),
+214126,True,Excellent (BMD-26638E24M-P-VPI),Normal (BMD-EL16660M24-P-VPI),,,Normal (BMD-BCA986/13M/P-VPI),Normal (BMD-EYE4100/10M-PI)
+214123,True,Excellent (BMD-26341E25F-P-VPI),Normal (BMD-EL16400F25-P-VPI),,,Normal (BMD-BCA985/17F/P-VPI),Normal (BMD-EYE4098/14F-VPI)
+214074,False,,,,,,
+214054,False,,,,,,
+214048,True,Good (BMD-28132G24F-C-VPI),Normal (BMD-EL17971F24-C-VPI),,,Normal (BMD-BCA2466/24F/P-VPI),
+213868,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (494709) | Clear/Normal (494709),DNA Sample Donated for Canine Health Research,Normal - AO/CONG (BMD-ACA1218/13M-VPI),Normal (BMD-EYE4525/13M-VPI)
+213786,True,Clear/Normal (HD-A),Clear/Normal (ED-0),,,,Unaffected (EYES - CLEAR)
+213784,True,Clear/Normal (HD-A),Clear/Normal (ED-0/0),Carrier (12693-0722) | Clear/Normal (12693-0722),,,
+213691,True,B (HD-B),0 (ED-0),Clear (206516) | Clear (206516),Approved (66544),,
+213556,True,HD Free,ED free,Clear (698447) | Clear (698447),,,
+213512,True,Excellent (Prelim-Prelim-EXCELLENT),Normal (Prelim-Prelim-NORMAL),Clear/Normal (40001648) | Clear/Normal (40001648),,Normal (BMD-BCA2113/13M/P-PI),Normal (BMD-EYE4571/15M-VPI)
+213509,True,Good (BMD-28184G24F-P-VPI),Normal (BMD-EL18018F24-P-VPI),Carrier (491581) | Clear/Normal (491581),,Normal (CREEKWOOD ANIMAL HOSPITAL DR. JEFF SPECTOR),Normal (DR. TAYLOR OPGENORTH (#730))
+213456,False,,,,,,
+213436,False,,,,,,
+213411,False,,,,,,
+213306,False,,,,,,
+213272,True,A (PED),0 (PED),,,,
+213156,True,Good (BMD-28518G30F-P-VPI),Normal (BMD-EL18314F30-P-VPI),Clear/Normal (512373) | Clear/Normal (512373),,Normal - AO/CONG (BMD-ACA1346/26F-VPI),Normal (BMD-EYE4907/26F-VPI)
+213003,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear (705148) | Clear (705148),,Normal (BMD-BCA2033/13F/C-VPI),Normal (BMD-EYE4398/12F-VPI)
+212987,True,Excellent (BMD-27997E24F-P-VPI),Normal (PRELIM),Clear/Normal (407249) | Clear/Normal (407250),,Normal (BMD-BCA2247/19F/C-VPI),Normal (BMD-EYE4628/19F-VPI)
+212967,False,,,,,,
+212913,True,A (1286 2022 HD),ED free (1971 2022 ED),,,,
+212847,True,Good (BMD-28013G24F-P-VPI),Normal (BMD-EL17855F24-P-VPI),Carrier (483658) | Clear by Parentage,,Normal (BMD-BCA2404/24F/P-VPI),Normal (BMD-EYE4748/25F-VPI)
+212727,True,Good (BMD-28071G24F-C-VPI),Normal (BMD-EL17915F24-C-VPI),Clear/Normal (438840) | Clear/Normal (438841),DNA Sample Donated for Canine Health Research,Normal - AO/CONG (BMD-ACA1181/13F-NOPI),
+212721,True,A (422024 HD A),ED free (1100-2024-ED),Clear (A00033604) | Clear (A00033604),,,
+212720,True,Unaffected (HD-A),Normal (ED-0),Carrier (PKRI|-142597) | Clear (PKRI|-142597),,,
+212669,True,Fair (BMD-26922F28M-C-VPI),Normal (BMD-EL16909M28-C-VPI),,,,
+212543,True,,,Clear (2105-W-36787) | Clear (2105-W-36787),,,
+212542,False,,,,,,
+212540,False,,,,,,
+212539,False,,,,,,
+212386,True,Excellent (PRELIMINARY),Normal (PRELIM),Clear by Parentage | Clear/Normal (48!199),,Normal - AO/CONG (BMD-ACA1243/18F-VPI),Normal (BMD-EYE4586/18F-VPI)
+212267,False,,,,,,
+212176,True,Excellent (BMD-26345E48F-C-VPI),,Carrier (EMBARK),,Normal (BMD-BCA1398/48F/P-VPI),
+212141,True,Good (BMD-27375G40F-C-VPI),Elbow: DJD Grade I (UNILATERAL LEFT - RIGHT NORMAL),Clear/Normal (198333) | Clear/Normal (199458),,Normal (BMD-BCA2031/40F/P-VPI),Normal (BMD-EYE4491/41F-VPI)
+212139,True,"Mild Dysplasia (UNILATERAL LEFT SUBLUXATION, REMODLING OF FEMORAL HEAD/NECK, OA)",Normal (BMD-EL17880F24-P-VPI),Clear by Parentage | Clear (EMBARK),DNA Sample Donated for Canine Health Research,Normal (DR SAMANTHA GREEN),Clear (EMBARK)
+212087,False,,,,,,
+212050,True,Good (BMD-26372G28F-C-VPI),Elbow: DJD Grade I,,,Normal (BMD-BCA1457/28F/P-VPI),
+212043,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (425612) | Clear/Normal (425613),,Normal (BMD-BCA2026/15F/C-VPI),Normal (BMD-EYE4502/16F-VPI)
+212042,False,,,,,,
+212041,True,B (HD B),0 (ED FREE),Clear (2204 W 27069) | Clear (2204 W 27069),,,
+212010,False,,,,,,
+211998,False,,,,,,
+211983,False,,,,,,
+211884,True,,Normal (0),,,,
+211838,True,Excellent (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (398373) | Clear/Normal (398374),,Normal (BMD-BCA1857/12M/P-VPI),Normal (DR. STEVEN M. ROBERTS)
+211830,True,Excellent (BMD-25438E25F-P-VPI),Normal (BMD-EL15741F26-P-VPI),,,,Normal (BMD-EYE3627/17F-VPI)
+211810,True,Good (BMD-25347G25F-C-NOPI),Normal (BMD-EL15527F25-C-NOPI),,,,
+211720,True,,Normal (0),,,,
+211674,True,Fair (BMD-26144F63F-C-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I),,,,
+211673,True,Fair (Prelim-Prelim-FAIR),Normal (Prelim-Prelim-NORMAL),,,,
+211647,False,,,,,,
+211646,False,,,,,,
+211598,False,,,,,,
+211554,True,Fair (BMD-26105F25M-C-VPI),Normal (BMD-EL16197M25-C-VPI),,,Normal (BMD-BCA726/15M/P-VPI),Normal (BMD-EYE4645/46M-VPI)
+211520,True,A (HD A),Normal (ED NORMAL),,,,
+211382,False,,,,,,
+211379,False,,,,,,
+211360,False,,,,,,
+211257,True,Good (BMD-25321G25M-C-VPI),Normal (BMD-EL15506M25-C-VPI),Carrier (275584) | Clear/Normal (275585),,Normal - Cardiologist,Not passed (LEFT EYE IRIS TO IRIS PPM)
+211121,False,,,,,,
+211119,False,,,,,,
+211098,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (352239) | Clear/Normal (477733),,"Normal AO/CONG, AUSC/ECG/ECHO (DR MEGAN KING)",Normal - see health record (DR. MARTHA LOW (EC502))
+211036,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (341701) | Clear/Normal (341702),,Clear/Normal (BMD-BCA1358/12M/P-VPI),Normal (DR SYDNEY EDWARDS EC 583)
+210933,True,,Normal (PRELIMINARY),Clear/Normal (399388) | Clear/Normal (399389),,Normal (BMD-BCA1517/15F/P-VPI),
+210878,False,,,,,,
+210877,False,,,,,,
+210869,True,Excellent (BMD-27555E24F-U-PI),Normal (BMD-EL17461F24-U-PI),Clear/Normal (482883) | Clear/Normal (482883),,Normal (BMD-BCA2120/24F/P-VPI),Normal (BMD-EYE4604/27F-VPI)
+210859,False,,,,,,
+210786,True,Good (BMD-27117G24F-P-VPI),Normal (BMD-EL17066F24-P-VPI),Clear/Normal (352270) | Clear/Normal (352272),,Normal (BMD-BCA1820/22F/C-PI),Normal (BMD-EYE4272/20F-VPI)
+210763,True,Excellent (BMD-27279E29F-P-VPI),Normal (BMD-EL17215F29-P-VPI),Carrier (310338) | Clear/Normal (13482),,,Normal (DR. KELLI COMBS RAMEY)
+210756,True,Good (BMD-27280G25M-C-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I),Carrier (393030) | Clear/Normal (332310),,"Normal CONGENITAL, AUSC ONLY (DR. KIM HAWKES)",Normal (DR. KELLI COMBS RAMEY)
+210738,True,Good (BMD-26650G24F-C-VPI),Normal (BMD-EL16671F24-C-VPI),Clear/Normal (435134) | Clear/Normal (435135),,"Normal AO/CONG, AUSC/ECHO (DR LUIS BRAZ-RUIVO)",Normal (BMD-EYE4155/25F-PI)
+210689,False,,,,,,
+210668,True,Good (BMD-27488G24M-P-VPI),Normal (BMD-EL17389M24-P-VPI),Clear/Normal (392656) | Clear/Normal (392657),,,Normal - see health record (BMD-EYE4614/27M-VPI)
+210525,True,Good (PRELIM),Normal (PRELIM),Carrier (483306) | Clear/Normal (483306),,"Normal AO/CONG, AUSC/ECHO (DR DEREK HANES CH17)",
+210463,False,,,,,,
+210454,True,A (181-2023-HD),ED free (108-2023-ED),Clear (A00044442) | Clear (A00044442),,,
+210326,True,,Normal (PRELIMINARY),Carrier (298973) | Clear/Normal (298971),,Normal (BMD-BCA1065/17M/C-PI),Normal - see health record (RACHEL ALLBAUGH)
+210265,False,,,,,,
+210228,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear/Normal (375265) | Clear/Normal (375264),,Normal (BMD-BCA1862/12M/P-VPI),Normal (BMD-EYE4037/6M-VPI)
+209783,False,,,,,,
+209769,False,,,,,,
+209731,False,,,,,,
+209714,True,,Normal (0),,,,
+209679,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (426939) | Clear/Normal (426940),DNA Sample Donated for Canine Health Research,"Normal AO/CONG, AUSC/ECHO (DR DAN HOGAN CH22)",
+209668,True,Good (PRELIMINARY),Elbow: DJD Grade I (PRELIM),Clear (BMD-DM3489/11M-PI) | Clear/Normal (402233) | Clear/Normal (402234) | Clear (BMD-DMB406/11M-PI),,Normal - AO/CONG (BMD-ACA1085/20M-VPI),Normal (BMD-EYE4009/16M-VPI)
+209624,True,Excellent (BMD-27923E24F-P-VPI),Normal (BMD-EL17778F24-P-VPI),Clear/Normal (396936) | Clear/Normal (396937),,"Normal AO, AUSC/ECHO (BMD-ACA1160/32F-VPI)",Normal (BMD-EYE4158/9F-VPI)
+209582,False,,,,,,
+209581,False,,,,,,
+209209,False,,,,,,
+208997,True,Good (BMD-25664G24F-C-VPI),Normal (BMD-EL15814F24-C-VPI),,,Normal (BMD-BCA713/19F/P-VPI),
+208975,True,Excellent (BMD-27165E24M-P-VPI),Normal (BMD-EL17105M24-P-VPI),Carrier (469447) | Clear/Normal (469447),,Normal - AO/CONG (BMD-ACA1159/24M-VPI),Normal (BMD-EYE4497/28M-VPI)
+208970,True,Good (BMD-27158G24F-C-VPI),Normal (BMD-EL17096F24-C-VPI),,,Normal - AO/CONG (BMD-ACA1192/26F-VPI),Normal (BMD-EYE4484/26F-VPI)
+208964,True,A (A),0/0 (0/0),,,,
+208957,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (383537) | Clear/Normal (383538),,Normal (BMD-BCA1062/15M/P-VPI),Normal (BMD-EYE3806/18M-VPI)
+208844,False,,,,,,
+208789,True,Good (BMD-26407G24M-C-VPI),Normal (BMD-EL16460M24-C-VPI),Clear (BMD-DM3419/5M-NOPI) | Clear (BMD-DMB363/5M-NOPI),,,
+208778,True,A (2619 2023 HD A),ED free (458 2024 ED),Clear (AOOO71013) | Clear (A00071013),,,
+208760,True,Good (BMD-25911G26M-C-VPI),Normal (BMD-EL16032M26-C-VPI),,,Normal (BMD-BCA1153/26M/P-VPI),
+208434,True,Excellent (PRELIMINARY),Normal (PRELIMINARY),,,,
+208139,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (406059) | Clear/Normal (406060),,Normal - Cardiologist (BMD-BCA1423/12M/C-VPI),Normal (BMD-EYE3945/12M-VPI)
+208085,True,,,Clear (N/N) | Clear (N/N),,,
+208006,False,,,,,,
+207832,True,Excellent (BMD-27796E25F-P-VPI),Normal (PRELIM),Clear by Parentage | Clear (386048),DNA Sample Donated for Canine Health Research,"Normal AO, AUSC/ECHO (DR HOGAN)",Normal (DR BELKNAP)
+207773,True,,,Clear/Normal (391413) | Clear/Normal (391412),,,
+207692,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (97468) | Clear/Normal (97469),,Normal (BMD-BCA1878/15M/P-VPI),Normal (BMD-EYE4459/20M-VPI)
+207687,True,A (A),Normal (NORMAL),Clear (TIHODOG 11627) | At Risk (TIHODOG 11627),,,
+207674,True,Good (BMD-25686G25M-C-VPI),Normal ((0/0) DR. VIEFHUES),Clear/Normal (2109-A-12560) | Clear/Normal (2109-A-12560),,Normal (BMD-BCA1128/28M/C-VPI),Normal (BMD-EYE3761/28M-VPI)
+207664,True,,Mild Dysplasia (1),,,,
+207657,False,,,,,,
+207532,False,,,,,,
+207528,False,,,,,,
+207462,False,,,,,,
+207444,True,Normal (HD-A),Normal (ED-0),Clear/Normal (2201-W-04056) | Clear/Normal (2201-W-04056),,,Unaffected (EYES-CLEAR)
+207310,False,,,,,,
+207301,False,,,,,,
+207277,False,,,,,,
+207273,False,,,,,,
+207271,False,,,,,,
+207270,False,,,,,,
+207258,False,,,,,,
+207240,True,,,,,Normal (BMD-BCA956/18M/P-VPI),
+207235,True,Excellent (BMD-28291E40F-C-VPI),Normal (BMD-EL18111F40-C-VPI),Clear/Normal (273419) | Clear/Normal (476040),,,Normal (BMD-EYE4359/24F-VPI)
+207219,False,,,,,,
+207212,True,Excellent (PRELIMINARY),Normal (PRELIMINARY),Carrier (461599) | Clear/Normal (461599),,Normal - Cardiologist (DR MOISE CM09),See Health (DR. KELLY KNICKELBEIN)
+207195,True,,,Clear/Normal (285813) | Clear/Normal (285811),,,
+207089,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (374302),,"Normal AO, AUSC/ECHO (DR. JOHN MACGREGOR (CM-01))",Normal (DR. RUTH MARRION)
+207067,True,Excellent (BMD-27617E24M-C-VPI),Normal (BMD-EL17516M24-C-VPI),Clear/Normal (480369) | Clear/Normal (480369),,Normal - AO/CONG (BMD-ACA1227/21M-VPI),Normal (BMD-EYE4543/21M-VPI)
+207007,False,,,,,,
+206976,True,Fair (PRELIMINARY),Normal (PRELIMINARY),Carrier (305647) | Carrier (BMD-DM3407/13F-PI-CAR) | Clear/Normal (305647) | Clear (BMD-DMB356/13F-PI),,Normal - AO/CONG (BMD-ACA947/13F-VPI),Normal (BMD-EYE3667/13F-VPI)
+206909,True,Good (BMD-27450G24M-C-VPI),Normal (BMD-EL17357M24-C-VPI),Clear/Normal (286824) | Clear/Normal (286823),,Normal - Cardiologist (DR BRUNO BOULET CB25),Normal - see health record (DR CHERYL CULLEN ACVO 216)
+206832,True,Good (BMD-25073G26F-VPI),,,,,
+206794,False,,,,,,
+206736,True,Unaffected (HD-A),Normal (ED-0),Clear (N/N) | Clear (N/N),,,
+206667,True,Good (BMD-27290G25F-P-VPI),Normal (BMD-EL17223F25-P-VPI),Carrier (344118) | Clear/Normal (356264),,Normal - Cardiologist (DR MOISE),Normal (DR KERN EC12)
+206547,True,Good (BMD-25121G25F-VPI),,,,Normal (BMD-BCA616/25F/P-VPI),
+206545,True,Good (BMD-26224G26M-C-VPI),Normal (BMD-EL16293M26-C-VPI),,,Normal (BMD-BCA663/12M/P-VPI),Normal (BMD-EYE4697/47M-VPI)
+206540,True,,,,,Normal (BMD-BCA540/16F/P-NOPI),
+206515,False,,,,,,
+206443,True,Good (BMD-27690G25F-C-VPI),Elbow: DJD Grade I,Clear/Normal (379926) | Clear/Normal (379927),,Normal - AO/CONG (BMD-ACA1073/13F-PI),Normal (BMD-EYE4156/13F-PI)
+206388,False,,,,,,
+206364,True,Excellent (BMD-26309E24F-P-VPI),Normal (BMD-EL16374F24-P-VPI),Clear/Normal (329217) | Clear/Normal (329218),,Normal (BMD-BCA1064/17F/C-VPI),Normal - see health record (BMD-EYE3688/38F-VPI)
+206361,True,,Normal (BMD-EL14961M25-VPI),,,,
+206219,True,,Normal (PRELIMINARY),Clear/Normal (268773) | Clear/Normal (268774),,,Normal (BMD-EYE3091/23F-VPI)
+206189,False,,,,,,
+206144,True,Unaffected (HD-FREI),Normal (ED 0/0),Clear (TIHODOG 11135) | Clear (TIHODOG 11135),,,
+206134,True,Good (PRELIMINARY),Elbow: DJD Grade I (PRELIMINARY),Clear/Normal (368362) | Clear/Normal (382541),,Normal (BMD-BCA1932/23F/P-VPI),Normal (DR. CARRIE BREAUX (315))
+206088,True,Excellent (BMD-24585E39M-NOPI),Normal (BMD-EL14864M39-NOPI),,,Normal (BMD-BCA256/39M/P-NOPI),
+205997,True,,,,,Normal (BMD-BCA428/37F/P-VPI),
+205980,False,,,,,,
+205834,True,Excellent (BMD-27535E25M-C-VPI),Normal (BMD-EL17442M25-C-VPI),Carrier (368359) | Clear/Normal (94238),,Normal - AO/CONG (BMD-ACA1257/27M-VPI),Normal (BMD-EYE4591/27M-VPI)
+205815,False,,,,,,
+205814,False,,,,,,
+205778,True,Good (BMD-24937G25M-VPI),Normal (BMD-EL15171M25-VPI),,,Normal (BMD-BCA476/25M/P-VPI),
+205722,True,Good (BMD-24946G35F-NOPI),Normal (BMD-EL15179F35-NOPI),,,,
+205662,True,Good (BMD-25497G24F-C-VPI),Normal (BMD-EL15669F24-C-VPI),,,,
+205574,False,,,,,,
+205562,True,Unaffected (HD-A),Normal (ED-0),,,,
+205561,False,,,,,,
+205559,True,,Normal (0/0=0),,,,
+205426,True,A (13962023 HD),ED free (1957 2023 ED FREE),Carrier (A00050345) | Clear (A00050345),,,
+205424,True,A (HD A),0 (ED 0),Carrier (A00044072) | Clear (A00044072),,,
+205329,False,,,,,,
+205049,True,Fair (BMD-24350F31M-VPI),Normal (BMD-EL14660M31-VPI),,,,
+204979,True,Excellent (#24358 (2/2)),Normal (#24358 (0/0)),,,,
+204922,True,C (HD L),Normal (ED NORMAL),Carrier (A00004243) | Clear (A00004243),,,
+204920,False,,,,,,
+204862,True,A (3666 2022 HD),ED free (980 2023 ED),Clear (A00021727) | Clear (A00021727),,,
+204741,True,,Normal (0),Clear (A00015444) | At Risk (A 15000444),,,
+204728,True,,Normal (0),,,,
+204576,True,,Mild Dysplasia (1),,,,
+204541,True,A,0/0,Carrier (N/DM) | Clear (N/N),,,
+204501,True,Good (BMD-27591G25F-C-VPI),Normal (BMD-EL17527F25-C-VPI),Carrier (406234) | Clear/Normal (406233),,Normal (BMD-BCA2210/27F/C-VPI),Normal (BMD-EYE4625/28F-VPI)
+204436,False,,,,,,
+204435,False,,,,,,
+204427,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear/Normal (361330) | Clear/Normal (361331),,Normal (BMD-BCA1500/12M/P-VPI),Normal (BMD-EYE4032/13M-VPI)
+204303,True,,Normal (BMD-EL16561M24-C-VPI),Carrier (198240) | Clear/Normal (22011/Y0094),,Normal (BMD-BCA1532/24M/P-VPI),Normal (BMD-EYE4116/25M-VPI)
+204169,True,A (364-2024-HD),ED free (240-2024-ED),Carrier (A00064821) | Clear (A00064821),,,
+204127,True,Good (BMD-25732G40F-C-VPI),Normal (BMD-EL15869F40-C-VPI),Clear/Normal (EMBARK),,,
+204062,True,Excellent (PRELIM),Normal (PRELIM),Clear/Normal (370557) | Clear/Normal (370556),,Normal - AO/CONG (BMD-ACA1111/34M-VPI),Normal (BMD-EYE3611/16M-VPI)
+204038,True,Good (BMD-27383G24F-P-VPI),Normal (BMD-EL17294F24-P-VPI),Carrier (BMD-DM3502/18F-PI-CAR) | Carrier (453017) | Clear/Normal (453017) | Clear (BMD-DMB412/18F-PI),,Normal - AO/CONG (BMD-ACA1316/34F-VPI),Normal (BMD-EYE4213/32F-PI)
+203978,True,Fair (BMD-24949F40M-VPI),Normal (BMD-EL15181M40-VPI),,,,
+203961,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear/Normal (454867) | Clear/Normal (454867),,Normal (BMD-BCA1794/29F/P-VPI),
+203951,True,Excellent (PRELIM),Normal (PRELIM),Clear/Normal (356125) | Clear/Normal (356126),,Normal (BMD-BCA1306/13F/C-VPI),Normal (BMD-EYE3872/38F-VPI)
+203732,True,A (A),0 (0),Clear (2303-W-22520) | Clear (2303-W-22520),,,
+203553,True,Fair (BMD-24982F34F-VPI),Normal (BMD-EL15215F34-VPI),,,,
+203542,False,,,,,,
+203516,False,,,,,,
+202780,False,,,,,,
+202757,True,Fair (BMD-25132F29M-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I UNILATERAL RIGHT),,,,
+202733,True,Good (BMD-26849G24F-C-VPI),Normal (BMD-EL16848F24-C-VPI),,,Normal (BMD-BCA1720/25F/P-VPI),
+202723,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (359846) | Clear/Normal (359845),,Normal - AO/CONG (BMD-ACA1077/16M-VPI),Normal (BMD-EYE4178/16M-VPI)
+202558,False,,,,,,
+202530,True,Good (BMD-27225G27F-C-VPI),Normal (BMD-EL17162F27-C-VPI),Clear/Normal (329807) | Clear/Normal (329808),,Normal (BMD-BCA1942/27F/S-VPI),Normal (DR. CARRIE BREAUX (315))
+202176,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (350052) | Clear/Normal (350053),,Normal (BMD-BCA748/18M/P-VPI),Normal (BMD-EYE4885/58M-PI)
+202171,True,Good (PRELIMS),Normal (PRELIMS),Carrier (221114) | Clear/Normal (221113),,Normal (BMD-BCA1202/18F/P-VPI),
+202094,True,Good (PRELIM),Normal (PRELIM),Carrier (132400) | Clear/Normal (132400),,,
+202091,True,Good (BMD-25651G33M-P-VPI),Normal (BMD-EL15803M33-P-VPI),Carrier (334332),,,
+202045,False,,,,,,
+201971,True,Good (PRELIM),Normal (PRELIM),Clear (197116) | Clear/Normal (197422),,"Normal AO/CONG, AUSC/ECHO (BMD-ACA1402/54F-VPI)",Normal (BMD-EYE3849/47F-VPI)
+201966,True,Excellent (BMD-26997E25M-C-VPI),Normal (BMD-EL16967M25-C-VPI),Clear/Normal (296095) | Clear/Normal (296095),,,Normal (DR. BERDOULAY)
+201863,True,Good (BMD-27230G25M-C-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I UNILATERAL RIGHT),Clear/Normal (347854) | Clear/Normal (461598) | Clear/Normal (461598),,Normal - AO/CONG (BMD-ACA1173/27M-VPI),Normal (DR. KELLY KNICKELBEIN EC651)
+201682,True,Excellent (BMD-27526E28F-C-VPI),Normal (BMD-EL17432F28-C-VPI),Clear/Normal (344253) | Clear/Normal (344246),,Normal (BMD-BCA1691/18F/C-VPI),Normal (BMD-EYE3747/9F-VPI)
+201671,True,Excellent (BMD-26453E33M-C-VPI),Normal (BMD-EL16499M33-C-VPI),Clear/Normal (EMBARK) | Clear/Normal (463855),,Normal (BMD-BCA2651/59M/P-VPI),
+201457,True,Excellent (BMD-25145E24M-VPI),Normal (BMD-EL15354M24-VPI),,,,
+201109,True,Good (BMD-26820G25M-C-VPI),Normal (BMD-EL16823M25-C-VPI),Clear (190729) | Clear/Normal (190863),,,
+201094,True,Good (BMD-27273G24F-C-CPI),Elbow: DJD Grade I,Clear/Normal (366734) | Clear/Normal (366733),,"Normal AO/CONG, AUSC/ECHO (BMD-ACA1100/18F-VPI)",Normal (DR. STEVEN M. ROBERTS ((054))
+200218,True,,,,,Normal (BMD-ACA856/18F-VPI),Normal (BMD-EYE3148/18F-VPI)
+200214,False,,,,,,
+200213,True,Good (BMD-24564G24F-VPI),,,,,
+200212,False,,,,,,
+200208,True,Excellent (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (254452) | Clear/Normal (254453),,Normal - AO/CONG (BMD-ACA990/13F-VPI),Normal (BMD-EYE3779/12F-VPI)
+200071,True,,Normal (0),,,,
+199697,False,,,,,,
+198964,True,Excellent (BMD-27492E28F-C-VPI),Normal (PRELIM),Clear/Normal (348109) | Clear/Normal (348108),,Normal (BMD-BCA2061/27F/C-VPI),Normal (BMD-EYE4473/27F-VPI)
+198880,False,,,,,,
+198875,True,Good (BMD-26938G27M-C-VPI),Normal (BMD-EL16921M27-C-VPI),Clear/Normal (350323) | Clear/Normal (350324),,Normal (BMD-BCA1483/22M/C-VPI),Normal (BMD-EYE3988/22M-VPI)
+198797,True,Good (BMD-26480G24F-C-VPI),Normal (BMD-EL16522F24-C-VPI),Carrier (1035) | Clear/Normal (1035),,Normal (BMD-BCA2018/35F/C-VPI),Normal (BMD-EYE4418/35F-VPI)
+198796,True,Good (BMD-26591G25F-C-VPI),Normal (BMD-EL16622F25-C-VPI),,,,
+198788,True,Fair (Prelim-Prelim-FAIR),Normal (Prelim-Prelim-NORMAL),,,,
+198633,True,Good (BMD-24293G25F-VPI),,,,Normal (BMD-BCA122/25F/P-VPI),Normal (BMD-EYE4845/78F-VPI)
+198553,True,Good (BMD-26376G29F-C-VPI),Normal (BMD-EL16436F29-C-VPI),,,,Normal (BMD-EYE4314/35F-VPI)
+198336,True,A (2329-2022-HD A),ED free (18-2023-ED FREE),Clear by Parentage | Clear by Parentage,,,
+198311,True,Good (BMD-25427G26F-U-VPI),Normal (BMD-EL15603F26-U-VPI),Carrier (384197) | Clear/Normal (384196),,Normal (BMD-BCA818/26F/P-VPI),
+198242,False,,,,,,
+198205,False,,,,,,
+198052,False,,,,,,
+198051,True,A/B (A/B),0/0 (0/0),Clear/Normal (PEDIGREE) | Clear/Normal (PEDIGREE),,,
+198023,True,,Normal (0),,,,
+197795,True,A (1536 2022 HD),ED free (2019 2022 ED),Clear (05906W0721) | Clear (05906W0721),,,
+197761,True,Fair (BMD-27434F32F-C-VPI),Normal (BMD-EL16896F24-C-VPI),Clear/Normal (350328) | Clear/Normal (350329),,Normal (BMD-BCA2231/35F/C-VPI),Normal (BMD-EYE4616/35F-VPI)
+197684,True,A,3,,,,
+197636,True,Good (BMD-24696G25M-VPI),,Carrier (158851) | Clear/Normal (158850),,Normal (BMD-BCA1171/43M/P-VPI),
+197571,False,,,,,,
+197512,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (181496),,Normal (BMD-BCA750/14M/P-VPI),Normal (BMD-EYE3760/21M-VPI)
+197463,True,Excellent (BMD-24423E28M-VPI),Normal (BMD-EL14725M28-VPI),,,,
+197332,False,,,,,,
+197173,True,Normal (HD-A/A),Normal (ED-0/0),Carrier (DM1A-N/DM) | Clear (DM1B-N/N),,,
+197165,True,Good (BMD-24928G24F-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I),Carrier (177876) | Clear/Normal (177877),,,
+197113,True,Good (PRELIM),Elbow: DJD Grade I (PRELIM),Clear/Normal (258743) | Clear/Normal (258744),,Normal (BMD-BCA1006/19F/C-VPI),Normal (BMD-EYE3654/19F-VPI)
+197087,True,Good (PRELIMINARY REPORT),Clear/Normal (PRELIMINARY REPORT),Clear/Normal (355704) | Clear/Normal (355702),,Normal (BMD-BCA782/14F/C-VPI),Normal (BMD-EYE3475/14F-VPI)
+197054,True,Fair (BMD-26784F24F-U-VPI),Normal (BMD-EL16792F24-U-VPI),Clear/Normal (313139) | Clear/Normal (313138),,Normal (BMD-BCA1735/25F/C-VPI),Normal (BMD-EYE4179/25F-VPI)
+197049,True,Good (BMD-27004G24F-C-VPI),Normal (BMD-EL16975F24-C-VPI),Clear/Normal (331244) | Clear/Normal (331245),,Normal (BMD-BCA1473/18F/C-VPI),Normal - see health record (BMD-EYE3731/10F-VPI)
+197032,True,Good (PRELIMINARY),Elbow: DJD Grade I (PRELIMINARY - UNILATERAL LEFT),Carrier (367471) | Clear/Normal (367472),,"Normal AO/CONG, AUSC/ECG/ECHO (DR. MEGAN KING)",Normal (BMD-EYE3888/21M-VPI)
+196986,True,Fair (HD - V),Normal (ED-NORMAL),Carrier (793 827) | Clear (793 827),,,
+196947,True,Good (#44176 (2/3)),Normal (#44176 (0/0)),,,,
+196901,True,Good (BMD-27039G24F-C-VPI),Normal (PRELIM),Carrier (247219) | Clear/Normal (396108),,Normal - AO/CONG (BMD-ACA1028/17F-VPI),Normal (BMD-EYE3946/17F-VPI)
+196847,True,A (1475-2023-HD),ED free (922-2023-ED),Carrier (533185) | Clear (533185),,,
+196817,False,,,,,,
+196814,True,,,Clear/Normal (321432) | Clear/Normal (321431),,,
+196674,True,Excellent (BMD-24370E25F-VPI),Normal (BMD-EL14683F25-VPI),Clear/Normal (150523) | Clear/Normal (168308),,Normal (DR. MOISE CORNELL),Normal (DR. KERN EC12)
+196545,False,,,,,,
+196469,True,Excellent (BMD-27934E39F-P-VPI),Normal (BMD-EL17791F39-P-VPI),At Risk (313302),,Normal - AO/CONG (BMD-ACA1193/32F-VPI),Normal (BMD-EYE3973/7F-PI)
+196455,True,,Normal (BMD-EL15245M25-VPI),,,,
+196315,True,,Normal (0),,,,
+196304,True,Good (BMD-26907G25M-C-VPI),Elbow: DJD Grade I (PRELIMINARY - UNLIATERAL RIGHT),Clear/Normal (119657) | Clear/Normal (398377),,"Normal AO/CONG, AUSC/ECHO (DR. ANNA SIROCHMAN CCSI)",Normal (DR. SAMI PEDERSON (608))
+196279,True,Good (BMD-26753G24F-P-VPI),Normal (BMD-EL16768F24-P-VPI),Carrier (221118) | Clear/Normal (221117),,Normal (BMD-BCA1667/24F/P-VPI),
+196083,True,Good (PRELIM),,Carrier (309331) | Clear/Normal (309330),,,
+196077,True,Excellent (BMD-26682E28F-C-VPI),Normal (BMD-EL16698F28-C-VPI),Clear/Normal (338963) | Clear (BMD-DM3488/10F-PI) | Clear (BMD-DMB405/10F-PI) | Clear/Normal (338964),,Normal - AO/CONG (BMD-ACA1084/31F-VPI),Normal (BMD-EYE4008/27F-VPI)
+196011,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (282595) | Clear/Normal (282597),,,Normal (DR MACLAREN E186)
+195967,False,,,,,,
+195944,True,Good (BMD-24751G47M-VPI),Normal (BMD-EL15002M47-VPI),Clear/Normal (181561) | Clear/Normal (184276) | Clear (BMD-DM3314/50M-PI) | Clear (BMD-DMB308/50M-PI),,Normal - AO/CONG (BMD-ACA1256/82M-VPI),Normal - see health record (BMD-EYE3350/52M-VPI)
+195897,True,A (3148 2021 HD),ED free (594 2022 ED),Carrier (2111 N 16291) | Clear (2111 N 16291),,,
+195876,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (382568) | Clear/Normal (382569),,Normal (BMD-BCA796/13M/P-NOPI),Normal (BMD-EYE3817/21M-NOPI)
+195755,True,Good (BMD-26945G25F-P-VPI),Normal (BMD-EL16929F25-P-VPI),Carrier (316601) | Clear/Normal (316602),,Normal - AO/CONG (BMD-ACA995/16F-VPI),Normal (BMD-EYE3522/7F-VPI)
+195735,False,,,,,,
+195711,True,Good (BMD-26714G25F-C-VPI),Normal (BMD-EL16733F25-C-VPI),Clear/Normal (41492) | Clear/Normal (41493),,Normal - AO/CONG (BMD-ACA1057/24F-VPI),Normal (BMD-EYE4148/26F-VPI)
+195635,False,,,,,,
+195543,True,Good (PRELIM),Normal (PRELIM),Carrier (310334) | Clear/Normal (310333),,Normal (DR HAWKES),Normal (DR KELLI COMBS RAMEY ACVO 393)
+195370,True,Good (BMD-26427G24M-P-VPI),Normal (BMD-EL16479M24-P-VPI),Clear/Normal (330850) | Clear/Normal (330851),,"Normal AO/CONG, AUSC/ECG (BMD-ACA1149/48M-PI)",Normal - see health record (BMD-EYE4103/26M-VPI)
+195152,True,Excellent (BMD-26557E37F-U-PI),Normal (PRELIM),,,Normal (BMD-BCA533/16F/P-VPI),Normal - see health record (BMD-EYE3325/18F-VPI)
+195145,False,,,,,,
+194911,False,,,,,,
+194757,False,,,,,,
+194669,True,Excellent (BMD-26531E24F-C-VPI),Normal (BMD-EL16569F24-C-VPI),Carrier (19363) | Clear/Normal (9597),,Normal (BMD-BCA1472/22F/C-VPI),Normal - see health record (BMD-EYE3726/14F-VPI)
+194636,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (264041),,Normal - AO/CONG (BMD-ACA991/17M-VPI),Normal (DR. JENNIFER URBANZ (248))
+194617,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear by Parentage | Clear/Normal (310302),,Normal (BMD-BCA964/12M/P-VPI),Normal - see health record (BMD-EYE4706/42M-VPI)
+194565,False,,,,,,
+194561,True,,Normal (0),,,,
+194487,False,,,,,,
+194368,True,,Normal (0),,,,
+194323,False,,,,,,
+194310,True,,Normal (BMD-EL14783F32-VPI),,,Normal (BMD-BCA207/32F/P-VPI),
+194218,True,Good (BMD-26560G24F-P-VPI),Normal (BMD-EL16591F24-P-VPI),Carrier (298408) | Clear by Parentage | Clear/Normal (525334),,Normal - AO/CONG (BMD-ACA1101/28F-VPI),Normal (BMD-EYE3502/10F-NOPI)
+194174,True,Excellent (BMD-26864E24F-P-VPI),Normal (BMD-EL16862F24-P-VPI),Clear by Parentage | Clear by Parentage,,Normal - Cardiologist (DR HERNDON CH03),Normal (DR. CINDY MAR)
+194056,False,,,,,,
+193937,True,Good (BMD-26218G25F-C-VPI),Normal (BMD-EL16288F25-C-VPI),Clear/Normal (290946) | Clear/Normal (290947),,Normal (BMD-BCA1319/25F/C-VPI),Normal (BMD-EYE3880/25F-VPI)
+193911,True,A (3728 2022 HD),Normal (2206 2022 ED),,,,
+193907,False,,,,,,
+193096,True,Good (BMD-26327G24F-P-VPI),Normal (BMD-EL16390F24-P-VPI),Carrier (494768) | Clear/Normal (494768),,Normal - AO/CONG (BMD-ACA1068/27F-VPI),Normal (BMD-EYE4141/27F-VPI)
+193025,True,Normal B (1264-18386),ED free (1264-18386),Clear/Normal (284565) | Clear/Normal (284565),,,Clear/Normal (1264-18386)
+192908,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (271132) | Clear/Normal (271133),,Normal (BMD-BCA286/12F/P-VPI),
+192878,False,,,,,,
+192870,True,Good (BMD-25278G27M-C-VPI),Normal (BMD-EL15463M27-C-VPI),,,,
+192858,True,Good (BMD-25041G31M-VPI),Normal (BMD-EL15260M31-VPI),Carrier (316719) | Clear/Normal (316720),,Normal - Cardiologist,Normal - see health record (DR. AMBER LABELLE ACVO 368)
+192740,True,A,0,Clear (568 K),,,
+192670,False,,,,,,
+192609,True,Good (BMD-26266G24M-C-VPI),Normal (BMD-EL16332M24-C-VPI),Carrier (291243) | Clear/Normal (291245),,Normal (BMD-BCA1225/43M/C-VPI),Normal (BMD-EYE3755/43M-VPI)
+192543,False,,,,,,
+192504,True,Excellent (PRELIM),Normal (PRELIM),Clear/Normal (382577) | Clear/Normal (393586),,Normal (BMD-BCA485/14F/P-NOPI),Normal (BMD-EYE3114/9F-NOPI)
+192501,True,Good (PRELIM),Normal (PRELIM),Clear by Parentage | Clear by Parentage,,Normal - AO/CONG (BMD-ACA1106/32M-VPI),Normal (DR. ERIC MILLER EC534)
+192497,True,,Normal (BMD-EL16271M24-C-VPI),Clear/Normal (271683) | Clear/Normal (271684),,Normal (BMD-BCA1286/16M/P-VPI),Normal (BMD-EYE3301/7M-VPI)
+192478,True,,,Carrier (227584) | Clear/Normal (227584),,,
+192366,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (286735) | Clear/Normal (286734),DNA Sample Donated for Canine Health Research (BMD-DNA-113/B),"Normal AO, AUSC/ECHO (BMD-ACA960/18M-VPI)",Normal (BMD-EYE3714/18M-VPI)
+192362,True,HD Free (1537 2021 HD),ED free (1959 2021 ED),Clear (2107N10403) | Clear (2107N10403),,,
+192361,True,A,0,,,,
+192323,False,,,,,,
+192317,True,HD Free,ED free,,,,
+192293,True,Good (BMD-26025G24M-U-VPI),Normal (BMD-EL16127M24-U-VPI),Clear/Normal (296861) | Clear/Normal (343474),,,Normal (BMD-EYE4297/36M-VPI)
+192064,False,,,,,,
+191986,False,,,,,,
+191985,False,,,,,,
+191917,True,,,Carrier (251525),,,
+191880,True,,,Carrier (251521),,,
+191874,True,Fair (BMD-26331F25M-C-VPI),Normal (BMD-EL16392M25-C-VPI),Carrier (292556) | Clear/Normal (292557) | Clear/Normal (488685),,Normal (BMD-BCA1106/17M/C-PI),Normal - see health record (BMD-EYE3524/13M-PI)
+191871,True,Excellent (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (257314) | At Risk (257313),,,
+191838,True,Good (BMD-25064G26M-VPI),Normal (BMD-EL15277M26-VPI),,,Normal (BMD-BCA575/26M/P-VPI),
+191837,False,,,,,,
+191733,False,,,,,,
+191701,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (87232) | Clear/Normal (87233),,Normal - AO/CONG (BMD-ACA989/22F-VPI),Normal (BMD-EYE3418/12F-PI)
+191700,True,Good (BMD-26119G24F-C-VPI),Normal (PRELIMINARY),Clear/Normal (87234) | Clear/Normal (87235),,Normal (BMD-BCA1399/24F/C-VPI),Normal (BMD-EYE3419/12F-PI)
+191601,True,A (SHSB 770083 L029),Normal (SHSB 770083 L029),,,,
+191597,True,Moderate Dysplasia (Prelim-Prelim-MODERATE),Normal (BMD-EL15196M27-VPI),,,,
+191555,True,Good (BMD-25589G24M-P-VPI),Normal (BMD-EL15747M24-P-VPI),,,Normal (BMD-BCA942/24M/P-VPI),
+191550,False,,,,,,
+191451,False,,,,,,
+191382,False,,,,,,
+191365,True,Good (PRELIMINARY),Normal (PRELIMINARY),,,Normal - AO/CONG (BMD-ACA1021/26F-VPI),Normal (BMD-EYE4019/27F-VPI)
+191332,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (450808) | Clear/Normal (450808),,Normal (BMD-BCA1696/32F/C-VPI),
+191305,False,,,,,,
+191276,False,,,,,,
+191218,False,,,,,,
+191217,False,,,,,,
+191154,True,C (735-2025-HD),ED free (457-2025-ED),Clear (A00107130) | Clear (A00107130),,,
+191086,True,Fair (PRELIMINARY),Normal (PRELIMINARY),Carrier (255559),,Normal (BMD-BCA973/18F/P-VPI),
+191053,True,B (2080-2024-HD),2 (1278-2024-ED),,,,
+191019,False,,,,,,
+190980,True,Good (PRELIMINARY),Elbow: DJD Grade I (DJD GRADE I),Clear/Normal (195875) | Clear/Normal (430905),,Normal (BMD-BCA1943/37F/P-VPI),Normal (BMD-EYE5063/58F-VPI)
+190979,False,,,,,,
+190920,False,,,,,,
+190910,False,,,,,,
+190821,True,Excellent (BMD-26431E42M-P-VPI),Normal (BMD-EL16481M42-P-VPI),Clear/Normal (210818) | Clear/Normal (210817),,Normal (BMD-BCA1480/42M/P-VPI),
+190788,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (280247) | Clear/Normal (280248) | Clear (BMD-DM3297/12M-PI) | Clear (BMD-DMB296/12M-PI),,Normal (BMD-BCA527/12M/P-VPI),Normal (BMD-EYE3316/12M-VPI)
+190706,True,A (3967-2021-HD),ED free (1180-2022-ED),Carrier (166949) | Clear (166949),,,
+190703,True,A (13830),0/0 (13830),,Tested (233951),,
+190680,True,,Normal (R0 + L0 =0   #37682),Clear/Normal (248342) | Clear/Normal (248343),,,
+190586,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (269695) | Clear/Normal (269696),,Normal (BMD-BCA681/15M/C-VPI),Normal (BMD-EYE3406/12M-VPI)
+190477,True,Excellent (PRELIMINARY),Normal (PRELIMINARY),,,Normal (BMD-BCA105/12M/P-VPI),
+190448,True,Good (Prelim-Prelim-GOOD),Elbow: DJD Grade I (Prelim-Prelim-DEGENERATIVE JOINT DISEASE I UNILATERAL LEFT),,,,
+190409,True,Good (BMD-24117G26M-VPI),,,,,
+190320,True,Good (BMD-25728G27F-P-VPI),Normal (BMD-EL15866F27-P-VPI),,,Normal (BMD-BCA1025/27F/P-VPI),
+190232,True,Good (BMD-25165G36F-VPI),Normal (BMD-EL15368F36-VPI),,,,
+190177,True,Good (BMD-24587G25M-VPI),Normal (PRELIM),Clear/Normal (168302) | Clear/Normal (168303),,Normal - Cardiologist (DR MOISE CORNELL),Normal (DR KERN EC12)
+190161,True,Good (BMD-23883G33F-NOPI),,,,,
+190131,True,Excellent (BMD-24422E32M-VPI),Normal (BMD-EL14724M32-VPI),Clear/Normal (273713) | Clear/Normal (273714),,"Normal AO/CONG, AUSC/ECHO (DR. ASHLEY JONES)",Normal - see health record (BMD-EYE3434/44M-VPI)
+190051,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (251544) | Clear/Normal (251545),,Normal (BMD-CA5554/16F/P-VPI),
+189918,True,Good (BMD-24460G25M-VPI),Normal (BMD-EL14763M25-VPI),Clear/Normal (151347) | Clear/Normal (151348) | Clear (BMD-DM3405/5M-PI) | Clear (BMD-DMB354/5M-PI),,Normal - Cardiologist (BMD-CA5552/17M/C-PI-ECHO),Normal - see health record (BMD-EYE2828/17M-VPI)
+189887,False,,,,,,
+189866,True,Good (BMD-24574G29M-VPI),Normal (BMD-EL14852M29-VPI),,,,
+189736,False,,,,,,
+189712,True,Good (BMD-23789G37M-VPI),Normal (BMD-EL14182M37-VPI),,,Normal (BMD-CA5487/37M/P-VPI),
+189661,True,Good (BMD-23877G38M-NOPI),Normal (BMD-EL14255M38-NOPI),,,,
+189623,True,Good (BMD-24374G31F-VPI),Normal (BMD-EL14686F31-VPI),,,,
+189598,True,Excellent (BMD-23576E24M-NOPI),Normal (BMD-EL13983M24-NOPI),,,Normal (BMD-CA5394/24M/P-NOPI),
+189553,True,Fair (BMD-26750F32F-C-VPI),Normal (BMD-EL16565F30-C-VPI),Carrier (41507) | Clear by Parentage,,Normal - Cardiologist (CAPE COD VET SPECIALISTS),Normal (DR MARRIC)
+189455,True,,,,,Normal (BMD-CA5406/18F/P-VPI),
+189433,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Carrier (247517) | Carrier (BMD-DMB450/0M-PI-CAR) | Clear (BMD-DM3568/0M-PI) | Clear/Normal (151249),,Normal - AO/CONG (BMD-ACA917/16M-VPI),Normal (BMD-EYE4770/58M-VPI)
+189401,True,Carrier (254452-1 HEUPLAXITEIT 2 (HIP LAXITY 2)),Normal (2019-08985 (0/0)),Clear/Normal (254452-1 (NORMAAL)) | Clear/Normal (264452-15),Tested,,
+189286,True,Good (BMD-23562G37F-VPI),Normal (BMD-EL13969F37-VPI),,,Normal (BMD-CA5375/37F/P-VPI),
+189186,True,,Clear/Normal (0),Clear/Normal (2109-W-22680) | Clear/Normal (2109-W-22689),,,
+189185,False,,,,,,
+189181,True,,Clear/Normal (0),Clear/Normal (2202-W-11885) | At Risk (2202-W-11885),,,
+189166,False,,,,,,
+189065,True,Excellent (BMD-23555E44M-NOPI),,,,,
+188968,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (176536),,Normal (BMD-CA5484/17F/P-VPI),Normal (BMD-EYE2835/49F-VPI)
+188867,True,Excellent (BMD-26034E26F-C-VPI),Normal (Prelim-Prelim-NORMAL),Clear/Normal (207409) | Clear/Normal (247220),,Normal - AO/CONG (BMD-ACA908/15F-VPI),Normal (BMD-EYE3119/6F-VPI)
+188829,False,,,,,,
+188800,True,A (3984 2021 HD),ED free (817 2022 ED),,,,
+188792,True,A (2403-2022-HD),ED free (1408-2022-ED),Carrier (A00010782) | Clear (A00010782),,,
+188738,True,Good (BMD-25243G29M-C-VPI),Normal (BMD-EL15433M29-C-VPI),,,Normal (BMD-BCA634/29M/P-VPI),
+188718,True,Good (BMD-25747G24F-P-NOPI),Normal (BMD-EL15882F24-P-NOPI),,,Normal (52822),Normal (834217)
+188703,False,,,,,,
+188676,True,Excellent (34021 (1+2=3)),Normal (34021 (0/0)),Clear/Normal (# 297923 (A)) | Clear/Normal (# 297924 (A)),,,
+188611,True,A (3478-2021-HD),ED free (612-2022-ED),,,,
+188560,False,,,,,,
+188531,False,,,,,,
+188528,True,Borderline (HD-B/B),Normal (ED-0/0),Clear by Parentage (DM1A-N/N (BP)) | Clear by Parentage (DM1B-N/N (BP)),,,
+188415,True,Good (BMD-25773G27F-P-VPI),Normal (BMD-EL15905F27-P-VPI),Clear by Parentage | Clear/Normal (218466),,Normal (BMD-BCA908/22F/P-VPI),Normal (BMD-EYE3711/23F-VPI)
+188299,False,,,,,,
+188294,True,Fair (BMD-26349F31M-C-VPI),Normal (BMD-EL16407M31-C-VPI),Clear/Normal (116042),,Normal (BMD-BCA1430/31M/P-VPI),Normal (DR. STEVEN M. ROBERTS)
+188262,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (240800) | Clear/Normal (240801),,Normal (BMD-BCA1871/58F/P-VPI),
+188217,True,Good (BMD-25866G25F-C-VPI),Normal (BMD-EL15989F25-C-VPI),Carrier (394914) | Clear/Normal (394913),,Normal (BMD-BCA1091/24F/C-VPI),Normal (BMD-EYE3751/25F-VPI)
+188186,True,,Normal (0),,,,
+188105,False,,,,,,
+188039,False,,,,,,
+187815,True,Excellent (BMD-26336E32F-P-VPI),Normal (BMD-EL16396F32-P-VPI),Carrier (295195) | Clear/Normal (216918),,Normal - AO/CONG (BMD-ACA892/16F-VPI),Normal (BMD-EYE3234/12F-VPI)
+187650,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (186874) | Clear/Normal (212914),,Normal - AO/CONG (BMD-ACA894/17M-VPI),Normal (BMD-EYE3174/12M-VPI)
+187320,True,,Normal (0),,,,
+187196,True,Good (BMD-25673G24M-C-VPI),Normal (BMD-EL15819M24-C-VPI),Clear/Normal (229557) | Clear/Normal (460107),,Normal (BMD-BCA987/24M/P-VPI),Normal (BMD-EYE3852/28M-VPI)
+187162,False,,,,,,
+186918,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear/Normal (179899) | Clear/Normal (179900) | Clear (BMD-DM3386/5F-PI) | Clear (BMD-DMB341/5F-PI),,"Normal AO/CONG, AUSC/ECHO (DR. J.A. WOODFIELD (CW-05))",Normal (DR. PAUL SCHERLIE  (153))
+186917,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (393589) | Clear/Normal (393590),,Normal (BMD-BCA486/12F/P-PI),Normal (BMD-EYE3610/21F-VPI)
+186681,True,Excellent (BMD-25294E24F-C-VPI),Normal (BMD-EL15479F24-C-VPI),Clear/Normal (265685) | Clear/Normal (265686),,Normal - AO/CONG (BMD-ACA877/19F-VPI),Normal (BMD-EYE3231/17F-VPI)
+186656,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (259174) | Clear/Normal (259175) | Clear (BMD-DM3295/25F-PI) | Clear (BMD-DMB294/25F-PI),,Normal (BMD-BCA223/16F/P-VPI),Normal (BMD-EYE3192/25F-VPI)
+186560,True,A (834-2022-HD),ED free (511-2022-ED),,,,
+186200,False,,,,,,
+185670,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (143954) | Clear/Normal (151586),,Normal - AO/CONG (BMD-ACA980/33M-VPI),Normal - see health record (BMD-EYE3614/28M-VPI)
+185256,False,,,,,,
+185244,False,,,,,,
+184899,False,,,,,,
+184613,True,HD Free,ED free,,,,
+184048,True,Good (BMD-25140G24F-VPI),Normal (BMD-EL15348F24-VPI),Clear/Normal (406065) | Clear/Normal (406066),,,
+183897,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (207116) | Clear/Normal (258195),,Normal (BMD-BCA1085/27M/C-VPI),Normal (BMD-EYE3720/27M-VPI)
+183894,True,Good (BMD-25470G25F-C-VPI),Normal (BMD-EL15641F25-C-VPI),Clear/Normal (334389) | Clear/Normal (334388),,Normal (BMD-BCA1418/37F/C-VPI),Normal - see health record (BMD-EYE3276/18F-VPI)
+183890,True,Fair (BMD-24498F24M-VPI),Normal (BMD-EL14795M24-VPI),Clear/Normal (185914) | Clear/Normal (258199),,Normal (BMD-BCA483/30M/C-VPI),Normal (BMD-EYE3270/30M-VPI)
+183523,True,A,ED free,,,,
+183292,False,,,,,,
+183207,True,HD Free,ED free,,,,
+183112,False,,,,,,
+183073,True,B (28409 2020 HD),ED free (302 2022 ED),,,,
+182988,False,,,,,,
+182967,True,Normal (1179/2020 (A)),Normal (1179/2020 (0/0)),Carrier (03772K1020) | Clear/Normal (03772K1020),,Normal (DR. RAFAL NIZIOLEK),
+180041,True,HD Free (17355),ED free (20147),,,,
+179165,True,Good (BMD-24519G24F-VPI),Elbow: DJD Grade I (DJD GRADE I),Clear/Normal (407328) | Clear/Normal (407329),,Normal (BMD-BCA210/24F/C-VPI),Normal (BMD-EYE3086/24F-VPI)
+179144,False,,,,,,
+178936,True,Fair (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (232750) | Clear/Normal (232751),,,
+177866,True,Fair (BMD-26203F33F-P-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I UNILATERAL RIGHT),Carrier (161429) | Clear/Normal (161430),,Normal (BMD-BCA330/12F/C-VPI),Normal (BMD-EYE3345/17F-VPI)
+177813,False,,,,,,
+177463,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (169211) | Clear/Normal (169212) | Clear (BMD-DM3329/8M-PI) | Clear (BMD-DMB317/8M-PI),,Normal (BMD-BCA147/22M/P-VPI),Normal (BMD-EYE3054/26M-VPI)
+177346,True,Excellent (BMD-23133E26F-PI),Normal (BMD-EL13589F26-PI),,,,
+177062,True,HD Free (HD-A),Elbow: DJD Grade I (ED I/I),Clear (: 2001-W-75307) | Clear (: 2001-W-75307),,,
+177023,True,Good (BMD-25736G26F-C-VPI),Normal (BMD-EL15871F26-C-VPI),Carrier (380355) | Clear/Normal (491789),,Normal (BMD-BCA1935/44F/C-VPI),Normal (BMD-EYE3466/21F-VPI)
+176671,False,,,,,,
+176598,False,,,,,,
+176559,True,,Normal (0),,,,
+176294,True,Good (BMD-23386G30F-VPI),Normal (BMD-EL13806F30-VPI),,,,
+176107,True,Fair (BMD-22271F32M-PI),Normal (BMD-EL12384M24-VPI),,,Normal (BMD-CA4751/24M/P-VPI),
+175919,True,Good (BMD-24567G30M-VPI),Normal (BMD-EL14846M30-VPI),,,,
+175789,True,Fair (BMD-23608F25F-VPI),Normal (BMD-EL14014F25-VPI),Clear/Normal (3795-5173-9633-5031) | Clear (BMD-DM3189/26F-PI) | Clear/Normal (45025),,Normal - AO/CONG (BMD-ACA1082/65F-VPI),Normal (BMD-EYE2832/61F-VPI)
+175781,True,Good (BMD-26159G34M-P-VPI),Normal (PRELIM),Clear/Normal (214249) | Clear/Normal (214250),,Normal - AO/CONG (BMD-ACA1217/50M-VPI),Normal (BMD-EYE3262/16M-VPI)
+175343,False,,,,,,
+175326,True,A (1710-2021-HD),ED free (2030-2021-ED),Clear (A00066587) | Clear (A00066587),,,
+175312,True,Good (BMD-25534G25F-C-VPI),Elbow: FCP/DJD Grade I (FCP/DJD I UNILATERAL LEFT),Clear/Normal (237867),,,
+175290,True,Good (BMD-24108G26F-VPI),Normal (BMD-EL14459F26-VPI),Clear/Normal (120865) | Clear/Normal (179889),,Normal (BMD-BCA172/26F/C-VPI),Normal (BMD-EYE3039/26F-VPI)
+175068,True,,Elbow: DJD Grade I,Clear/Normal (117331),,Normal - AO/CONG (BMD-ACA1046/45M-PI),Normal (BMD-EYE4049/36M-VPI)
+175065,False,,,,,,
+174997,True,HD Free (1471-2021-HD),ED free (1930-2021-ED),Clear (2111-N-16292) | Clear (2111-N-16292),,,
+174425,True,Excellent (BMD-25088E28M-VPI),Normal (PRELIMINARY),Clear/Normal (267276) | Clear/Normal (267277),,"Normal AO/CONG, AUSC ONLY (BMD-ACA809/13M-VPI)",Normal (BMD-EYE3012/13M-VPI)
+174420,True,Good (BMD-25023G27F-VPI),Normal (PRELIMINARY),,,Normal (BMD-BCA529/26F/C-VPI),Normal - see health record (BMD-EYE2807/11F-PI)
+174294,True,Good (PRELIMINARY),Normal (PRELIMINARY REPORT),Clear/Normal (238978) | Clear/Normal (238977),DNA Sample Donated for Canine Health Research,Normal - AO/CONG (BMD-ACA1321/62M-PI),Normal (BMD-EYE3079/62M-VPI)
+174016,True,Excellent (BMD-25450E27F-C-VPI),Normal (BMD-EL15623F27-C-VPI),Carrier (203253),,Normal (DR WOODFIELD CW-05),Normal (DR PAUL SCHERLIE EC153)
+173503,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),,,Normal (BMD-CA5317/23M/P-VPI),
+173178,False,,,,,,
+172944,True,A (128-2021 -HD),ED free (78-2021-ED),,,,
+172825,True,Good (BMD-22639G26M-PI),Normal (BMD-EL13144M26-PI),,,,
+171982,False,,,,,,
+171959,True,Good (BMD-22828G36F-PI),Normal (BMD-EL13302F36-PI),,,"Normal AO/CONG, AUSC ONLY (BMD-ACA640/36F-VPI)",Normal (BMD-EYE2440/37F-VPI)
+171934,True,Good (BMD-22780G27M-PI),,,,,
+171878,False,,,,,,
+171715,True,,,Carrier (0-2000020602) | Clear/Normal (0-2000020602),,,
+170887,False,,,,,,
+170885,True,HD Free,ED free,,,,
+170864,True,,,Clear/Normal (C-2000016632-25579) | Clear/Normal (C-2000016632-25579),,,
+170740,True,HD Free (23817),ED free (27151),,,,
+170739,False,,,,,,
+170530,True,Good (BMD-24256G24F-VPI),Normal (BMD-EL14581F24-VPI),Clear (174863) | Clear (174864) | Clear (BMD-DM3242/22F-NOPI) | Clear (BMD-DMB268/22F-NOPI),,Normal (BMD-BCA118/23F/C-VPI),Normal (DR. JENNIFER SHEHAN)
+169601,True,Good (BMD-25261G24F-C-VPI),Normal (BMD-EL15453F24-C-VPI),Clear by Parentage | Clear/Normal (192050),,Normal (DR. UVI SINGH),Normal - see health record (BMD-EYE2928/6F-VPI)
+169552,True,Excellent (BMD-25302E25F-P-VPI),Normal (BMD-EL15487F25-P-VPI),Carrier (324218) | Clear (324217),,"Normal AO/CONG, AUSC/ECG (BMD-ACA999/34F-VPI)",Normal (BMD-EYE4274/46F-VPI)
+169090,True,HD Free,ED free,,,,
+168724,True,Excellent (BMD-24728E24M-VPI),Normal (PRELIMS),Carrier (159632) | Clear (159633),,Normal (BMD-BCA346/24M/P-VPI),
+168723,True,Excellent (BMD-24940E26F-VPI),Normal (PRELIMS),Carrier (159634) | Clear (159635),,Normal (BMD-BCA477/26F/P-VPI),
+168687,True,HD Free (2032512),ED free (2032512),Carrier (2022-W-07072 - GENOTIPO N/DM (ESONE 2)) | Clear (2022-W-07072 - GENOTIPO N/N (ESONE 1)),,,
+168516,False,,,,,,
+168193,True,Good (PRELIM),Normal (PRELIM),Carrier (187431) | Clear/Normal (187432),,Normal (BMD-CA5432/12F/P-VPI),
+168177,False,,,,,,
+168171,True,,,Carrier (314078) | Clear/Normal (314076),,Normal (BMD-BCA516/22F/C-VPI),Normal (BMD-EYE3292/22F-VPI)
+168169,True,Good (BMD-22876G25F-VPI),Elbow: DJD Grade I (DJD GRADE I),Carrier (85603) | Clear/Normal (132080),,,
+167895,True,A (19321),ED free (19322),Clear by Parentage | Clear by Parentage,,,
+167608,True,Unaffected (HD-A),Normal (ED-0),,,,
+167555,False,,,,,,
+167433,True,,Normal (0),,,,
+167342,False,,,,,,
+167288,False,,,,,,
+167286,True,HD Free,ED free,,,,
+167285,False,,,,,,
+166955,True,Good (BMD-25415G36F-P-VPI),Normal (BMD-EL15589F36-P-VPI),Clear/Normal (160189),,,Normal - see health record (DR TARA RICHARDS 372)
+166926,True,Excellent (Prelim-Prelim-EXCELLENT),Normal (Prelim-Prelim-NORMAL),Carrier (257311) | Clear/Normal (257312),,Normal (BMD-CA5378/14F/P-VPI),
+166722,True,A (2210 2021 HD),ED free (1307 2021 ED),,,,
+166717,False,,,,,,
+166697,True,Normal (FREE - DR ÁKOS HADHÁZY),Normal (0 - DR ÁKOS HADHÁZY),,,,
+166686,True,Excellent (BMD-25182E24M-VPI),Normal (BMD-EL15383M24-VPI),Carrier (199338) | Carrier (BMD-DM3410/2M-PI-CAR) | Clear/Normal (123784),,Normal (BMD-BCA970/30M/C-VPI),Normal (BMD-EYE3636/30M-VPI)
+166619,False,,,,,,
+166341,True,Good (BMD-23913G24M-VPI),Normal (BMD-EL14292M24-VPI),Clear/Normal (131671) | Clear/Normal (143511),,Normal (BMD-CA5483/22M/P-VPI),Normal (BMD-EYE2438/55M-VPI)
+165853,True,Good (BMD-25228G26F-P-NOPI),Elbow: DJD Grade I (UNILATERAL LEFT - RIGHT NORMAL),Carrier (196655) | Clear/Normal (196654),,Normal (BMD-BCA280/18F/C-NOPI),Normal (BMD-EYE3131/18F-NOPI)
+165660,True,Excellent (BMD-24925E24F-VPI),Normal (PRELIMINARY),Clear/Normal (269196) | Clear/Normal (269197),,Normal (BMD-BCA234/19F/C-VPI),Normal (BMD-EYE3059/66F-VPI)
+165648,True,Excellent (BMD-24508E26M-VPI),Elbow: DJD Grade I (BILATERAL),Clear by Parentage | Clear by Parentage | Clear/Normal (428257) | Clear/Normal (428256),,Normal (BMD-BCA2101/64M/C-VPI),Normal (BMD-EYE3992/74M-VPI)
+165269,False,,,,,,
+165003,False,,,,,,
+164966,True,,,Clear/Normal (142526) | Clear/Normal (142528),,,
+164143,True,HD Free (23022),ED free (26502),Carrier (125891) | Carrier (125891),,,
+164045,True,HD Free (9/14/2020),ED free,,,,
+163998,True,Excellent (BMD-25144E24F-VPI),Normal (PRELIM),Clear by Parentage | Clear by Parentage,,Normal (DR JOHN MACGREGOR),Normal (BMD-EYE)
+163969,True,,Normal (BMD-EL12840F26-VPI),,,,
+163866,True,HD Free,ED free,Carrier (394934) | Clear (394935),,,
+163299,True,HD Free,ED free,,,,
+163227,False,,,,,,
+163007,True,HD Free,ED free,,,,
+162429,False,,,,,,
+162421,True,HD Free,ED free,Clear (172812) | Clear (172812),,,
+162419,False,,,,,,
+162356,True,Good (BMD-24560G26F-VPI),,Clear (00160794) | Clear (BMD-DM3138/8F-PI),,Normal (BMD-CA5251/12F/P-VPI),Normal (BMD-EYE2794/15F-VPI)
+162354,True,Good (BMD-24559G24M-VPI),,Clear (00151986) | Clear (BMD-DM3137/4M-PI),,Normal (BMD-CA5250/12M/P-VPI),Normal (BMD-EYE2793/14M-VPI)
+161815,True,Good (BMD-25119G24F-VPI),Normal (BMD-EL15333F24-VPI),Clear/Normal (173666) | Clear/Normal (369798),DNA Sample Donated for Canine Health Research,Normal - AO/CONG (BMD-ACA885/22F-VPI),Normal (BMD-EYE3295/22F-VPI)
+161813,True,Good (PRELIMINARY),Normal (PRELIMINARY),At Risk (184488),,Normal - AO/CONG (BMD-ACA967/33M-VPI),Normal (BMD-EYE2995/11M-VPI)
+161807,True,Good (BMD-25163G24M-VPI),Normal (BMD-EL15367M24-VPI),Carrier (173668) | Clear by Parentage,,Normal - AO/CONG (BMD-ACA968/33M-VPI),Normal (BMD-EYE3098/16M-VPI)
+161701,True,Good (BMD-25143G25M-VPI),Normal (BMD-EL15351M25-VPI),Clear by Parentage | Clear/Normal (109286),,"Normal AO/CONG, AUSC/ECHO (BMD-ACA862/20M-VPI)",Normal (BMD-EYE2728/59M-VPI)
+161568,True,HD Free,ED free,Clear (H340873) | Clear (H340873),,,
+160794,True,HD Free,ED free,Clear (155936) | Clear (155936),,,
+160691,False,,,,,,
+160673,True,Good (BMD-24872G24M-VPI),Normal (BMD-EL15116M24-VPI),Clear/Normal (75788) | Clear by Parentage (CLEAR BY PARENTAGE),,Normal - AO/CONG (BMD-ACA948/35M-VPI),Normal (BMD-EYE2919/14M-VPI)
+160527,True,HD Free (28086),ED free (889-2021-ED),Carrier (2101 N 01 071) | Clear (2101 N 01 071),,,
+160202,True,HD Free,ED free,,,,
+160121,True,Good (BMD-24908G24F-VPI),Normal (BMD-EL15145F24-VPI),Clear/Normal (240509) | Clear/Normal (240510),,Normal (BMD-BCA335/21F/C-VPI),
+160041,True,Excellent (BMD-24265E24F-VPI),Normal (PRELIM),,,,
+159372,True,Fair (BMD-23256F28F-VPI),Normal (BMD-EL13692F28-VPI),Carrier (65494) | Clear/Normal (65494),,,
+159233,True,,Normal (0),,,,
+159119,True,Good (BMD-24674G26F-VPI),Normal (BMD-EL14938F26-VPI),Clear/Normal (149638) | Clear/Normal (196960),,Normal (BMD-BCA294/26F/C-VPI),Normal (BMD-EYE3135/26F-VPI)
+159049,True,HD Free (15300),ED free (18464),,,,
+158808,True,Good (BMD-23672G24F-VPI),Normal (BMD-EL14070F24-VPI),Carrier (5147) | Clear/Normal (5146),,,Normal (DR. BRUCE GRAHN)
+158383,False,,,,,,
+157994,True,HD Free (21623),ED free (23023),Clear (1809N09257) | Clear (1809N09257),,,
+157969,True,HD Free (25091),ED free (45 2020 ED),Clear (1904N04125) | Clear (1904N04125),,,
+157930,True,A (1114 2021 HD),ED free (678 2021 ED),Carrier (H554561) | Clear (H334561),,,
+157529,True,HD Free (A),Elbow: DJD Grade I (1),,,,
+157412,True,,Normal (0),,,,
+157358,False,,,,,,
+157253,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (597680) | Clear/Normal (597680),,"Normal AO/CONG, AUSC ONLY (BMD-ACA682/13M-VPI)",Normal (BMD-EYE3190/35M-VPI)
+157174,True,Good (BMD-22285G28F-NOPI),Normal (BMD-EL12850F28-NOPI),,,,
+157121,True,Good (BMD-23405G26M-VPI),Normal (BMD-EL13824M26-VPI),Clear (BMD-DM3054/10M-PI),,Normal (BMD-CA4973/13M/P-VPI),
+157065,True,Excellent (BMD-23918E24F-NOPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I UNILATERAL LEFT),,,Normal (BMD-BCA1455/55F/C-VPI),Normal (BMD-EYE3965/55F-VPI)
+157012,True,"Normal (PKR,HD-A)","Normal (PKR,ED-0/0)","Carrier (PKR,DM-N/DM) | Clear (PKR,DM-N/N)",,,
+157003,True,Excellent (Prelim-Prelim-EXCELLENT),Normal (Prelim-Prelim-NORMAL),Clear/Normal (164524) | Clear (221438),,Normal (CO89761),Normal (20E6QS)
+157002,True,Excellent (Prelim-Prelim-EXCELLENT),Normal (Prelim-Prelim-NORMAL),Carrier (164528) | Clear/Normal (478898),,"Normal AO/CONG, AUSC/ECHO (DR. JULIE MARTIN)",See Health (DR. EMILY CONWAY #EC539)
+156960,True,,Normal (#26849 (0/0)),Carrier (165496) | Clear/Normal (165497),,,
+156875,True,Good (BMD-22643G26F-VPI),,,,Normal (BMD-CA5019/26F/S-VPI),
+156829,True,Good (BMD-22417G24F-VPI),Normal (BMD-EL12969F24-VPI),,,,
+156825,True,Excellent (BMD-24393E26M-NOPI),,Clear (BMD-DM3136/5M-NOPI) | Clear (BMD-DMB231/5M-NOPI),,Normal (BMD-CA5247/12M/P-NOPI),Normal (BMD-EYE2491/5M-NOPI)
+156683,True,Good (BMD-24686G24M-VPI),Normal (BMD-EL14950M24-VPI),Clear/Normal (170924) | Clear/Normal (170925),,Normal (BMD-BCA399/25M/C-VPI),Normal (BMD-EYE3293/28M-VPI)
+156672,True,Excellent (BMD-23366E24F-VPI),Normal (BMD-EL13788F24-VPI),Clear/Normal (88638) | Clear/Normal (88639),,,
+156608,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (222302) | Clear/Normal (222303),,Normal (BMD-BCA130/20M/P-VPI),Normal (BMD-EYE3041/21M-VPI)
+156605,True,Good (PRELIM),Normal (PRELIM),Carrier (100351),DNA Sample Donated for Canine Health Research,Normal (BMD-BCA42/17F/P-VPI),Normal (BMD-EYE2938/17F-VPI)
+156558,True,HD Free,ED free,Clear/Normal (176228) | At Risk (176229),,,
+156529,False,,,,,,
+156496,True,Good (BMD-23874G33F-NOPI),,,,,
+156451,True,,,,,Normal - Cardiologist (BMD-CA5452/12M/C-VPI),
+156336,True,Good (BMD-25087G30F-VPI),Normal (BMD-EL15296F30-VPI),,,,
+156246,True,0/1 (562/20),ED free (562/20),Carrier (150159) | Clear (150160),,,
+156245,True,Normal (65/2017),Normal (65/2017),Clear/Normal (18-19615) | Clear/Normal (18-19615),,,
+156209,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Carrier (297011) | Clear by Parentage,,"Normal - Cardiologist (HEIDI N. MACLEAN, DVM, MS)","Normal (MATTHEW LANDRY, DVM, DACVO EC320)"
+156100,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (113017) | Clear/Normal (162100),,Normal (BMD-BCA52/27M/C-PI),Normal (BMD-EYE2458/10M-VPI)
+156079,False,,,,,,
+155944,False,,,,,,
+155936,False,,,,,,
+155874,False,,,,,,
+155725,True,Excellent (BMD-24750E25M-VPI),Normal (BMD-EL15001M25-VPI),,,Normal - Cardiologist (DR. HEIDI MACLEAN),Normal (DR KAREN BRANTMAN EC491)
+155683,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Carrier (119693) | Clear/Normal (119694),,Normal (BMD-CA5127/14M/P-VPI),Normal (BMD-EYE2777/22M-VPI)
+155652,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (270122) | Clear/Normal (270123),,"Normal AO/CONG, AUSC ONLY (BMD-ACA685/16M-VPI)",Normal (BMD-EYE2583/16M-VPI)
+155497,True,Good (BMD-24461G24M-VPI),Normal (BMD-EL14764M24-VPI),Carrier (253398) | Clear/Normal (253399),,Normal - AO/CONG (BMD-ACA1069/54M-VPI),Normal (BMD-EYE3028/24M-VPI)
+155486,True,Excellent (BMD-24414E24M-VPI),Normal (PRELIMINARY),Clear/Normal (164803) | Clear/Normal (164804),,"Normal AO/CONG, AUSC ONLY (BMD-ACA752/12M-VPI)",Normal (BMD-EYE2716/12M-VPI)
+155477,True,,Normal (0),Clear/Normal (1810-N-11142) | Clear/Normal (1810-N-11142),,,
+155474,True,HD Free (20888),ED free (23916),,,,
+155351,True,Unaffected (HD-A),Normal (ED-0),Clear (1611 W 38829) | Clear (1611 W 38829),,,
+155340,True,Excellent (BMD-22749E29M-PI),Normal (BMD-EL13235M29-PI),Clear/Normal (59338) | Clear/Normal (59338),,,
+155170,True,Good (BMD-24098G24F-NOPI),Normal (BMD-EL14451F24-NOPI),Carrier (257058) | Clear/Normal (257059),,Normal (BMD-ACA),Normal (BMD-EYE)
+155168,True,Good (BMD-23970G30M-VPI),Normal (BMD-EL14346M30-VPI),,,,
+155122,True,Good (BMD-24568G28F-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I),Clear/Normal (102750),,Normal (BMD-BCA1032/29F/C-VPI),Normal (BMD-EYE2696/13F-VPI)
+155074,True,Good (PRELIM),Normal (PRELIM),Carrier (130578),,Normal (BMD-BCA189/26F/C-VPI),Normal - see health record (BMD-EYE3024/20F-VPI)
+155070,True,Good (BMD-22529G24F-VPI),Normal (BMD-EL13062F24-VPI),,,,
+155031,True,Good (BMD-24409G26F-NOPI),Normal (BMD-EL14711F26-NOPI),Clear/Normal (135705),,Normal (BMD-BCA237/27F/C-NOPI),Normal (BMD-EYE3094/27F-NOPI)
+154978,True,Good (PRELIM),Normal (PRELIM),Clear by Parentage | Clear/Normal (5583),,Normal (DR. BRENT AONA),Normal (DR. TORAH WEBB)
+154977,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (140409) | Clear/Normal (140410),,Normal (BMD-BCA301/29F/P-VPI),Normal (BMD-EYE3452/39F-VPI)
+154704,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear/Normal (137150) | Clear/Normal (137151),,,
+154653,True,,Normal (0 + 0 =0  (23885)),Carrier (#) | Clear/Normal (#),,Normal - Cardiologist,Unaffected (2244)
+154650,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Carrier (193193) | Clear (193193),,,
+154497,True,Good (BMD-22509G32M-NOPI),Normal (BMD-EL13045M32-NOPI),,,,
+154466,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (53184) | Clear/Normal (53187),,Normal (BMD-CA4961/12M/P-VPI),Normal (BMD-EYE2337/15M-VPI)
+154415,False,,,,,,
+154388,True,Good (BMD-24416G24M-VPI),Normal (BMD-EL14719M24-VPI),,,,
+154373,True,Fair (BMD-23788F24M-VPI),Normal (BMD-EL14180M24-VPI),Carrier (113097) | Clear/Normal (20529),,"Normal AO/CONG, AUSC/ECG (DR, MEGAN KING)",Normal (BMD-EYE2689/18M-VPI)
+154372,True,"Mild Dysplasia (LEFT - UNILATERAL SUBLUXATION, REMODELING OF FEMORAL HEAD/NECK)",Normal (BMD-EL14116F24-VPI),Carrier (113095) | Clear/Normal (113096),,"Normal AO/CONG, AUSC ONLY (DR. BRUCE KORNREICH)",Normal (DR. THOMAS J. KERN)
+154329,True,Unaffected (POL.HD-A),Normal (POL.ED-0/0),,,,
+154131,True,Fair (BMD-24084F24M-NOPI),Normal (BMD-EL14442M24-NOPI),Clear/Normal (132974) | Clear/Normal (90705),,,
+154080,True,Excellent (PRELIM),Normal (PRELIM),Carrier (114542) | Carrier (BMD-DM3250/13M-PI-CAR) | Clear/Normal (114541) | Clear (BMD-DMB269/13M-PI),,Normal (BMD-BCA479/36M/C-VPI),Normal - see health record (BMD-EYE3275/36M-VPI)
+154067,False,,,,,,
+153978,True,Excellent (BMD-24241E31M-VPI),Normal (PRELIM),Clear/Normal (97896) | Clear/Normal (28691),,Normal (BMD-BCA111/31M/P-VPI),Normal (BMD-EYE3144/36M-VPI)
+153958,True,Good (BMD-24364G26M-VPI),Normal (PRELIM),Clear/Normal (193800) | Clear (193801),,Normal - see health record (DR. GINA PASIEKA),Normal (BMD-EYE2693/14M-VPI)
+153854,True,Excellent (BMD-23917E27F-VPI),Normal (Prelim-Prelim-NORMAL),Carrier (195156) | Clear (122089),,Normal (BMD-CA5295/21F/P-VPI),Normal (BMD-EYE2687/19F-VPI)
+153792,True,Good (BMD-23901G24M-VPI),Normal (BMD-EL14281M24-VPI),Clear (144103) | Clear (227940),,Normal - AO/CONG (BMD-ACA1008/52M-VPI),Normal (BMD-EYE3208/34M-VPI)
+153790,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear (119050) | Clear by Parentage (NONE),,Normal (BMD-CA5370/20M/P-VPI),
+153727,False,,,,,,
+153726,True,Excellent (BMD-24234E25M-VPI),Normal (BMD-EL14558M25-VPI),Clear/Normal (129792) | Clear/Normal (129793),,Normal - AO/CONG (BMD-ACA859/30M-VPI),Normal (BMD-EYE2331/32M-VPI)
+153671,False,,,,,,
+153643,True,Normal (A),Normal (0),,,,Normal (CLEAR)
+153558,True,,Moderate Dysplasia (2),,,,
+153551,True,,Normal (0),,,,
+153510,False,,,,,,
+153392,True,Excellent (BMD-23699E24F-VPI),Normal (BMD-EL14104F24-VPI),,,"Normal AO/CONG, AUSC ONLY (BMD-ACA803/26F-PI)",Normal (BMD-EYE4264/57F-PI)
+153265,True,Good (BMD-24408G29F-VPI),Normal (BMD-EL14457F25-VPI),,,,Normal - see health record (BMD-EYE2865/22F-VPI)
+153260,True,Good (BMD-21454G39F-VPI),Normal (BMD-EL12123F39-VPI),Clear (90823),,Normal - AO/CONG (DR BRANDON PAGUE),Normal (DR STACY ANDREW)
+153200,True,Fair (BMD-23930F25F-NOPI),Normal (BMD-EL14309F25-NOPI),Carrier (248779) | Clear/Normal (248780),,Normal (BMD-CA5565/25F/P-NOPI),Normal (BMD-EYE2932/25F-NOPI)
+153107,True,,Normal (0),,,,
+153064,True,,Normal (0),,,,
+153008,False,,,,,,
+153007,False,,,,,,
+152970,True,Excellent (BMD-26550E59M-C-VPI),Normal (BMD-EL16581M59-C-VPI),Carrier (121499) | Clear/Normal (121498),,"Normal AO, AUSC/ECHO (DR LUIS BRAZ-RUIZO CB05)",Normal - see health record (BMD-EYE4165/61M-PI)
+152671,True,Good (BMD-23882G24M-VPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I UNILATERAL LEFT),Clear/Normal (156874) | Clear/Normal (156872),,Normal - see health record (DR. DARLENE BLISCHOK),Normal (BMD-EYE4584/73M-VPI)
+152425,True,Excellent (BMD-23958E27F-VPI),Normal (PRELIM),Carrier (11201),,Normal (BMD-BCA490/39F/C-VPI),
+152120,True,,,,,Normal (BMD-CA5308/32M/P-VPI),
+152116,True,,,,,Normal (BMD-BCA246/46F/P-VPI),
+152028,True,Excellent (PRELIM),Normal (PRELIM),Clear by Parentage | Clear/Normal (66292),,"Normal AO/CONG, AUSC ONLY (BMD-ACA744/18F-VPI)",Normal (BMD-EYE2296/6F-VPI)
+152024,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (130187) | Clear/Normal (130188),,Normal - AO/CONG (BMD-ACA735/58M-VPI),Normal (BMD-EYE2691/29M-VPI)
+151694,True,Mild Dysplasia (MILD HIP DYSPLASIA),Normal (BMD-EL14163F24-VPI),Carrier (112538) | Clear/Normal (112539),,"Normal AO/CONG, AUSC ONLY (BMD-CA5302/18F/P-VPI)",Normal - see health record (BMD-EYE3062/31F-VPI)
+151334,False,,,,,,
+150888,False,,,,,,
+150865,False,,,,,,
+150733,False,,,,,,
+150718,True,Good (BMD-21559G28M-VPI),,Clear/Normal (175322) | Clear/Normal (176074),,,
+150307,True,,Normal (BMD-EL13758M24-VPI),Clear/Normal (145942) | Clear/Normal (145943),,Normal (BMD-CA5163/20M/P-VPI),Normal (BMD-EYE2709/24M-VPI)
+149884,True,Good (BMD-23666G24F-VPI),Normal (BMD-EL14066F24-VPI),Clear/Normal (81001) | Clear/Normal (217478),,Normal (BMD-BCA8/27F/C-VPI),Normal (BMD-EYE2897/63F-VPI)
+149611,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (100358) | Clear/Normal (34547),DNA Sample Donated for Canine Health Research,"Normal AO/CONG, AUSC ONLY (BMD-ACA673/17M-VPI)",Normal (BMD-EYE2569/17M-VPI)
+149598,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (148450) | Clear/Normal (148451),,"Normal AO/CONG, AUSC ONLY (BMD-ACA719/18M-PI)",Normal (BMD-EYE2630/18M-VPI)
+149568,True,Good (BMD-25407G45F-C-VPI),Normal (BMD-EL15584F45-C-VPI),Clear/Normal (108144) | Clear/Normal (190805) | Clear (BMD-DMB332/46F-PI),,Normal (BMD-BCA835/44F/P-VPI),Normal (BMD-EYE3267/37F-VPI)
+149529,False,,,,,,
+149348,False,,,,,,
+149288,True,HD Free,ED free,Carrier (176232) | Clear/Normal (176231),,,
+149260,False,,,,,,
+149197,True,,Normal (0),,,,
+149130,False,,,,,,
+149124,True,,,Carrier (88061),,,
+149119,True,Good (BMD-23500G24M-VPI),Normal (BMD-EL13907M24-VPI),Carrier (106389) | Clear/Normal (135400),,Normal (DR JESSICA WARD),Normal (DR STEVEN BISTNER EC100)
+149075,True,Good (BMD-23063G28M-VPI),Normal (BMD-EL13520M28-VPI),,,Normal (BMD-CA4847/12M/P-VPI),
+148815,True,Good (BMD-21853G33F-PI),Normal (BMD-EL12477F33-PI),Carrier (97741) | Clear/Normal (97742),,Normal (BMD-CA4836/33F/P-PI),
+148732,True,Good (BMD-21815G25F-VPI),Normal (BMD-EL12441F25-VPI),Clear/Normal (95743) | Clear/Normal (95744),,Normal (BMD-CA4783/25F/C-VPI),Normal (BMD-EYE1997/25F-VPI)
+148704,True,Good (BMD-23466G36M-VPI),Normal (PRELIM),Carrier (48896) | Carrier (BMD-DMB243/1M-PI-CAR) | Clear/Normal (48895) | Clear (BMD-DM3168/1M-PI),,Normal - AO/CONG (BMD-ACA411/15M-VPI),Normal (BMD-EYE2059/24M-VPI)
+148623,True,Good (BMD-23420G24F-NOPI),Normal (BMD-EL13838F24-NOPI),Carrier (106539) | Clear/Normal (106540),,"Normal AO/CONG, AUSC ONLY (BMD-ACA759/23F-NOPI)",Normal (BMD-EYE2726/23F-NOPI)
+148586,True,,0/0 (21556),,,Clear/Normal (#),
+148393,True,Good (BMD-23646G37M-VPI),Normal (BMD-EL14048M37-VPI),,,Normal (BMD-CA5412/37M/P-VPI),Normal (BMD-EYE4071/74M-VPI)
+148356,True,Unaffected (PKR.HD-A),Normal (PKR.ED-0/0),Clear (DM N/N),,,
+147634,True,Good (BMD-23350G24F-PI),Normal (BMD-EL13770F24-PI),Clear/Normal (93467) | Clear/Normal (93468),,"Normal AO/CONG, AUSC/ECHO (BMD-ACA763/25F-VPI)",Normal (BMD-EYE2870/31F-VPI)
+147513,True,Good (BMD-22171G25F-VPI),Elbow: DJD Grade I,Clear (56361) | Clear (56362),,Normal - AO/CONG (BMD-ACA588/21F-VPI),Normal (BMD-EYE2332/21F-VPI)
+147338,True,Excellent (BMD-23037E24M-VPI),Normal (PRELIMINARY),Clear by Parentage | Clear/Normal (139517),,Normal - AO/CONG (BMD-ACA568/17M-PI),Normal (BMD-EYE2230/15M-VPI)
+147251,True,,Mild Dysplasia (1),,,,
+147230,True,HD Free (A),ED free (FREE),Clear/Normal (42416),,,
+147185,True,Good (BMD-23502G28F-VPI),Normal (BMD-EL13910F28-VPI),Carrier (173196) | Clear/Normal (173197),,Normal (BMD-CA5339/28F/P-VPI),Normal (BMD-EYE2779/28F-VPI)
+147148,True,,Mild Dysplasia (1),,,,
+147143,True,,Normal (0),,,,
+146975,True,,,,,Normal (BMD-CA4437/15F/P-VPI),
+146554,True,Good (BMD-22557G24M-VPI),Normal (BMD-EL13082M24-VPI),,,,
+146528,True,Good (PRELIM),Normal (PRELIM),Carrier (67546) | Clear (227779),,"Normal AO/CONG, AUSC ONLY (BMD-ACA706/24M-VPI)",Normal (BMD-EYE2626/26M-VPI)
+146500,True,Excellent (BMD-21713E39M-VPI),Normal (BMD-EL12358M39-VPI),Carrier (88859) | Clear/Normal (88858),,,
+146377,True,Good (BMD-23398G30F-VPI),Normal (BMD-EL13817F30-VPI),,,,
+146169,True,Good (PRELIMINARY),Normal (PRELIMINARY),Carrier (26218) | Carrier (BMD-DM3146/5F-PI-CAR) | Clear/Normal (70691) | Clear (BMD-DMB232/15F-PI),,Normal (BMD-CA4767/22F/C-PI),Normal (BMD-EYE2010/21F-VPI)
+145275,False,,,,,,
+144995,True,Excellent (BMD-22985E24M-VPI),Normal (PRELIM),Clear by Parentage | Clear (70694),,Normal (DR MARGIOCCA CM05),Normal (DR MARNIE FORD EC308)
+144969,True,Good (BMD-23395G28F-VPI),Normal (BMD-EL13815F28-VPI),Clear by Parentage | Clear/Normal (243882),,Normal (BMD-BCA169/37F/C-VPI),Normal (BMD-EYE2901/37F-VPI)
+144967,True,Good (BMD-23140G25F-VPI),Normal (BMD-EL13596F25-VPI),Clear/Normal (83634) | Clear/Normal (83635) | Clear (BMD-DM3159/6F-PI) | Clear (BMD-DMB239/6F-PI),,"Normal AO/CONG, AUSC ONLY (BMD-ACA617/19F-VPI)",Normal - see health record (BMD-EYE2401/57F-PI)
+144532,True,Good (PRELIM),Normal (PRELIM),,,,
+144278,True,Good (PRELIM),Normal (PRELIM),Clear/Normal (1704-W-51229) | Clear/Normal (1704-W-51229),,Normal (C042340),Normal (467835)
+143837,True,Fair (BMD-23320F32F-VPI),,Carrier (90703) | Clear/Normal (142947),,,
+143510,True,Good (PRELIM),Elbow: FCP/DJD Grade I (PRELIM),Clear/Normal (35283) | Clear/Normal (35282),,,Normal - see health record (DR KELLI RAMEY EC393)
+143467,True,Good (BMD-23558G34F-VPI),Normal (BMD-EL13964F34-VPI),Clear/Normal (192832) | Clear/Normal (192833),,,
+143453,True,Good (BMD-22670G24F-VPI),Normal (BMD-EL13166F24-VPI),Carrier (125991) | Clear by Parentage,,Normal - Cardiologist (BMD-CA5450/38F/C-VPI),Normal (BMD-EYE2482/26F-VPI)
+143335,True,Good (BMD-23285G29M-VPI),Normal (BMD-EL13718M29-VPI),Carrier (251409) | Clear/Normal (251410),,"Normal AO/CONG, AUSC/ECHO (DR. BRYAN BOTTORF)",Normal (BMD-EYE2523/21M-VPI)
+143250,True,,Normal (PRELIMINARY),Clear/Normal (83490) | Clear/Normal (83491),,Normal (BMD-CA4699/13M/P-VPI),
+143245,True,Good (PRELIM),Normal (PRELIM),Carrier (175111) | Clear/Normal (175109),,"Normal AO/CONG, AUSC/ECHO (DR. RODRIQUEZ)",Normal (DR. HEIDI KLEIN WEDDLE)
+143235,True,Excellent (PRELIM - 1970310),Normal (PRELIM - 1970310),Clear/Normal (42204) | Clear/Normal (42204),,Normal (BMD-CA5323/32M/C-VPI),Normal (BMD-EYE2091/11M-VPI)
+143212,True,Normal (HD-A/A),Normal (ED-0/0),Clear (DM1A-N/N) | Clear (DM1B-N/N),,,
+143081,True,Good (BMD-22817G24F-VPI),Elbow: DJD Grade I (2037223 UNILATERAL),,,Normal (BMD-CA5003/21F/P-VPI),
+142796,False,,,,,,
+142661,True,Fair (BMD-21251F24M-NOPI),Normal (BMD-EL11948M24-NOPI),,,,
+142527,False,,,,,,
+142341,True,Excellent (BMD-23018E25M-VPI),Normal (PRELIM),Carrier (68791) | Clear (70636),,Normal (BMD-CA),
+142269,True,Good (BMD-23050G25F-VPI),Elbow: DJD Grade II (DEGENERATIVE JOINT DISEASE II),Clear (1796) | Clear (BMD-DM3023/1F-PI) | Clear (BMD-DMB174/11F-PI),,"Normal AO/CONG, AUSC/ECHO (BMD-ACA714/27F-VPI)",Normal (BMD-EYE2119/67F-VPI)
+142219,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear by Parentage | Clear/Normal (58299),,Normal - AO/CONG (BMD-ACA599/22M-VPI),Normal (BMD-EYE2015/10M-VPI)
+141807,True,Good (BMD-22693G24F-VPI),Elbow: FCP/DJD Grade I,Carrier (69048) | Clear/Normal (69049),,Normal - AO/CONG (DR. MARGARET SAYER),
+141758,True,Excellent (BMD-22773E24M-VPI),Normal (BMD-EL13253M24-VPI),Carrier (23939) | Clear/Normal (23940),,Normal (BMD-CA5200/29M/P-VPI),
+141528,True,Good (PRELIMINARY),Elbow: DJD Grade I (PRELIMINARY),Clear (64648) | Clear/Normal (192260),,Normal (BMD-CA4602/16M/C-VPI),Normal (BMD-EYE1735/16M-PI)
+141506,True,Good (BMD-23023G27F-VPI),Normal (BMD-EL13483F27-VPI),Clear/Normal (55216) | Clear/Normal (175489),,Normal (BMD-BCA537/52F/P-VPI),
+140455,True,Good (BMD-23062G28F-VPI),Normal (BMD-EL13519F28-VPI),,,Normal (BMD-CA4846/15F/P-VPI),
+140426,True,Good (PRELIMINARY),Normal (PRELIMINARY),Clear/Normal (63249),,Normal (BMD-BCA997/73F/C-VPI),Normal (DR. RACHEL DAVIS)
+140040,True,Normal (HD GRAD A),Normal (ED UA (0)),Carrier (DM/N) | Clear (N/N),,,
+139948,True,A,0,,,,
+139763,True,Good (BMD-22365G24M-VPI),Normal (BMD-EL12920M24-VPI),Clear by Parentage | Clear/Normal (134236),,Normal - AO/CONG (BMD-ACA542/23M-NOPI),Normal (BMD-EYE2207/23M-PI)
+139759,True,,,,,Normal (BMD-CA4489/17F/P-VPI),Normal - see health record (BMD-EYE1546/17F-VPI)
+139701,True,Good (BMD-22555G24F-VPI),Normal (BMD-EL13081F24-VPI),Clear (BMD-DM3040/16F-PI) | Clear/Normal (107150) | Clear/Normal (107151) | Clear (BMD-DMB183/16F-PI),,Normal - AO/CONG (BMD-ACA482/17F-VPI),Normal (BMD-EYE2099/15F-VPI)
+139690,False,,,,,,
+139527,True,Good (PRELIMINARY),Normal (PRELIMINARY),,,,
+139370,True,Good (BMD-22442G24F-VPI),Normal (BMD-EL12982F24-VPI),Carrier (BMD-DM2929/3F-NOPI-CAR) | Clear/Normal (56304),,Normal (BMD-CA4957/24F/P-VPI),Normal - see health record (BMD-EYE2935/44F-VPI)
+139007,True,Good (BMD-22415G25M-PI),Normal (BMD-EL12967M25-PI),Clear/Normal (60623) | At Risk (60622),,Normal (BMD-CA5121/31M/C-VPI),Normal (BMD-EYE2476/31M-VPI)
+138852,True,Excellent (BMD-22231E25M-VPI),Normal (BMD-EL12798M25-VPI),Clear (49295) | At Risk (47450),,Normal (BMD-BCA1694/84M/C-VPI),
+138789,True,Good (BMD-22541G27F-VPI),Normal (BMD-EL13074F27-VPI),Clear/Normal (132793) | Clear/Normal (132794),,,
+138416,True,,Normal (PRELIMINARY),Carrier (131703) | Clear (132754),,Normal (BMD-CA4503/12M/P-VPI),
+138392,False,,,,,,
+136607,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear (5182-0227-1144-7191) | Clear/Normal (133134),,Normal (BMD-CA5422/47M/P-VPI),Normal (BMD-EYE2172/25M-VPI)
+136396,True,Good (BMD-22282G25F-VPI),Normal (BMD-EL12848F25-VPI),Clear (49293) | Clear (49292),,,
+135997,True,Excellent (BMD-21944E25M-PI),Normal (BMD-EL12555M25-PI),Carrier (38804) | Clear (38805),,Normal (BMD-CA4848/25M/P-VPI),Normal (BMD-EYE2496/37M-VPI)
+135927,True,Normal (HD.A (0)),Normal (ED (0)),Carrier (1804-W-16206) | Clear (1804-W-16206),,,
+135148,True,Excellent (BMD-22134E24F-NOPI),Elbow: DJD Grade I (DEGENERATIVE JOINT DISEASE I UNILATERAL LEFT),Clear (19506) | Clear/Normal (19507),,Normal - AO/CONG (BMD-ACA303/14F-NOPI),Normal (BMD-EYE1863/14F-NOPI)
+134694,True,Good (BMD-22233G29F-PI),,Clear (1606W18163) | Clear (1606W18163),,Normal (BMD-CA4915/29F/P-PI),
+132660,True,Good (Prelim-Prelim-GOOD),Normal (Prelim-Prelim-NORMAL),Clear (60883) | Clear (60884),,Normal (BMD-CA4892/25F/S-VPI),Normal (BMD-EYE2206/26F-VPI)
+132639,False,,,,,,
+131853,True,,Normal (BMD-EL12469M24-PI),Clear by Parentage | Clear (100-29240) | Clear (BMD-DM2976/1M-PI) | Clear by Parentage (BMD-DMB144/21M-PI-BP),,Normal - AO/CONG (BMD-ACA237/14M-PI),Normal (BMD-EYE1928/21M-VPI)
+131767,True,Normal (HD - L4 + R5 = 9),Normal (ED - R0+L1),,,,
+131625,True,Good (BMD-22116G25M-VPI),Normal (BMD-EL12707M25-VPI),Clear (60259) | Clear (60260),,Normal - AO/CONG (BMD-ACA541/28M-PI),Normal (BMD-EYE2210/28M-VPI)
+129844,True,Good (BMD-22036G35M-VPI),Normal (BMD-EL12017M25-VPI),Carrier (40733) | Clear (40732),,Normal (BMD-CA4651/25M/P-VPI),Normal (BMD-EYE1360/11M-PI)
+129644,True,,Normal (BMD-EL12508F24-VPI),Clear (100-9152) | Clear (100-9153),,Normal - AO/CONG (BMD-ACA402/16F-VPI),Normal - see health record (BMD-EYE2164/26F-PI)
+129600,True,Good (BMD-21166G24F-VPI),Normal (BMD-EL11877F24-VPI),Clear/Normal (32875) | At Risk (32874),,,
+129557,True,Normal (HD-A/A),Normal (ED-0/0),Clear (DM1A-N/N) | Clear (DM1B-N/N),,,
+129505,False,,,,,,
+129463,True,Normal (1180/2016 (A)),Normal (1180/2016 (0/0)),Clear/Normal (1510-W-30540) | Clear/Normal (1504-W-10696),,Normal (DR RAFAL NIZIOLEK),Normal (NEGATIVE.)
+128577,True,Good (BMD-21512G24M-VPI),Normal (BMD-EL12173M24-VPI),Carrier (BMD-DM2917/2M-PI-CAR) | Carrier (21695) | Clear (21198) | Clear (BMD-DMB108/1M-PI),,Normal - AO/CONG (BMD-ACA169/16M-VPI),Normal (DR SHARI GREENBERG)
+128199,True,Good (BMD-21640G24M-VPI),Normal (BMD-EL12284M24-VPI),Clear (54245) | Clear (54247),,Normal (SYDNEY MOISE),Normal (RON RIIS)
+128131,True,Excellent (BMD-21623E24F-VPI),Normal (BMD-EL12266F24-VPI),,,Normal - AO/CONG (BMD-ACA160/14F-PI),Normal (BMD-EYE1635/14F-PI)
+127580,False,,,,,,
+125253,True,Excellent (PRELIM),Normal (PRELIM),Clear (100 - 21950) | Clear (100 - 21951),,Normal (BMD-CA4436/12M/S-VPI),Normal (BMD-EYE1427/12M-VPI)
+124732,True,,,Clear (88061),,,
+124204,True,Good (PRELIM),Normal (PRELIM),Clear (100-5144) | Clear (100-5145),,,Normal (PENDING)
+123042,False,,,,,,
+121424,True,Good (BMD-21103G25M-VPI),Normal (BMD-EL11820M25-VPI),Carrier (22118) | Clear (22119),,"Normal - Cardiologist (HEIDI N. MACLEAN, DVM, MS)","Normal (MATTHEW LANDRY, DVM, DACVO EC320)"
+121070,True,Good (BMD-21255G28F-VPI),Normal (BMD-EL11953F28-VPI),Carrier (79338) | Clear (79339),,Normal (BMD-CA4694/29F/C-PI),Normal (BMD-EYE1855/29F-VPI)
+120354,True,Excellent (PRELIM),Normal (PRELIM),Clear (100-15316) | Clear (100-15320),,Normal (DR WOOD),Normal (BMD-EYE1393/17M-PI)
+116192,True,Good (BMD-20631G24M-VPI),Normal (BMD-EL11426M24-VPI),Clear/Normal (100-17684) | Clear/Normal (100-17685),,Normal - AO/CONG (BMD-ACA142/27M-VPI),Normal (BMD-EYE 1567/51MO)
+116064,True,Fair (Prelim-FAIR),Normal (Prelim-NORMAL),Carrier by Parentage | Carrier (130088) | Clear by Parentage,,Normal - AO/CONG (BMD-ACA70/25M-VPI),Normal (BMD-EYE1394/25M-VPI)
+111488,True,,Normal (0),,,,
+102864,False,,,,,,
+100661,False,,,,,,
+99075,True,Good (BMD-19233G24M-VPI),Normal (BMD-EL10203M24-VPI),Clear (90583),,Normal (BMD-CA3830/24M/S-VPI),Normal (BMD-EYE838/26M-VPI)
+73926,True,Unaffected (HD A),Normal (ED 0),,,,
+61073,True,Good (BMD-16496G30M-VPI),Normal (PRELIM),Carrier (BMD-DM1014/42M-VPI-CAR),,Normal (BMD-CA NOT REGISTERED),Normal (BMD-)
+21754,True,Good (BMD-12744G26M-PI),Normal (BMD-EL4936M26-PI),,,Normal (BMD-CA846/26M/C-PI),Normal (BMD-3323)
