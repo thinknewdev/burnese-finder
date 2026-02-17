@@ -463,66 +463,96 @@
                 <div>
                     <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Breeder Information</h3>
                     @if($dog->breeder)
-                    <div class="bg-white border-2 border-bernese-200 rounded-lg p-3 hover:border-bernese-400 transition">
-                        <a href="{{ route('breeders.show', $dog->breeder) }}" class="block">
-                            <div class="flex items-start gap-3">
-                                <div class="bg-bernese-100 rounded-full p-2 mt-0.5">
-                                    <span class="text-lg">🏠</span>
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <div class="font-bold text-bernese-800">{{ $dog->breeder->full_name }}</div>
-                                    @if($dog->breeder->kennel_name)
-                                    <div class="text-sm text-bernese-600 font-medium">{{ $dog->breeder->kennel_name }}</div>
-                                    @endif
-                                    @if($dog->breeder->city || $dog->breeder->state || $dog->breeder->country)
-                                    <div class="text-xs text-gray-500 mt-1">
-                                        📍 {{ collect([$dog->breeder->city, $dog->breeder->state, $dog->breeder->country])->filter()->implode(', ') }}
-                                    </div>
-                                    @endif
-                                    @if($dog->breeder->grade)
-                                    <div class="mt-2 inline-flex items-center gap-1 text-xs">
-                                        <span class="text-gray-500">Breeder Grade:</span>
-                                        <span class="font-bold {{ $dog->breeder->grade >= 70 ? 'text-green-600' : ($dog->breeder->grade >= 50 ? 'text-yellow-600' : 'text-red-600') }}">
-                                            {{ number_format($dog->breeder->grade, 1) }}
-                                        </span>
-                                    </div>
-                                    @endif
-                                </div>
+                    <div class="bg-white border-2 border-bernese-200 rounded-lg overflow-hidden hover:border-bernese-400 transition">
+                        {{-- Header: kennel name or breeder name --}}
+                        <div class="bg-bernese-50 px-4 py-3 border-b border-bernese-100">
+                            @if($dog->breeder->kennel_name)
+                            <div class="font-bold text-bernese-900 text-base">{{ $dog->breeder->kennel_name }}</div>
+                            <div class="text-sm text-bernese-700">{{ $dog->breeder->full_name }}</div>
+                            @else
+                            <div class="font-bold text-bernese-900 text-base">{{ $dog->breeder->full_name }}</div>
+                            @endif
+                            @if($dog->breeder->city || $dog->breeder->state)
+                            <div class="text-xs text-gray-500 mt-0.5">
+                                📍 {{ collect([$dog->breeder->city, $dog->breeder->state])->filter()->implode(', ') }}
                             </div>
-                        </a>
-                        @if($dog->breeder->email || $dog->breeder->phone)
-                        <div class="mt-3 pt-3 border-t border-gray-200 space-y-1">
+                            @endif
+                        </div>
+
+                        {{-- Body: contact + links --}}
+                        <div class="px-4 py-3 space-y-2">
                             @if($dog->breeder->email)
-                            <div class="text-xs">
+                            <div class="text-sm">
                                 <a href="mailto:{{ $dog->breeder->email }}" class="text-bernese-600 hover:text-bernese-800 flex items-center gap-2">
-                                    <span>📧</span>
+                                    <span class="text-base">📧</span>
                                     <span class="truncate">{{ $dog->breeder->email }}</span>
                                 </a>
                             </div>
                             @endif
                             @if($dog->breeder->phone)
-                            <div class="text-xs">
+                            <div class="text-sm">
                                 <a href="tel:{{ $dog->breeder->phone }}" class="text-bernese-600 hover:text-bernese-800 flex items-center gap-2">
-                                    <span>📞</span>
+                                    <span class="text-base">📞</span>
                                     <span>{{ $dog->breeder->phone }}</span>
                                 </a>
                             </div>
                             @endif
+
+                            {{-- Grade + links row --}}
+                            <div class="flex items-center justify-between pt-1">
+                                <div class="flex gap-3 text-xs">
+                                    <a href="{{ route('breeders.show', $dog->breeder) }}"
+                                       class="text-bernese-600 hover:text-bernese-800 font-medium">
+                                        View Profile →
+                                    </a>
+                                    @if($dog->breeder->bg_person_id && $dog->breeder->bg_person_id > 0)
+                                    <a href="https://www.bernergarde.org/DB/Person_Detail?PID={{ $dog->breeder->bg_person_id }}"
+                                       target="_blank"
+                                       class="text-gray-400 hover:text-gray-600 font-medium">
+                                        BernerGarde (ID: {{ $dog->breeder->bg_person_id }}) ↗
+                                    </a>
+                                    @endif
+                                </div>
+                                @if($dog->breeder->grade)
+                                <span class="text-xs px-2 py-0.5 rounded-full font-semibold
+                                    {{ $dog->breeder->grade >= 70 ? 'bg-green-100 text-green-800' : ($dog->breeder->grade >= 50 ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-800') }}">
+                                    Grade {{ number_format($dog->breeder->grade, 1) }}
+                                </span>
+                                @endif
+                            </div>
                         </div>
-                        @endif
                     </div>
                     @elseif($dog->breeder_name)
-                    <div class="bg-gray-50 border rounded-lg p-3">
-                        <div class="flex items-center gap-2">
-                            <span class="text-lg">🏠</span>
-                            <div class="text-gray-700 font-medium">{{ $dog->breeder_name }}</div>
+                    <div class="bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+                        <div class="bg-gray-50 px-4 py-3 border-b border-gray-100">
+                            <div class="font-bold text-gray-800 text-base">{{ $dog->breeder_name }}</div>
+                            <div class="text-xs text-gray-500 mt-0.5">Contact details not available</div>
                         </div>
-                        <div class="text-xs text-gray-500 mt-1">Contact details not available</div>
+                        <div class="px-4 py-3">
+                            @if($dog->bg_dog_id)
+                            <a href="https://www.bernergarde.org/DB/Dog_Detail?DogID={{ $dog->bg_dog_id }}"
+                               target="_blank"
+                               class="text-xs text-gray-400 hover:text-gray-600">
+                                View dog on BernerGarde for full breeder details ↗
+                            </a>
+                            @endif
+                        </div>
                     </div>
                     @else
-                    <div class="text-center py-4 bg-gray-50 rounded border-2 border-dashed border-gray-200">
-                        <span class="text-2xl opacity-30">🏠</span>
-                        <p class="text-gray-400 text-xs mt-1">Breeder information unavailable</p>
+                    <div class="bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+                        <div class="bg-gray-50 px-4 py-3 border-b border-gray-100">
+                            <div class="font-bold text-gray-400 text-base">Breeder Not Listed</div>
+                        </div>
+                        <div class="px-4 py-3">
+                            @if($dog->bg_dog_id)
+                            <a href="https://www.bernergarde.org/DB/Dog_Detail?DogID={{ $dog->bg_dog_id }}"
+                               target="_blank"
+                               class="text-xs text-bernese-500 hover:text-bernese-700 flex items-center gap-1">
+                                <span>View on BernerGarde for breeder details</span>
+                                <span>↗</span>
+                            </a>
+                            @endif
+                        </div>
                     </div>
                     @endif
                 </div>
