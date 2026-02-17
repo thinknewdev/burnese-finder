@@ -357,114 +357,55 @@
                     </div>
                 </div>
 
-                <!-- Pedigree - Enhanced 3 Generation Tree -->
+                <!-- Pedigree - Parent Summary -->
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Pedigree (3 Generations)</h3>
-                    @php
-                        // Get parents
-                        $sire = $dog->sire_id ? \App\Models\Dog::where('bg_dog_id', $dog->sire_id)->first() : null;
-                        $dam = $dog->dam_id ? \App\Models\Dog::where('bg_dog_id', $dog->dam_id)->first() : null;
-
-                        // Get grandparents
-                        $siresSire = $sire && $sire->sire_id ? \App\Models\Dog::where('bg_dog_id', $sire->sire_id)->first() : null;
-                        $siresDam = $sire && $sire->dam_id ? \App\Models\Dog::where('bg_dog_id', $sire->dam_id)->first() : null;
-                        $damsSire = $dam && $dam->sire_id ? \App\Models\Dog::where('bg_dog_id', $dam->sire_id)->first() : null;
-                        $damsDam = $dam && $dam->dam_id ? \App\Models\Dog::where('bg_dog_id', $dam->dam_id)->first() : null;
-                    @endphp
-                    @if($sire || $dam)
-                    <div class="space-y-3 text-xs">
-                        <!-- Sire's line -->
-                        @if($sire || $dog->sire_name)
-                        <div class="border-l-4 border-blue-400 pl-3 pb-2">
-                            <div class="font-semibold text-blue-700 mb-1">♂ SIRE</div>
-                            <div class="mb-2">
-                                @if($sire)
-                                    <a href="{{ route('dogs.show', $sire) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline font-medium">
-                                        {{ Str::limit($sire->registered_name, 30) }}
-                                    </a>
-                                    @if($sire->grade)
-                                        <span class="text-green-600 ml-1">({{ number_format($sire->grade, 1) }})</span>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Parents</h3>
+                    @if($pedigree['sire'] || $pedigree['sire_name'] || $pedigree['dam'] || $pedigree['dam_name'])
+                    <div class="space-y-2 text-xs">
+                        @if($pedigree['sire'] || $pedigree['sire_name'])
+                        <div class="border-l-4 border-blue-400 pl-3 py-1">
+                            <div class="text-blue-600 font-semibold text-xs mb-0.5">♂ SIRE</div>
+                            @if($pedigree['sire'])
+                                <a href="{{ route('dogs.show', $pedigree['sire']) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline font-medium leading-tight block">{{ Str::limit($pedigree['sire']->registered_name, 32) }}</a>
+                                <div class="flex gap-2 mt-1 flex-wrap">
+                                    @if($pedigree['sire']->grade)
+                                    <span class="px-1.5 py-0.5 rounded text-xs font-semibold {{ $pedigree['sire']->grade >= 60 ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700' }}">
+                                        Grade {{ number_format($pedigree['sire']->grade, 1) }}
+                                    </span>
                                     @endif
-                                @else
-                                    <span class="text-gray-600">{{ Str::limit($dog->sire_name, 30) }}</span>
-                                @endif
-                            </div>
-
-                            @if($siresSire || $siresDam || ($sire && ($sire->sire_name || $sire->dam_name)))
-                            <div class="ml-3 space-y-1 text-xs">
-                                @if($siresSire || ($sire && $sire->sire_name))
-                                <div class="text-gray-600">
-                                    <span class="text-blue-500">♂♂</span>
-                                    @if($siresSire)
-                                        <a href="{{ route('dogs.show', $siresSire) }}" class="hover:underline">{{ Str::limit($siresSire->registered_name, 25) }}</a>
-                                    @elseif($sire && $sire->sire_name)
-                                        {{ Str::limit($sire->sire_name, 25) }}
+                                    @if($pedigree['sire']->hip_rating)
+                                    <span class="text-gray-500">{{ Str::before($pedigree['sire']->hip_rating, ' (') }}</span>
                                     @endif
                                 </div>
-                                @endif
-                                @if($siresDam || ($sire && $sire->dam_name))
-                                <div class="text-gray-600">
-                                    <span class="text-pink-500">♀♂</span>
-                                    @if($siresDam)
-                                        <a href="{{ route('dogs.show', $siresDam) }}" class="hover:underline">{{ Str::limit($siresDam->registered_name, 25) }}</a>
-                                    @elseif($sire && $sire->dam_name)
-                                        {{ Str::limit($sire->dam_name, 25) }}
-                                    @endif
-                                </div>
-                                @endif
-                            </div>
+                            @else
+                                <span class="text-gray-500">{{ Str::limit($pedigree['sire_name'], 32) }}</span>
                             @endif
                         </div>
                         @endif
-
-                        <!-- Dam's line -->
-                        @if($dam || $dog->dam_name)
-                        <div class="border-l-4 border-pink-400 pl-3">
-                            <div class="font-semibold text-pink-700 mb-1">♀ DAM</div>
-                            <div class="mb-2">
-                                @if($dam)
-                                    <a href="{{ route('dogs.show', $dam) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline font-medium">
-                                        {{ Str::limit($dam->registered_name, 30) }}
-                                    </a>
-                                    @if($dam->grade)
-                                        <span class="text-green-600 ml-1">({{ number_format($dam->grade, 1) }})</span>
+                        @if($pedigree['dam'] || $pedigree['dam_name'])
+                        <div class="border-l-4 border-pink-400 pl-3 py-1">
+                            <div class="text-pink-600 font-semibold text-xs mb-0.5">♀ DAM</div>
+                            @if($pedigree['dam'])
+                                <a href="{{ route('dogs.show', $pedigree['dam']) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline font-medium leading-tight block">{{ Str::limit($pedigree['dam']->registered_name, 32) }}</a>
+                                <div class="flex gap-2 mt-1 flex-wrap">
+                                    @if($pedigree['dam']->grade)
+                                    <span class="px-1.5 py-0.5 rounded text-xs font-semibold {{ $pedigree['dam']->grade >= 60 ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700' }}">
+                                        Grade {{ number_format($pedigree['dam']->grade, 1) }}
+                                    </span>
                                     @endif
-                                @else
-                                    <span class="text-gray-600">{{ Str::limit($dog->dam_name, 30) }}</span>
-                                @endif
-                            </div>
-
-                            @if($damsSire || $damsDam || ($dam && ($dam->sire_name || $dam->dam_name)))
-                            <div class="ml-3 space-y-1 text-xs">
-                                @if($damsSire || ($dam && $dam->sire_name))
-                                <div class="text-gray-600">
-                                    <span class="text-blue-500">♂♀</span>
-                                    @if($damsSire)
-                                        <a href="{{ route('dogs.show', $damsSire) }}" class="hover:underline">{{ Str::limit($damsSire->registered_name, 25) }}</a>
-                                    @elseif($dam && $dam->sire_name)
-                                        {{ Str::limit($dam->sire_name, 25) }}
+                                    @if($pedigree['dam']->hip_rating)
+                                    <span class="text-gray-500">{{ Str::before($pedigree['dam']->hip_rating, ' (') }}</span>
                                     @endif
                                 </div>
-                                @endif
-                                @if($damsDam || ($dam && $dam->dam_name))
-                                <div class="text-gray-600">
-                                    <span class="text-pink-500">♀♀</span>
-                                    @if($damsDam)
-                                        <a href="{{ route('dogs.show', $damsDam) }}" class="hover:underline">{{ Str::limit($damsDam->registered_name, 25) }}</a>
-                                    @elseif($dam && $dam->dam_name)
-                                        {{ Str::limit($dam->dam_name, 25) }}
-                                    @endif
-                                </div>
-                                @endif
-                            </div>
+                            @else
+                                <span class="text-gray-500">{{ Str::limit($pedigree['dam_name'], 32) }}</span>
                             @endif
                         </div>
                         @endif
                     </div>
                     @else
                     <div class="text-center py-4 bg-gray-50 rounded border-2 border-dashed border-gray-200">
-                        <span class="text-2xl opacity-30">🌳</span>
-                        <p class="text-gray-400 text-xs mt-1">Pedigree not available</p>
+                        <p class="text-gray-400 text-xs">Parentage not on record</p>
                     </div>
                     @endif
                 </div>
@@ -616,6 +557,129 @@
                     </div>
                 </div>
             </div>
+        </div>
+        @endif
+
+        <!-- Full-Width Pedigree Chart -->
+        @php
+            $hasPedigreeData = $pedigree['sire'] || $pedigree['sire_name'] || $pedigree['dam'] || $pedigree['dam_name'];
+        @endphp
+        @if($hasPedigreeData)
+        <div class="border-t p-6">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Pedigree Chart</h3>
+
+            @php
+            // Helper: render a pedigree node (dog record or fallback text)
+            function pedigreeCell($dog, $fallbackName, $sexClass, $label) {
+                $hasDog = !is_null($dog);
+                $hasName = $hasDog || !empty($fallbackName);
+                if (!$hasName) return '<div class="h-full flex items-center justify-center text-gray-300 text-xs italic px-2">—</div>';
+                $out = '<div class="px-2 py-1.5 h-full flex flex-col justify-center gap-0.5">';
+                $out .= '<div class="text-' . ($dog?->sex === 'Female' ? 'pink' : 'blue') . '-500 text-xs font-semibold leading-none mb-0.5">' . $label . '</div>';
+                if ($hasDog) {
+                    $name = Str::limit($dog->registered_name, 28);
+                    $url = route('dogs.show', $dog);
+                    $out .= '<a href="' . $url . '" class="text-bernese-700 hover:text-bernese-900 hover:underline font-medium text-xs leading-tight">' . htmlspecialchars($name) . '</a>';
+                    if ($dog->grade) {
+                        $color = $dog->grade >= 60 ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700';
+                        $out .= '<span class="text-xs px-1 py-0 rounded ' . $color . ' w-fit mt-0.5">Gr ' . number_format($dog->grade, 1) . '</span>';
+                    }
+                    $hip = $dog->hip_rating ? Str::before($dog->hip_rating, ' (') : null;
+                    if ($hip) {
+                        $out .= '<span class="text-gray-400 text-xs leading-tight">Hip: ' . htmlspecialchars($hip) . '</span>';
+                    }
+                    if ($dog->dm_status) {
+                        $dm = Str::before($dog->dm_status, ' (');
+                        $dm = Str::before($dm, ' |');
+                        $dmColor = str_contains(strtolower($dm), 'clear') ? 'text-green-500' : (str_contains(strtolower($dm), 'affected') ? 'text-red-500' : 'text-gray-400');
+                        $out .= '<span class="text-xs ' . $dmColor . ' leading-tight">DM: ' . htmlspecialchars(Str::limit($dm, 15)) . '</span>';
+                    }
+                } else {
+                    $out .= '<span class="text-gray-500 text-xs leading-tight">' . htmlspecialchars(Str::limit($fallbackName, 28)) . '</span>';
+                }
+                $out .= '</div>';
+                return $out;
+            }
+            @endphp
+
+            {{-- Pedigree table: Gen 1 (parents) | Gen 2 (grandparents) | Gen 3 (great-grandparents) --}}
+            {{-- 8 rows, G1 spans 4, G2 spans 2, G3 spans 1 --}}
+            <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-xs" style="min-width: 560px">
+                <colgroup>
+                    <col style="width: 33%">
+                    <col style="width: 33%">
+                    <col style="width: 34%">
+                </colgroup>
+                {{-- Row 1: Sire | Sire's Sire | Sire's Sire's Sire --}}
+                <tr class="border-b border-gray-100">
+                    <td rowspan="4" class="border-r border-gray-200 align-middle" style="border-bottom: 1px solid #e5e7eb">
+                        {!! pedigreeCell($pedigree['sire'], $pedigree['sire_name'], 'blue', '♂ SIRE') !!}
+                    </td>
+                    <td rowspan="2" class="border-r border-gray-200 align-middle bg-blue-50/30" style="border-bottom: 1px solid #e5e7eb">
+                        {!! pedigreeCell($pedigree['sires_sire'], $pedigree['sires_sire_name'], 'blue', '♂♂ Sire\'s Sire') !!}
+                    </td>
+                    <td class="align-middle bg-blue-50/20 border-b border-gray-100">
+                        {!! pedigreeCell($pedigree['ss_s'], $pedigree['ss_s_name'], 'blue', '♂♂♂') !!}
+                    </td>
+                </tr>
+                {{-- Row 2: | | Sire's Sire's Dam --}}
+                <tr class="border-b border-gray-100">
+                    <td class="align-middle bg-pink-50/20 border-b border-gray-100">
+                        {!! pedigreeCell($pedigree['ss_d'], $pedigree['ss_d_name'], 'pink', '♀♂♂') !!}
+                    </td>
+                </tr>
+                {{-- Row 3: | Sire's Dam | Sire's Dam's Sire --}}
+                <tr class="border-b border-gray-100">
+                    <td rowspan="2" class="border-r border-gray-200 align-middle bg-pink-50/30" style="border-bottom: 1px solid #e5e7eb">
+                        {!! pedigreeCell($pedigree['sires_dam'], $pedigree['sires_dam_name'], 'pink', '♀♂ Sire\'s Dam') !!}
+                    </td>
+                    <td class="align-middle bg-blue-50/20 border-b border-gray-100">
+                        {!! pedigreeCell($pedigree['sd_s'], $pedigree['sd_s_name'], 'blue', '♂♀♂') !!}
+                    </td>
+                </tr>
+                {{-- Row 4: | | Sire's Dam's Dam --}}
+                <tr class="border-b border-gray-200">
+                    <td class="align-middle bg-pink-50/20 border-b border-gray-200">
+                        {!! pedigreeCell($pedigree['sd_d'], $pedigree['sd_d_name'], 'pink', '♀♀♂') !!}
+                    </td>
+                </tr>
+                {{-- Row 5: Dam | Dam's Sire | Dam's Sire's Sire --}}
+                <tr class="border-b border-gray-100">
+                    <td rowspan="4" class="border-r border-gray-200 align-middle bg-pink-50/10" style="border-bottom: 1px solid #e5e7eb">
+                        {!! pedigreeCell($pedigree['dam'], $pedigree['dam_name'], 'pink', '♀ DAM') !!}
+                    </td>
+                    <td rowspan="2" class="border-r border-gray-200 align-middle bg-blue-50/30" style="border-bottom: 1px solid #e5e7eb">
+                        {!! pedigreeCell($pedigree['dams_sire'], $pedigree['dams_sire_name'], 'blue', '♂♀ Dam\'s Sire') !!}
+                    </td>
+                    <td class="align-middle bg-blue-50/20 border-b border-gray-100">
+                        {!! pedigreeCell($pedigree['ds_s'], $pedigree['ds_s_name'], 'blue', '♂♂♀') !!}
+                    </td>
+                </tr>
+                {{-- Row 6: | | Dam's Sire's Dam --}}
+                <tr class="border-b border-gray-100">
+                    <td class="align-middle bg-pink-50/20 border-b border-gray-100">
+                        {!! pedigreeCell($pedigree['ds_d'], $pedigree['ds_d_name'], 'pink', '♀♂♀') !!}
+                    </td>
+                </tr>
+                {{-- Row 7: | Dam's Dam | Dam's Dam's Sire --}}
+                <tr class="border-b border-gray-100">
+                    <td rowspan="2" class="border-r border-gray-200 align-middle bg-pink-50/30">
+                        {!! pedigreeCell($pedigree['dams_dam'], $pedigree['dams_dam_name'], 'pink', '♀♀ Dam\'s Dam') !!}
+                    </td>
+                    <td class="align-middle bg-blue-50/20 border-b border-gray-100">
+                        {!! pedigreeCell($pedigree['dd_s'], $pedigree['dd_s_name'], 'blue', '♂♀♀') !!}
+                    </td>
+                </tr>
+                {{-- Row 8: | | Dam's Dam's Dam --}}
+                <tr>
+                    <td class="align-middle bg-pink-50/20">
+                        {!! pedigreeCell($pedigree['dd_d'], $pedigree['dd_d_name'], 'pink', '♀♀♀') !!}
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <p class="text-xs text-gray-400 mt-2">Grade shown where dog record exists in database. Hip and DM results from OFA certifications.</p>
         </div>
         @endif
 
