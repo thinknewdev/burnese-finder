@@ -1,7 +1,7 @@
 # Session Status & Next Steps
 
-**Last Updated:** February 16, 2026
-**Session Summary:** Enhanced UI to make Active Breeding Search the centerpiece feature with improved dog detail pages
+**Last Updated:** February 17, 2026
+**Session Summary:** Added real health certification data from BernerGarde, updated branding, replaced placeholder images with bernese-1.png
 
 ---
 
@@ -31,6 +31,13 @@
   - 360 alive dogs with litters since 2024
   - 645 litters linked to sire dogs (94% coverage)
   - 635 litters linked to dam dogs (94% coverage)
+- **Health Certification Coverage** ⭐ NEW:
+  - 577 dogs with hip ratings (OFA)
+  - 600 dogs with elbow ratings (OFA)
+  - 356 dogs with cardiac clearances (OFA)
+  - 300 dogs with eye clearances (OFA/CAER)
+  - 455 dogs with DM genetic test results
+  - 673 of 989 active breeding dogs have at least one certification (68%)
 
 ### Application Features
 1. **Search & Discovery**
@@ -45,17 +52,28 @@
    - **Filters**: year, sex, state, sort options
    - **Results**: 505 dogs by default (last 3 years)
 
-3. **Enhanced Dog Detail Pages** ⭐ NEW
+3. **Enhanced Dog Detail Pages**
    - **Active Breeder Badge**: Green gradient badge with litter count
    - **Breeding History**: Shows up to 5 recent litters with dates/partners
    - **Health Tests**: Card-based layout with emoji icons and color coding
    - **3-Gen Pedigree**: Visual tree with clickable links and grades
    - **Breeder Info**: Enhanced cards with contact details and grades
 
-4. **Health Grading System**
+4. **Real Health Certification Data** ⭐ NEW
+   - OFA cert results scraped directly from BernerGarde for 673 active breeding dogs
+   - Displays hip, elbow, cardiac, eye, and DM results with OFA cert numbers
+   - Color-coded: green (Excellent/Good/Normal), yellow (Fair/Carrier), red (Affected)
+   - DM shows all test variants (SOD1-A, SOD1-B) with correct priority coloring
+   - "No health clearances on file" message for dogs without data
+
+5. **Branding & Image Updates** ⭐ NEW
+   - Site title updated to "Bernese Mountain Dog Finder" everywhere
+   - bernese-1.png used as placeholder image across all views (cards, table rows, detail pages, navbar)
+
+6. **Health Grading System**
    - Dog grades: 40% health + 40% longevity + 20% breeder
-   - Health scoring based on OFA clearances
-   - Breeder grades based on average dog grades
+   - Health scoring based on OFA clearances (now populated with real data)
+   - Breeder grades recalculated based on updated dog grades
 
 ---
 
@@ -99,6 +117,11 @@ All located in `app/Console/Commands/`:
    docker exec bernese_app php artisan litters:link --fresh
    ```
 
+5. **`ImportHealthCertifications.php`** - Import OFA/health cert data ⭐ NEW
+   ```bash
+   docker exec bernese_app php artisan import:health-certifications
+   ```
+
 ### Scraper Files
 Located in `scraper/` directory:
 
@@ -109,6 +132,13 @@ Located in `scraper/` directory:
 - **`scrape_parent_dogs.py`**
   - Scrapes missing parent dog details
   - Output: `scraper/output/parent_dogs_details.csv`
+
+- **`scrape_certifications.py`** ⭐ NEW
+  - Scrapes OFA health certification data from each dog's BernerGarde page
+  - Parses: Hips, Elbows, Heart, Eyes, DM genetic tests with cert numbers
+  - Output: `scraper/output/health_certifications.csv`
+  - Run: `python3 scrape_certifications.py --active-only` (989 dogs, ~33 min)
+  - Supports resuming: re-run skips already-scraped dogs
 
 - **Other scrapers**:
   - `scrape_dog_details.py` - Dog detail scraper
@@ -122,70 +152,50 @@ Located in `scraper/output/`:
 - `litters.csv` - 2,604 litters
 - `recent_litters_details.csv` - 604 recent litters with dog IDs
 - `parent_dogs_details.csv` - 961 parent dogs with full details
+- `health_certifications.csv` - 989 active breeding dogs, 673 with cert data ⭐ NEW
 
 ---
 
-## 🎯 What Was Accomplished This Session
+## 🎯 What Was Accomplished This Session (Feb 17)
 
-### 1. Homepage Redesign ⭐
-- ✅ Created prominent hero section for Active Breeding Search
-- ✅ Added gradient background (bernese-700 to bernese-900)
-- ✅ Display active breeder statistics (505 dogs with recent litters)
-- ✅ Year-by-year breakdown (2024, 2025, total litters)
-- ✅ Large call-to-action button to browse active breeding dogs
-- ✅ Improved layout (max-w-6xl for better screen usage)
-- ✅ Quick access links section with all main features
+### 1. Branding Update
+- ✅ Renamed site to "Bernese Mountain Dog Finder" (was "Bernese Dog Finder")
+- ✅ Updated page title, navbar, and footer everywhere (`layouts/app.blade.php`)
 
-### 2. Enhanced Dog Detail Pages ⭐
-All enhancements in `resources/views/dogs/show.blade.php`:
+### 2. Image Placeholder Replacement
+- ✅ Replaced 🐕 emoji placeholders with `bernese-1.png` across all views:
+  - Navbar logo icon
+  - Dog cards (`dogs/index.blade.php`)
+  - Top-rated table thumbnails (`dogs/top.blade.php`)
+  - Dog detail main image (`dogs/show.blade.php`)
+  - Dog detail offspring thumbnails
+  - Homepage dog cards (`search/index.blade.php`)
+  - Active breeding empty state (`search/active-breeding.blade.php`)
 
-**Active Breeder Badge**:
-- ✅ Green gradient badge with paw emoji
-- ✅ Shows count of recent litters (since 2023)
-- ✅ Only displays for alive dogs with breeding activity
+### 3. Real Health Certification Data ⭐ MAJOR
+- ✅ Investigated root cause: all health columns were empty — data was never scraped
+- ✅ Analyzed BernerGarde page structure via live page fetch
+  - Certifications table: Org | Test Type | Cert # | Findings | Test Date
+- ✅ Built `scraper/scrape_certifications.py`:
+  - Parses certifications table from each dog's BernerGarde detail page
+  - Maps to: hip_rating, elbow_rating, heart_status, eye_status, dm_status, dna_status
+  - Includes OFA cert numbers (e.g. "Good (BMD-25163G24M-VPI)")
+  - Supports resumable scraping (checkpoint every 100 dogs)
+- ✅ Scraped 989 active breeding dogs (33 min runtime at 2s/request)
+  - 673 dogs had certification data (68% hit rate)
+- ✅ Built `app/Console/Commands/ImportHealthCertifications.php` (`import:health-certifications`)
+  - Reads CSV, updates dog health fields, recalculates grades and breeder grades
+- ✅ Imported all 673 dogs with certifications into database
+- ✅ Updated `dogs/show.blade.php` health clearances section:
+  - OFA cert numbers shown in monospace below test name
+  - Fixed DM color priority: Affected (red) > Carrier (yellow) > Clear (green)
+  - Multiple DM test variants shown as separate badges
 
-**Breeding History Section**:
-- ✅ Shows up to 5 most recent litters (since 2020)
-- ✅ Displays year, date, puppy count, breeding partner
-- ✅ Highlighted in green with trophy emoji
-- ✅ Only appears for active breeders
-
-**Enhanced Health Clearances**:
-- ✅ Card-based layout with emoji icons
-- ✅ Visual indicators with color-coded badges
-- ✅ Completion percentage (X/6 tests)
-- ✅ Individual test cards:
-  - 🦴 Hip Dysplasia (OFA)
-  - 💪 Elbow Dysplasia (OFA)
-  - ❤️ Cardiac (Cardiologist Exam)
-  - 👁️ Eye Clearance (CERF/OFA)
-  - 🧬 DM (Degenerative Myelopathy)
-  - 🔬 DNA Profile
-
-**3-Generation Pedigree Tree**:
-- ✅ Visual tree showing sire and dam lines
-- ✅ Color-coded by sex (blue males, pink females)
-- ✅ Clickable links to view ancestors
-- ✅ Shows grades for each dog when available
-- ✅ Displays grandparents with symbols:
-  - ♂♂ Sire's Sire
-  - ♀♂ Sire's Dam
-  - ♂♀ Dam's Sire
-  - ♀♀ Dam's Dam
-
-**Enhanced Breeder/Kennel Information**:
-- ✅ Prominent card design with house emoji
-- ✅ Shows breeder name, kennel name, location
-- ✅ Contact details (email and phone) if available
-- ✅ Breeder grade displayed with color coding
-- ✅ Clickable to view full breeder profile
-
-### 3. Testing & Verification
-- ✅ All pages tested successfully (HTTP 200)
-- ✅ Homepage loads with hero section
-- ✅ Active breeding page functional
-- ✅ Dog detail pages display all enhancements
-- ✅ View cache cleared
+### 4. Previously Completed (Feb 15-16)
+- ✅ Homepage hero section for Active Breeding Search
+- ✅ Active Breeder badge, Breeding History section on dog detail pages
+- ✅ 3-Generation Pedigree Tree
+- ✅ Enhanced Breeder/Kennel cards
 
 ---
 
@@ -198,7 +208,7 @@ All enhancements in `resources/views/dogs/show.blade.php`:
    - Improve loading performance
 
 2. **Enhance Active Breeding Filters**
-   - Add health clearance filters (hips, elbows, etc.)
+   - Add health clearance filters (hips, elbows, etc.) — now that data exists!
    - Add breeder grade filter
    - Add frozen semen availability filter
    - Export to CSV functionality
@@ -390,7 +400,7 @@ DB_PASSWORD=secret
 - **Active Breeding**: http://localhost:8080/active-breeding
 - **Top Dogs**: http://localhost:8080/dogs/top
 - **Breeders**: http://localhost:8080/breeders
-- **Example Active Breeder**: http://localhost:8080/dogs/2700
+- **Example Active Breeder with health certs**: http://localhost:8080/dogs/161807
 
 ---
 
@@ -413,18 +423,13 @@ DB_PASSWORD=secret
 
 4. **Git Workflow**
    - Current branch: `main`
-   - Recent commit: Enhanced dog detail pages with Active Breeder focus
+   - Recent commits: Health certifications scraper + import, branding updates, bernese-1.png
    - Safe to pull updates: Yes
 
-5. **UI Enhancements Completed**
-   - Homepage has Active Breeding hero section
-   - Dog detail pages have all 5 enhancements:
-     - Active Breeder badge
-     - Breeding history
-     - Enhanced health tests
-     - 3-generation pedigree
-     - Enhanced breeder info
-   - All pages tested and working
+5. **Health Data Refresh Workflow**
+   - Re-scrape certs: `cd scraper && python3 scrape_certifications.py --active-only`
+   - Import to DB: `docker exec bernese_app php artisan import:health-certifications`
+   - Scraper resumes automatically if interrupted (skips already-scraped dogs)
 
 ---
 
@@ -436,17 +441,21 @@ DB_PASSWORD=secret
 - Database growth: +961 dogs (12% increase)
 - Feature improvement: 33x more active breeding dogs
 
-### This Session (Feb 16)
+### Session Feb 16
 - **Lines of code modified**: ~400
 - **Files updated**: 2
   - `resources/views/search/index.blade.php` - Complete homepage redesign
   - `resources/views/dogs/show.blade.php` - 5 major enhancements
-- **UI improvements**:
-  - Active Breeding hero section
-  - Active Breeder badges
-  - Breeding history sections
-  - Enhanced health test displays
-  - 3-generation pedigree trees
+
+### Session Feb 17 (This Session)
+- **New files created**: 2
+  - `scraper/scrape_certifications.py` - Health cert scraper
+  - `app/Console/Commands/ImportHealthCertifications.php` - Import command
+- **Files updated**: 6 view files (images + branding), `SESSION_STATUS.md`
+- **Data added**: 673 dogs with OFA health certifications
+  - 577 hip ratings, 600 elbow ratings, 356 cardiac, 300 eye, 455 DM
+- **Runtime**: ~33 min scraping + instant import
+- **Commits**: 3 (code, data, session status)
   - Enhanced breeder information cards
 - **Testing**: All pages verified (HTTP 200)
 - **Focus**: UI/UX improvements for active breeding feature
