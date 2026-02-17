@@ -34,6 +34,25 @@
                         @if($dog->titles)
                             <p class="text-sm text-amber-600 font-medium mt-1">{{ $dog->titles }}</p>
                         @endif
+
+                        @php
+                            // Check if this dog is an active breeder (has litters since 2023)
+                            $recentLittersAsSire = \App\Models\Litter::where('sire_id', $dog->bg_dog_id)
+                                ->where('birth_year', '>=', 2023)
+                                ->count();
+                            $recentLittersAsDam = \App\Models\Litter::where('dam_id', $dog->bg_dog_id)
+                                ->where('birth_year', '>=', 2023)
+                                ->count();
+                            $isActiveBreeder = ($recentLittersAsSire + $recentLittersAsDam) > 0 && !$dog->death_date;
+                        @endphp
+
+                        @if($isActiveBreeder)
+                        <div class="mt-2 inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg shadow-md">
+                            <span class="text-lg">🐾</span>
+                            <span class="font-semibold text-sm">Active Breeder</span>
+                            <span class="bg-white/20 px-2 py-0.5 rounded text-xs">{{ $recentLittersAsSire + $recentLittersAsDam }} recent litters</span>
+                        </div>
+                        @endif
                     </div>
                     @if($dog->grade)
                     <div class="text-center bg-{{ $dog->grade >= 70 ? 'green' : ($dog->grade >= 50 ? 'yellow' : 'red') }}-50 rounded-lg p-3">
@@ -96,50 +115,164 @@
                 </div>
                 @endif
 
-                <!-- Health Clearances -->
+                <!-- Breeding History (for active breeders) -->
+                @if($isActiveBreeder)
+                @php
+                    $recentLitters = \App\Models\Litter::where(function($query) use ($dog) {
+                        $query->where('sire_id', $dog->bg_dog_id)
+                              ->orWhere('dam_id', $dog->bg_dog_id);
+                    })
+                    ->where('birth_year', '>=', 2020)
+                    ->orderByDesc('birth_year')
+                    ->limit(5)
+                    ->get();
+                @endphp
+                @if($recentLitters->count() > 0)
+                <div class="border border-green-200 bg-green-50 rounded-lg p-4 mb-4">
+                    <h3 class="text-sm font-semibold text-green-800 uppercase tracking-wide mb-3 flex items-center gap-2">
+                        <span>🏆</span> Recent Breeding Activity
+                    </h3>
+                    <div class="space-y-2">
+                        @foreach($recentLitters as $litter)
+                        <div class="flex justify-between items-center text-sm bg-white rounded px-3 py-2">
+                            <div>
+                                <span class="font-medium text-gray-700">{{ $litter->birth_year }}</span>
+                                @if($litter->birth_date)
+                                    <span class="text-gray-500">• {{ $litter->birth_date->format('M d') }}</span>
+                                @endif
+                                @if($litter->puppies_count)
+                                    <span class="text-gray-500">• {{ $litter->puppies_count }} puppies</span>
+                                @endif
+                            </div>
+                            <div class="text-xs text-gray-500">
+                                @if($litter->sire_id == $dog->bg_dog_id && $litter->dam_name)
+                                    with {{ Str::limit($litter->dam_name, 25) }}
+                                @elseif($litter->dam_id == $dog->bg_dog_id && $litter->sire_name)
+                                    with {{ Str::limit($litter->sire_name, 25) }}
+                                @endif
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
+                @endif
+
+                <!-- Health Clearances - Enhanced -->
                 <div class="border-t pt-4">
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Health Clearances</h3>
-                    @if($dog->hip_rating || $dog->elbow_rating || $dog->heart_status || $dog->eye_status || $dog->dm_status || $dog->dna_status)
-                    <div class="grid grid-cols-2 gap-3">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Health Clearances</h3>
+                        @php
+                            $healthTests = collect([
+                                'hip_rating' => $dog->hip_rating,
+                                'elbow_rating' => $dog->elbow_rating,
+                                'heart_status' => $dog->heart_status,
+                                'eye_status' => $dog->eye_status,
+                                'dm_status' => $dog->dm_status,
+                                'dna_status' => $dog->dna_status,
+                            ])->filter();
+                            $testsCount = $healthTests->count();
+                            $maxTests = 6;
+                            $completionPercent = $testsCount > 0 ? round(($testsCount / $maxTests) * 100) : 0;
+                        @endphp
+                        @if($testsCount > 0)
+                        <span class="text-xs px-2 py-1 rounded {{ $completionPercent >= 80 ? 'bg-green-100 text-green-700' : ($completionPercent >= 50 ? 'bg-yellow-100 text-yellow-700' : 'bg-gray-100 text-gray-700') }}">
+                            {{ $testsCount }}/{{ $maxTests }} tests
+                        </span>
+                        @endif
+                    </div>
+                    @if($testsCount > 0)
+                    <div class="bg-white rounded-lg border p-4 space-y-3">
                         @if($dog->hip_rating)
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full {{ str_contains(strtolower($dog->hip_rating), 'excellent') || str_contains(strtolower($dog->hip_rating), 'good') ? 'bg-green-500' : 'bg-yellow-500' }}"></span>
-                            <span class="text-sm"><strong>Hips:</strong> {{ $dog->hip_rating }}</span>
+                        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🦴</span>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-700">Hip Dysplasia</div>
+                                    <div class="text-xs text-gray-500">OFA Rating</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-sm font-medium {{ str_contains(strtolower($dog->hip_rating), 'excellent') ? 'bg-green-100 text-green-800' : (str_contains(strtolower($dog->hip_rating), 'good') ? 'bg-green-50 text-green-700' : 'bg-yellow-100 text-yellow-800') }}">
+                                {{ $dog->hip_rating }}
+                            </span>
                         </div>
                         @endif
                         @if($dog->elbow_rating)
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full {{ str_contains(strtolower($dog->elbow_rating), 'normal') ? 'bg-green-500' : 'bg-yellow-500' }}"></span>
-                            <span class="text-sm"><strong>Elbows:</strong> {{ $dog->elbow_rating }}</span>
+                        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">💪</span>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-700">Elbow Dysplasia</div>
+                                    <div class="text-xs text-gray-500">OFA Rating</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-sm font-medium {{ str_contains(strtolower($dog->elbow_rating), 'normal') ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
+                                {{ $dog->elbow_rating }}
+                            </span>
                         </div>
                         @endif
                         @if($dog->heart_status)
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                            <span class="text-sm"><strong>Heart:</strong> {{ $dog->heart_status }}</span>
+                        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">❤️</span>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-700">Cardiac</div>
+                                    <div class="text-xs text-gray-500">Cardiologist Exam</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                {{ $dog->heart_status }}
+                            </span>
                         </div>
                         @endif
                         @if($dog->eye_status)
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                            <span class="text-sm"><strong>Eyes:</strong> {{ $dog->eye_status }}</span>
+                        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">👁️</span>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-700">Eye Clearance</div>
+                                    <div class="text-xs text-gray-500">CERF/OFA</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                {{ $dog->eye_status }}
+                            </span>
                         </div>
                         @endif
                         @if($dog->dm_status)
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full {{ str_contains(strtolower($dog->dm_status), 'clear') || str_contains(strtolower($dog->dm_status), 'normal') ? 'bg-green-500' : (str_contains(strtolower($dog->dm_status), 'carrier') ? 'bg-yellow-500' : 'bg-red-500') }}"></span>
-                            <span class="text-sm"><strong>DM:</strong> {{ $dog->dm_status }}</span>
+                        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🧬</span>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-700">DM (Degenerative Myelopathy)</div>
+                                    <div class="text-xs text-gray-500">Genetic Test</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-sm font-medium {{ str_contains(strtolower($dog->dm_status), 'clear') || str_contains(strtolower($dog->dm_status), 'normal') ? 'bg-green-100 text-green-800' : (str_contains(strtolower($dog->dm_status), 'carrier') ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-800') }}">
+                                {{ $dog->dm_status }}
+                            </span>
                         </div>
                         @endif
                         @if($dog->dna_status)
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                            <span class="text-sm"><strong>DNA:</strong> {{ $dog->dna_status }}</span>
+                        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🔬</span>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-700">DNA Profile</div>
+                                    <div class="text-xs text-gray-500">Parentage Verification</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                {{ $dog->dna_status }}
+                            </span>
                         </div>
                         @endif
                     </div>
                     @else
-                    <p class="text-gray-400 text-sm italic">No health clearances on file</p>
+                    <div class="text-center py-6 bg-gray-50 rounded-lg border-2 border-dashed border-gray-200">
+                        <span class="text-3xl opacity-30">🩺</span>
+                        <p class="text-gray-400 text-sm mt-2">No health clearances on file</p>
+                    </div>
                     @endif
                 </div>
 
@@ -176,54 +309,183 @@
                     </div>
                 </div>
 
-                <!-- Pedigree -->
+                <!-- Pedigree - Enhanced 3 Generation Tree -->
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Pedigree</h3>
-                    @if($dog->sire_name || $dog->dam_name)
-                    <div class="space-y-2">
-                        @if($dog->sire_name)
-                        <div class="text-sm">
-                            <span class="text-blue-600 font-medium">Sire:</span>
-                            @if($dog->sire_id && $sire = \App\Models\Dog::where('bg_dog_id', $dog->sire_id)->first())
-                                <a href="{{ route('dogs.show', $sire) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline">{{ $dog->sire_name }}</a>
-                            @else
-                                <span class="text-gray-700">{{ $dog->sire_name }}</span>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Pedigree (3 Generations)</h3>
+                    @php
+                        // Get parents
+                        $sire = $dog->sire_id ? \App\Models\Dog::where('bg_dog_id', $dog->sire_id)->first() : null;
+                        $dam = $dog->dam_id ? \App\Models\Dog::where('bg_dog_id', $dog->dam_id)->first() : null;
+
+                        // Get grandparents
+                        $siresSire = $sire && $sire->sire_id ? \App\Models\Dog::where('bg_dog_id', $sire->sire_id)->first() : null;
+                        $siresDam = $sire && $sire->dam_id ? \App\Models\Dog::where('bg_dog_id', $sire->dam_id)->first() : null;
+                        $damsSire = $dam && $dam->sire_id ? \App\Models\Dog::where('bg_dog_id', $dam->sire_id)->first() : null;
+                        $damsDam = $dam && $dam->dam_id ? \App\Models\Dog::where('bg_dog_id', $dam->dam_id)->first() : null;
+                    @endphp
+                    @if($sire || $dam)
+                    <div class="space-y-3 text-xs">
+                        <!-- Sire's line -->
+                        @if($sire || $dog->sire_name)
+                        <div class="border-l-4 border-blue-400 pl-3 pb-2">
+                            <div class="font-semibold text-blue-700 mb-1">♂ SIRE</div>
+                            <div class="mb-2">
+                                @if($sire)
+                                    <a href="{{ route('dogs.show', $sire) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline font-medium">
+                                        {{ Str::limit($sire->registered_name, 30) }}
+                                    </a>
+                                    @if($sire->grade)
+                                        <span class="text-green-600 ml-1">({{ number_format($sire->grade, 1) }})</span>
+                                    @endif
+                                @else
+                                    <span class="text-gray-600">{{ Str::limit($dog->sire_name, 30) }}</span>
+                                @endif
+                            </div>
+
+                            @if($siresSire || $siresDam || ($sire && ($sire->sire_name || $sire->dam_name)))
+                            <div class="ml-3 space-y-1 text-xs">
+                                @if($siresSire || ($sire && $sire->sire_name))
+                                <div class="text-gray-600">
+                                    <span class="text-blue-500">♂♂</span>
+                                    @if($siresSire)
+                                        <a href="{{ route('dogs.show', $siresSire) }}" class="hover:underline">{{ Str::limit($siresSire->registered_name, 25) }}</a>
+                                    @elseif($sire && $sire->sire_name)
+                                        {{ Str::limit($sire->sire_name, 25) }}
+                                    @endif
+                                </div>
+                                @endif
+                                @if($siresDam || ($sire && $sire->dam_name))
+                                <div class="text-gray-600">
+                                    <span class="text-pink-500">♀♂</span>
+                                    @if($siresDam)
+                                        <a href="{{ route('dogs.show', $siresDam) }}" class="hover:underline">{{ Str::limit($siresDam->registered_name, 25) }}</a>
+                                    @elseif($sire && $sire->dam_name)
+                                        {{ Str::limit($sire->dam_name, 25) }}
+                                    @endif
+                                </div>
+                                @endif
+                            </div>
                             @endif
                         </div>
                         @endif
-                        @if($dog->dam_name)
-                        <div class="text-sm">
-                            <span class="text-pink-600 font-medium">Dam:</span>
-                            @if($dog->dam_id && $dam = \App\Models\Dog::where('bg_dog_id', $dog->dam_id)->first())
-                                <a href="{{ route('dogs.show', $dam) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline">{{ $dog->dam_name }}</a>
-                            @else
-                                <span class="text-gray-700">{{ $dog->dam_name }}</span>
+
+                        <!-- Dam's line -->
+                        @if($dam || $dog->dam_name)
+                        <div class="border-l-4 border-pink-400 pl-3">
+                            <div class="font-semibold text-pink-700 mb-1">♀ DAM</div>
+                            <div class="mb-2">
+                                @if($dam)
+                                    <a href="{{ route('dogs.show', $dam) }}" class="text-bernese-700 hover:text-bernese-900 hover:underline font-medium">
+                                        {{ Str::limit($dam->registered_name, 30) }}
+                                    </a>
+                                    @if($dam->grade)
+                                        <span class="text-green-600 ml-1">({{ number_format($dam->grade, 1) }})</span>
+                                    @endif
+                                @else
+                                    <span class="text-gray-600">{{ Str::limit($dog->dam_name, 30) }}</span>
+                                @endif
+                            </div>
+
+                            @if($damsSire || $damsDam || ($dam && ($dam->sire_name || $dam->dam_name)))
+                            <div class="ml-3 space-y-1 text-xs">
+                                @if($damsSire || ($dam && $dam->sire_name))
+                                <div class="text-gray-600">
+                                    <span class="text-blue-500">♂♀</span>
+                                    @if($damsSire)
+                                        <a href="{{ route('dogs.show', $damsSire) }}" class="hover:underline">{{ Str::limit($damsSire->registered_name, 25) }}</a>
+                                    @elseif($dam && $dam->sire_name)
+                                        {{ Str::limit($dam->sire_name, 25) }}
+                                    @endif
+                                </div>
+                                @endif
+                                @if($damsDam || ($dam && $dam->dam_name))
+                                <div class="text-gray-600">
+                                    <span class="text-pink-500">♀♀</span>
+                                    @if($damsDam)
+                                        <a href="{{ route('dogs.show', $damsDam) }}" class="hover:underline">{{ Str::limit($damsDam->registered_name, 25) }}</a>
+                                    @elseif($dam && $dam->dam_name)
+                                        {{ Str::limit($dam->dam_name, 25) }}
+                                    @endif
+                                </div>
+                                @endif
+                            </div>
                             @endif
                         </div>
                         @endif
                     </div>
                     @else
-                    <p class="text-gray-400 text-sm italic">Unknown pedigree</p>
+                    <div class="text-center py-4 bg-gray-50 rounded border-2 border-dashed border-gray-200">
+                        <span class="text-2xl opacity-30">🌳</span>
+                        <p class="text-gray-400 text-xs mt-1">Pedigree not available</p>
+                    </div>
                     @endif
                 </div>
 
-                <!-- Breeder -->
+                <!-- Breeder/Kennel - Enhanced -->
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Breeder</h3>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Breeder Information</h3>
                     @if($dog->breeder)
-                    <a href="{{ route('breeders.show', $dog->breeder) }}" class="block hover:bg-white rounded p-2 -m-2 transition">
-                        <div class="font-semibold text-bernese-700">{{ $dog->breeder->full_name }}</div>
-                        @if($dog->breeder->kennel_name)
-                        <div class="text-sm text-gray-500">{{ $dog->breeder->kennel_name }}</div>
+                    <div class="bg-white border-2 border-bernese-200 rounded-lg p-3 hover:border-bernese-400 transition">
+                        <a href="{{ route('breeders.show', $dog->breeder) }}" class="block">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-bernese-100 rounded-full p-2 mt-0.5">
+                                    <span class="text-lg">🏠</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="font-bold text-bernese-800">{{ $dog->breeder->full_name }}</div>
+                                    @if($dog->breeder->kennel_name)
+                                    <div class="text-sm text-bernese-600 font-medium">{{ $dog->breeder->kennel_name }}</div>
+                                    @endif
+                                    @if($dog->breeder->city || $dog->breeder->state || $dog->breeder->country)
+                                    <div class="text-xs text-gray-500 mt-1">
+                                        📍 {{ collect([$dog->breeder->city, $dog->breeder->state, $dog->breeder->country])->filter()->implode(', ') }}
+                                    </div>
+                                    @endif
+                                    @if($dog->breeder->grade)
+                                    <div class="mt-2 inline-flex items-center gap-1 text-xs">
+                                        <span class="text-gray-500">Breeder Grade:</span>
+                                        <span class="font-bold {{ $dog->breeder->grade >= 70 ? 'text-green-600' : ($dog->breeder->grade >= 50 ? 'text-yellow-600' : 'text-red-600') }}">
+                                            {{ number_format($dog->breeder->grade, 1) }}
+                                        </span>
+                                    </div>
+                                    @endif
+                                </div>
+                            </div>
+                        </a>
+                        @if($dog->breeder->email || $dog->breeder->phone)
+                        <div class="mt-3 pt-3 border-t border-gray-200 space-y-1">
+                            @if($dog->breeder->email)
+                            <div class="text-xs">
+                                <a href="mailto:{{ $dog->breeder->email }}" class="text-bernese-600 hover:text-bernese-800 flex items-center gap-2">
+                                    <span>📧</span>
+                                    <span class="truncate">{{ $dog->breeder->email }}</span>
+                                </a>
+                            </div>
+                            @endif
+                            @if($dog->breeder->phone)
+                            <div class="text-xs">
+                                <a href="tel:{{ $dog->breeder->phone }}" class="text-bernese-600 hover:text-bernese-800 flex items-center gap-2">
+                                    <span>📞</span>
+                                    <span>{{ $dog->breeder->phone }}</span>
+                                </a>
+                            </div>
+                            @endif
+                        </div>
                         @endif
-                        @if($dog->breeder->city || $dog->breeder->state)
-                        <div class="text-sm text-gray-400">{{ collect([$dog->breeder->city, $dog->breeder->state])->filter()->implode(', ') }}</div>
-                        @endif
-                    </a>
+                    </div>
                     @elseif($dog->breeder_name)
-                    <div class="text-gray-700">{{ $dog->breeder_name }}</div>
+                    <div class="bg-gray-50 border rounded-lg p-3">
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">🏠</span>
+                            <div class="text-gray-700 font-medium">{{ $dog->breeder_name }}</div>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1">Contact details not available</div>
+                    </div>
                     @else
-                    <p class="text-gray-400 text-sm italic">Unknown breeder</p>
+                    <div class="text-center py-4 bg-gray-50 rounded border-2 border-dashed border-gray-200">
+                        <span class="text-2xl opacity-30">🏠</span>
+                        <p class="text-gray-400 text-xs mt-1">Breeder information unavailable</p>
+                    </div>
                     @endif
                 </div>
             </div>
