@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Bernese Dog Finder')</title>
+    <title>@yield('title', 'Bernese Mountain Dog Finder')</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -33,8 +33,8 @@
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <a href="{{ route('home') }}" class="flex items-center space-x-2">
-                    <span class="text-2xl">🐕</span>
-                    <span class="font-bold text-xl">Bernese Dog Finder</span>
+                    <img src="/images/bernese-1.png" alt="Bernese Mountain Dog" class="w-8 h-8 rounded-full object-cover">
+                    <span class="font-bold text-xl">Bernese Mountain Dog Finder</span>
                 </a>
                 <div class="flex space-x-6">
                     <a href="{{ route('dogs.index') }}" class="hover:text-bernese-200 transition">Dogs</a>
@@ -52,7 +52,7 @@
 
     <footer class="bg-bernese-800 text-white py-6 mt-auto">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-bernese-200">Bernese Dog Finder - Find your perfect Bernese Mountain Dog</p>
+            <p class="text-bernese-200">Bernese Mountain Dog Finder - Find your perfect Bernese Mountain Dog</p>
         </div>
     </footer>
 </body>

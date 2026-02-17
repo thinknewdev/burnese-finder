@@ -30,8 +30,8 @@
                         @if($dog->primary_image)
                         <img src="{{ $dog->primary_image }}" alt="" class="w-12 h-12 rounded object-cover">
                         @else
-                        <div class="w-12 h-12 rounded bg-gradient-to-br from-bernese-100 to-bernese-200 flex items-center justify-center">
-                            <span class="text-lg opacity-50">🐕</span>
+                        <div class="w-12 h-12 rounded overflow-hidden">
+                            <img src="/images/bernese-1.png" alt="Bernese Mountain Dog" class="w-full h-full object-cover opacity-75">
                         </div>
                         @endif
                     </td>

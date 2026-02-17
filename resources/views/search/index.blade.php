@@ -155,8 +155,8 @@
                     <img src="{{ $dog->primary_image }}" alt="{{ $dog->registered_name }}" class="w-full h-full object-cover">
                 </div>
                 @else
-                <div class="h-48 bg-gradient-to-br from-bernese-100 to-bernese-200 flex items-center justify-center">
-                    <span class="text-6xl opacity-50">🐕</span>
+                <div class="h-48 overflow-hidden">
+                    <img src="/images/bernese-1.png" alt="Bernese Mountain Dog" class="w-full h-full object-cover opacity-75">
                 </div>
                 @endif
                 <div class="p-4">

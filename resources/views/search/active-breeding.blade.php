@@ -144,7 +144,9 @@
     </div>
     @else
     <div class="bg-white rounded-lg shadow p-12 text-center">
-        <div class="text-gray-400 text-6xl mb-4">🐕</div>
+        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden opacity-40">
+            <img src="/images/bernese-1.png" alt="Bernese Mountain Dog" class="w-full h-full object-cover">
+        </div>
         <h2 class="text-xl font-semibold text-gray-600 mb-2">No active breeding dogs found</h2>
         <p class="text-gray-500 mb-4">Try adjusting your filters to see more results</p>
     </div>

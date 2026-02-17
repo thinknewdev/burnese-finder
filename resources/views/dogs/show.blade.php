@@ -17,8 +17,8 @@
                 <img src="{{ $dog->primary_image }}" alt="{{ $dog->registered_name }}"
                     class="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg">
                 @else
-                <div class="w-full h-64 md:h-80 bg-bernese-700 rounded-lg flex items-center justify-center">
-                    <span class="text-bernese-400 text-6xl">🐕</span>
+                <div class="w-full h-64 md:h-80 rounded-lg overflow-hidden">
+                    <img src="/images/bernese-1.png" alt="Bernese Mountain Dog" class="w-full h-full object-cover opacity-80">
                 </div>
                 @endif
             </div>
@@ -182,65 +182,94 @@
                         @endif
                     </div>
                     @if($testsCount > 0)
+                    @php
+                        // Helper: split "Result (cert#)" into result and cert parts
+                        function splitCert($value) {
+                            if (preg_match('/^(.+?)\s*\(([^)]+)\)(.*)$/', $value, $m)) {
+                                return ['result' => trim($m[1] . $m[3]), 'cert' => trim($m[2])];
+                            }
+                            return ['result' => $value, 'cert' => null];
+                        }
+                    @endphp
                     <div class="bg-white rounded-lg border p-4 space-y-3">
                         @if($dog->hip_rating)
+                        @php $hip = splitCert($dog->hip_rating); $hipLower = strtolower($hip['result']); @endphp
                         <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
                             <div class="flex items-center gap-3">
                                 <span class="text-2xl">🦴</span>
                                 <div>
                                     <div class="text-sm font-medium text-gray-700">Hip Dysplasia</div>
-                                    <div class="text-xs text-gray-500">OFA Rating</div>
+                                    @if($hip['cert'])<div class="text-xs text-gray-400 font-mono">{{ $hip['cert'] }}</div>@endif
                                 </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium {{ str_contains(strtolower($dog->hip_rating), 'excellent') ? 'bg-green-100 text-green-800' : (str_contains(strtolower($dog->hip_rating), 'good') ? 'bg-green-50 text-green-700' : 'bg-yellow-100 text-yellow-800') }}">
-                                {{ $dog->hip_rating }}
+                            <span class="px-3 py-1 rounded-full text-sm font-medium
+                                {{ str_contains($hipLower, 'excellent') ? 'bg-green-100 text-green-800' :
+                                   (str_contains($hipLower, 'good') ? 'bg-green-50 text-green-700' :
+                                   (str_contains($hipLower, 'fair') ? 'bg-yellow-100 text-yellow-800' :
+                                   'bg-red-100 text-red-800')) }}">
+                                {{ $hip['result'] }}
                             </span>
                         </div>
                         @endif
                         @if($dog->elbow_rating)
+                        @php $elbow = splitCert($dog->elbow_rating); $elbowLower = strtolower($elbow['result']); @endphp
                         <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
                             <div class="flex items-center gap-3">
                                 <span class="text-2xl">💪</span>
                                 <div>
                                     <div class="text-sm font-medium text-gray-700">Elbow Dysplasia</div>
-                                    <div class="text-xs text-gray-500">OFA Rating</div>
+                                    @if($elbow['cert'])<div class="text-xs text-gray-400 font-mono">{{ $elbow['cert'] }}</div>@endif
                                 </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium {{ str_contains(strtolower($dog->elbow_rating), 'normal') ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
-                                {{ $dog->elbow_rating }}
+                            <span class="px-3 py-1 rounded-full text-sm font-medium
+                                {{ str_contains($elbowLower, 'normal') ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800' }}">
+                                {{ $elbow['result'] }}
                             </span>
                         </div>
                         @endif
                         @if($dog->heart_status)
+                        @php $heart = splitCert($dog->heart_status); $heartLower = strtolower($heart['result']); @endphp
                         <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
                             <div class="flex items-center gap-3">
                                 <span class="text-2xl">❤️</span>
                                 <div>
                                     <div class="text-sm font-medium text-gray-700">Cardiac</div>
-                                    <div class="text-xs text-gray-500">Cardiologist Exam</div>
+                                    @if($heart['cert'])<div class="text-xs text-gray-400 font-mono">{{ $heart['cert'] }}</div>@endif
                                 </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                                {{ $dog->heart_status }}
+                            <span class="px-3 py-1 rounded-full text-sm font-medium
+                                {{ str_contains($heartLower, 'normal') || str_contains($heartLower, 'clear') ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
+                                {{ $heart['result'] }}
                             </span>
                         </div>
                         @endif
                         @if($dog->eye_status)
+                        @php $eye = splitCert($dog->eye_status); $eyeLower = strtolower($eye['result']); @endphp
                         <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
                             <div class="flex items-center gap-3">
                                 <span class="text-2xl">👁️</span>
                                 <div>
                                     <div class="text-sm font-medium text-gray-700">Eye Clearance</div>
-                                    <div class="text-xs text-gray-500">CERF/OFA</div>
+                                    @if($eye['cert'])<div class="text-xs text-gray-400 font-mono">{{ $eye['cert'] }}</div>@endif
                                 </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                                {{ $dog->eye_status }}
+                            <span class="px-3 py-1 rounded-full text-sm font-medium
+                                {{ str_contains($eyeLower, 'normal') || str_contains($eyeLower, 'clear') ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
+                                {{ $eye['result'] }}
                             </span>
                         </div>
                         @endif
                         @if($dog->dm_status)
-                        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                        @php
+                            // DM may contain multiple results separated by " | "
+                            $dmParts = explode(' | ', $dog->dm_status);
+                            $dmLower = strtolower($dog->dm_status);
+                            // Priority: Affected (worst) > Carrier > Clear
+                            $dmColor = str_contains($dmLower, 'affected') ? 'bg-red-100 text-red-800' :
+                                       (str_contains($dmLower, 'carrier') ? 'bg-yellow-100 text-yellow-700' :
+                                       'bg-green-100 text-green-800');
+                        @endphp
+                        <div class="flex items-start justify-between p-2 rounded hover:bg-gray-50">
                             <div class="flex items-center gap-3">
                                 <span class="text-2xl">🧬</span>
                                 <div>
@@ -248,22 +277,31 @@
                                     <div class="text-xs text-gray-500">Genetic Test</div>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium {{ str_contains(strtolower($dog->dm_status), 'clear') || str_contains(strtolower($dog->dm_status), 'normal') ? 'bg-green-100 text-green-800' : (str_contains(strtolower($dog->dm_status), 'carrier') ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-800') }}">
-                                {{ $dog->dm_status }}
-                            </span>
+                            <div class="text-right space-y-1">
+                                @foreach($dmParts as $dmPart)
+                                @php $dmPartSplit = splitCert(trim($dmPart)); @endphp
+                                <div>
+                                    <span class="px-2 py-0.5 rounded-full text-xs font-medium {{ $dmColor }}">
+                                        {{ $dmPartSplit['result'] }}
+                                    </span>
+                                    @if($dmPartSplit['cert'])<span class="text-xs text-gray-400 font-mono ml-1">{{ $dmPartSplit['cert'] }}</span>@endif
+                                </div>
+                                @endforeach
+                            </div>
                         </div>
                         @endif
                         @if($dog->dna_status)
+                        @php $dna = splitCert($dog->dna_status); @endphp
                         <div class="flex items-center justify-between p-2 rounded hover:bg-gray-50">
                             <div class="flex items-center gap-3">
                                 <span class="text-2xl">🔬</span>
                                 <div>
                                     <div class="text-sm font-medium text-gray-700">DNA Profile</div>
-                                    <div class="text-xs text-gray-500">Parentage Verification</div>
+                                    @if($dna['cert'])<div class="text-xs text-gray-400 font-mono">{{ $dna['cert'] }}</div>@endif
                                 </div>
                             </div>
                             <span class="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                                {{ $dog->dna_status }}
+                                {{ $dna['result'] }}
                             </span>
                         </div>
                         @endif
@@ -561,8 +599,8 @@
                     @if($offspring->primary_image)
                     <img src="{{ $offspring->primary_image }}" class="w-10 h-10 rounded object-cover">
                     @else
-                    <div class="w-10 h-10 rounded bg-gradient-to-br from-bernese-100 to-bernese-200 flex items-center justify-center">
-                        <span class="text-sm opacity-50">🐕</span>
+                    <div class="w-10 h-10 rounded overflow-hidden">
+                        <img src="/images/bernese-1.png" alt="Dog" class="w-full h-full object-cover opacity-70">
                     </div>
                     @endif
                     <div class="min-w-0">
